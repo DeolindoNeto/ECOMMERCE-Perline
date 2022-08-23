@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
@@ -21,28 +22,26 @@
                     </th>
                 </tr>
             </table>       
-        </div>
-        <div class="divfaixa"> 
-        </div>    
+        </div>   
         <a name="topo"></a>
         <br><br><br><br><br>
         
         <!-- Início da página -->
         <center><div class="menu"><br><br><br>
             <h1>Cadastro de novo usuário</h1><br>
-            <form action="" method="post">
+            <form action="../ADM/novoUsuarioBack.php" method="post">
             <table>
                 <tr align="left">
                     <th width="300px"><p>Digite seu Nome Completo:</p></th>
-                    <th width="300px"><input type="text" name="USERNAME" maxlength="80" size="26" required></th>
+                    <th width="300px"><input type="text" name="USERNAME" maxlength="80" size="26" placeholder="Ex. Seu Nome" required></th>
                 </tr>
                 <tr align="left">
                    <th><p>Digite seu E-mail:</p></th>
-                   <th><input type="email" name="USEREMAIL" maxlength="40" size="26" required></th>
+                   <th><input type="email" name="USEREMAIL" maxlength="40" size="26" placeholder="Ex. seuemail@gmail.com.br required></th>
                 </tr>
                 <tr align="left">
                    <th><p>Digite seu Telefone:</p></th>
-                   <th><input type="text" name="USERTEL" maxlength="11" placeholder="Ex. 14999999999 ou 143103-9999" size="26" required></th>
+                   <th><input type="text" name="USERFONE" maxlength="11" placeholder="Ex. 14999999999 ou 143103-9999" size="26" required></th>
                 </tr>
                 <tr align="left">
                    <th><p>Digite seu CPF:</p></th>
@@ -54,18 +53,18 @@
                 </tr>
                 <tr align="left">
                    <th><p>Insira sua data de nascimento:</p></th>
-                   <th><input type="date" name="USERBIRTH" required></th>
+                   <th><input type="date" name="USERNASC" required></th>
                 </tr>
                 <tr align="left">
                    <th><p>Selecione seu Sexo</p></th>
-                   <th><input type="radio" name="USERSEX" value="MAS" checked required>MASCULINO
-                   <input type="radio" name="USERSEX" value="FEM" required>FEMININO</th>
+                   <th><input type="radio" name="USERSEX" value="MASC" checked required>MASCULINO
+                   <input type="radio" name="USERSEX" value="FEMI" required>FEMININO</th>
                 </tr>
                 <tr align="left">
-                   <th><p>Digite uma Senha:</p></th><th><input type="password" name="USERPASSWORD" maxlength="32" size="26" required></th>
+                   <th><p>Digite uma Senha:</p></th><th><input type="password" name="USERSENHA" maxlength="32" size="26" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Confirme sua Senha:</p></th><th><input type="password" name="USERPASSWORD2" maxlength="32" size="26" required></th>
+                   <th><p>Confirme sua Senha:</p></th><th><input type="password" name="USERSENHA2" maxlength="32" size="26" required></th>
                 </tr>
                 <tr>
                     <th colspan="2"><input type="submit" value="Cadastrar">&nbsp;&nbsp;<input type="reset" value="Limpar"></th>
@@ -93,7 +92,7 @@
                     <tr>
                         <td><white>Camila Eduarda - n°8 | </white></td>
                         <td><white>Deolindo Neto - n°12 | </white></td>
-                        <td><white>Evenly Mayra - n°15 | </white></td>
+                        <td><white>Evelyn Mayra - n°15 | </white></td>
                         <td><white>Mariana Caroline - n°28 | </white></td>
                         <td><white>Matheus Soares - n°30</white></td>
                     </tr>
