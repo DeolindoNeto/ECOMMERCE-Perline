@@ -11,6 +11,7 @@
     <?php
     include "./conection.php";
     $id_usuario = $_POST['id_user'];
+    $nome = $_POST['nome_user'];
 
     // Padrão para data no servidor do kinghost está americano (se atentar!!)
     $data = date('m/d/Y'); //'Y' (maiúsculo) para ano com 4 dígitos
@@ -20,7 +21,7 @@
                 set excluido = 'false', data_exclusao = '$data' 
             WHERE id_user = $id_usuario;";
     echo $sql;
-
+    echo $nome;
     $resultado = pg_query($conecta, $sql);
     $qtde = pg_affected_rows($resultado);
 

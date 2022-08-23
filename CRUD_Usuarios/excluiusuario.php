@@ -33,8 +33,8 @@
         <center><div class="menu"><br><br><br>
         <?php 
             include "./conection.php"; 
-            $id_user = $_GET["id_user"];
-            $sql = "SELECT * FROM usuario WHERE id_user=$id_user;";
+            $id_usuario = $_GET['id_user'];
+            $sql = "SELECT * FROM usuario WHERE id_user=$id_usuario;";
             $resultado=pg_query($conecta,$sql);
             $qtde=pg_num_rows($resultado);
             $linha = pg_fetch_array($resultado);
@@ -49,7 +49,7 @@
                 pg_close($conecta);
         ?>
             <h1>Exclusão de Usuário</h1><br>
-            <form action="excluiUserBack.php" method="post">
+            <form action="./excluiUserBack.php" method="POST">
             <table>
                <tr align="left">
                     <th width="300px"><p>ID:</p></th>
