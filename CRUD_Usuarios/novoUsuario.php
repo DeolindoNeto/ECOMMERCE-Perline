@@ -41,8 +41,8 @@
                 
                 <tr align="left">
                    <th><p>Selecione seu Sexo</p></th>
-                   <th><input type="radio" name="USERSEX" value="MAS" checked required>MASCULINO
-                   <input type="radio" name="USERSEX" value="FEM" required>FEMININO</th>
+                   <th><input type="radio" name="USERSEX" value="MASC" checked required>MASCULINO
+                   <input type="radio" name="USERSEX" value="FEMI" required>FEMININO</th>
                 </tr>
                    
                     <th colspan="2"><input type="submit" value="Cadastrar">&nbsp;&nbsp;
