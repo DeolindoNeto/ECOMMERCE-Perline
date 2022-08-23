@@ -32,24 +32,13 @@
         <!-- Início da página -->
         <center><div class="menu"><br><br><br>
         <?php 
-            include "./conection.php"; 
             $id_usuario = $_GET['id_user'];
-            $sql = "SELECT * FROM usuario WHERE id_user=$id_usuario;";
-            $resultado=pg_query($conecta,$sql);
-            $qtde=pg_num_rows($resultado);
-            $linha = pg_fetch_array($resultado);
-            if ( $qtde == 0 )
-            {
-                echo '<script language="javascript">';
-                echo "alert('Usuário não encontrado!')";
-                echo '</script>';	
-                echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=admhome.php'>";
-                exit;
-            }
-                pg_close($conecta);
+            include "./get_info_user.php"; 
+            
+           
         ?>
             <h1>Exclusão de Usuário</h1><br>
-            <form action="./excluiUserBack.php" method="POST">
+            <form action="./excluiUserBack.php" method="post">
             <table>
                <tr align="left">
                     <th width="300px"><p>ID:</p></th>
