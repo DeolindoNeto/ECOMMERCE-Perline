@@ -1,5 +1,5 @@
 <?php
-    include "../utils/conexao.php"; 
+    include ""; 
 
     /* a variável $cod_produto deve já ter sido atribuída na página pai, antes do include
        para esse arquivo */

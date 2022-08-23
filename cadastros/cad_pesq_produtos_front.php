@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <title>Pesquisa de Produtos</title>
-        
+        <link rel="stylesheet" href="../css/cabecalho.css">
     </head>
 <body>
 
 <style>
-    .table {width:100%; display:grid;}
+    .table {width:700px; display:grid;}
     .row { display:block;}
     .cell {
         display:inline-block;
@@ -18,11 +18,11 @@
         font-size: 10pt;
     }
     .cellHeader {text-align: center !important;}
-    .cellCodigo {width:24%;}
-    .cellDescricao {width:24%;}
+    .cellCodigo {width:100px; }
+    .cellDescricao {width:300px;}
     .cellPrecoHeader {width:100px;}
-    .cellPreco {width:24%; text-align:right;}
-    .cellAcoes {width:24%;}
+    .cellPreco {width:60px; text-align:right;}
+    .cellAcoes {width:100px;}
 </style>
 
 <iframe src="../utils/cabecalho.html" title="cabecalho" frameBorder="0" 
