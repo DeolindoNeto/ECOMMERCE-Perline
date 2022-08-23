@@ -7,7 +7,6 @@
 </head>
 <body>
     <?php
-        include "./conection.php";
         $id_produto = $_GET['id_produto'];
         include "./get_InfoProduto.php";
 

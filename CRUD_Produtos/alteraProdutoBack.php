@@ -39,13 +39,18 @@
                  quantidade = $quantidade
            WHERE id_produto = $id_produto;";
 
+    echo $sql;
     $resultado = pg_query($conecta, $sql);
     $linhas = pg_affected_rows($resultado);
 
-    if ($linhas > 0)
+    if ($linhas > 0){
         echo "<script type='text/javascript'>alert('Gravação OK !!!')</script>";
+        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
+    }
     else
         echo "<script type='text/javascript'>alert('Erro na Gravação !!!')</script>";
+        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
+
 
     // Fechando conexão com o Banco de Dados
     pg_close($conecta);

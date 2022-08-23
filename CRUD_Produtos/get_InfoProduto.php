@@ -1,6 +1,6 @@
 <?php
     include "./conection.php"; 
-
+    $id_produto = $_GET['id_produto'];
     /* a variável $cod_produto deve já ter sido atribuída na página pai, antes do include
        para esse arquivo */
     $sql="SELECT * FROM produto WHERE id_produto = $id_produto;";
