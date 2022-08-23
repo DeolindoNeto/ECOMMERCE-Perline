@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include "";
+        include "./conection.php";
         $sql ="SELECT * FROM usuario WHERE id_user=$id_user;";
         $resultado=pg_query($conecta,$sql);
         $qtde=pg_num_rows($resultado);

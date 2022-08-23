@@ -34,8 +34,6 @@
         <?php 
             $id_usuario = $_GET['id_user'];
             include "./get_info_user.php"; 
-            
-           
         ?>
             <h1>Exclusão de Usuário</h1><br>
             <form action="./excluiUserBack.php" method="post">
