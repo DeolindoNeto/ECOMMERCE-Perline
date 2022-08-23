@@ -1,15 +1,15 @@
-
-    <?php
+<?php
     include "./conection.php";
-    $id_user = $_POST['id_user'];
+    $id_user = $_POST['id_produto'];
 
     // Padrão para data no servidor do kinghost está americano (se atentar!!)
     $data = date('m/d/Y'); //'Y' (maiúsculo) para ano com 4 dígitos
     //$data=date('d/m/Y');
 
-    $sql = "update usuario
+    $sql = "update produto
                 set excluido = 'true', data_exclusao = '$data' 
-            WHERE id_user = $id_user;";
+            WHERE id_produto = $id_produto;";
+    
     $resultado = pg_query($conecta, $sql);
     $qtde = pg_affected_rows($resultado);
 
