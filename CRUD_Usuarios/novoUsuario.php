@@ -7,52 +7,61 @@
     <title>Perline Art</title>
 </head>
 <body>
-<div class="menu">
-   <h1>Cadastro de novo usuário</h1><br>
-            <form action="./novoUsuarioBack.php" method="post">
+        <!-- Início da página -->
+        <center><div class="menu"><br><br><br>
+            <h1>Cadastro de novo produto</h1><br>
+            <form action="./novoProdutoback.php" method="post">
             <table>
                 <tr align="left">
-                    <th width="300px"><p>Nome:</p></th>
-                    <th width="300px"><input type="text" name="USERNAME" maxlength="70" size="26" value="Deolindo S. Neto" required></th>
+                    <th width="300px"><p>Nome do produto:</p></th>
+                    <th width="300px"><input type="text" name="PRODUCTNAME" maxlength="70" size="26" placeholder="Ex: Pulseira de Pérolas" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Email:</p></th>
-                   <th><input type="email" size="70" name="USEREMAIL" value="deolindo.scandolera@unesp.br" required></th>
+                   <th><p>Preço:</p></th>
+                   <th><input type="number" name="PRODUCTPRICE" placeholder="Ex. 9,99" step="0.01" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Telefone:</p></th>
-                   <th><input type="text" name="USERFONE" maxlength="11" placeholder="Ex. 14981665544" size="26" value="14982155663" required></th>
+                   <th><p>Código visual:</p></th>
+                   <th><input type="text" name="PRODUCTCODE" maxlength="50" size="26" placeholder="Ex: 40028922" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Aniversário:</p></th>
-                   <th><input type="date" name="USERNASC" value="2006-03-03" required></th>
+                   <th><p>Custo:</p></th>
+                   <th><input type="number" name="PRODUCTCOST" placeholder="Ex. 9,99" step="0.01" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>CPF:</p></th>
-                   <th><input type="text" name="USERCPF" maxlength="11" placeholder="Ex. 09610068422" value="53403686884" required></th>
+                   <th><p>Preço de Venda:</p></th>
+                   <th><input type="number" name="PRODUCTSELLPRICE" placeholder="Ex. 9,99" step="0.01" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>CEP:</p></th>
-                   <th><input type="text" name="USERCEP" maxlength="8" placeholder="Ex. 17250000" value="17250272" required></th>
+                   <th><p>Margem de lucro (%):</p></th>
+                   <th><input type="number" name="PRODUCTMARGIN" placeholder="Ex. 33,33" step="0.01" min="0"  required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Senha:</p></th>
-                   <th><input type="password" name="USERSENHA" value="deo1234" required></th>
+                   <th><p>ICMS (%):</p></th>
+                   <th><input type="number" name="PRODUCTICMS" placeholder="Ex. 33,33" step="0.01" min="0" max="100"  required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Sexo:</p></th>
-                   <th>     
-                            <select name="USERSEX" multiple> <!--Se tirar o size vira uma dropbox-->
-                                <option value="Fem">Feminino</option>
-                                <option value="Mas">Masculino</option>
-                                <option value="N/A">N/A</option>
-                            </select>
-                    </th>
+                    <th><p>Imagem:</p></th>
+                    <th><input type="text" name="PRODUCTIMAGE" maxlength="200" size="26" placeholder="produto.png" required></th>
                 </tr>
-                    <th colspan="2"><input type="submit" value="Cadastrar">&nbsp;&nbsp;<input type="reset" value="Limpar"></th>
+                <tr align="left">
+                    <th><p>Quantidade:</p></th>
+                    <th><input type="number" name="PRODUCTQTDE" maxlength="200" size="26" placeholder="3" required></th>
+                </tr>
+                <tr align="left">
+                   <th><p>Manufaturado?</p></th>
+                   <th><input type="radio" name="PRODUCTMANFACTURED" value="Sim" checked required>SIM
+                   <input type="radio" name="PRODUCTMANFACTURED"  required>NÃO</th>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" value="Cadastrar">&nbsp;&nbsp;
+                                    <input type="reset" value="Limpar"></th>
                 </tr>        
             </table>
             </form><br>
+            <br><br><br><br><br>
+        </div></center>
+        <!-- Fim da página --><br>
    </div>         
 </body>
 </html>
