@@ -10,7 +10,7 @@
         echo '<script language="javascript">';
         echo "alert('Usuário não encontrado!')";
         echo '</script>';
-        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=admhome.php'>";
+        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelausuarios.php'>";
         exit;
     }
     $linha = pg_fetch_array($resultado);
