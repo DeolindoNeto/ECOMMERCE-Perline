@@ -39,7 +39,6 @@
                  quantidade = $quantidade
            WHERE id_produto = $id_produto;";
 
-    echo $sql;
     $resultado = pg_query($conecta, $sql);
     $linhas = pg_affected_rows($resultado);
 

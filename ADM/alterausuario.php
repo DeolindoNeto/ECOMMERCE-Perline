@@ -48,7 +48,7 @@
                 pg_close($conecta);
         ?>
             <h1>Alteração de Usuário</h1><br>
-            <form action="" method="post">
+            <form action="./alteraUserBack.php" method="post">
             <table class="table3">
                <tr align="left">
                     <th width="300px"><p>ID:</p></th>

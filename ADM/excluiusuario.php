@@ -48,11 +48,11 @@
                 pg_close($conecta);
         ?>
             <h1>Exclusão de Usuário</h1><br>
-            <form action="" method="post">
+            <form action="./excluiUserBack.php" method="post">
             <table class="table3">
                <tr align="left">
                     <th width="300px"><p>ID:</p></th>
-                    <th width="300px"><input type='number' size='26' value="<?php echo "".$linha['id_user'].""; ?>" readonly></th>
+                    <th width="300px"><input type='number' name="id_user" size='26' value="<?php echo "".$linha['id_user'].""; ?>" readonly></th>
                 </tr>
                 <tr align="left">
                     <th><p>Nome:</p></th>

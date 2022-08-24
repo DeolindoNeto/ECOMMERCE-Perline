@@ -109,8 +109,8 @@
                         ".$linha['manufaturado']."
                     </th>
                     <th>
-                        <a class='voltar' href='alteraproduto.php?id_produto=".$linha['id_produto']."'>Alterar</a>&nbsp;
-                        <a class='voltar' href='excluiproduto.php?id_produto=".$linha['id_produto']."'>Excluir</a>&nbsp;
+                        <a class='voltar' href='alteraProdutosFront.php?id_produto=".$linha['id_produto']."'>Alterar</a>&nbsp;
+                        <a class='voltar' href='excluiProdutoFront.php?id_produto=".$linha['id_produto']."'>Excluir</a>&nbsp;
                     </th>
                 </tr> "; 
             } 

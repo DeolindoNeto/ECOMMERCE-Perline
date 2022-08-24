@@ -100,7 +100,7 @@
 
                 <br><br>
                 <input type="submit" value="Confirma exclusão">
-                <input type="button" value="Editar" onclick="location.href='alteraProdutoFront.php?id_produto=<?php echo $id_produto ?>';">
+                <input type="button" value="Editar" onclick="location.href='alteraProdutosFront.php?id_produto=<?php echo $id_produto ?>';">
                 <input type="button" value="Voltar" onclick="location.href='tabelaprodutos.php';">
 </body>
 </form>

@@ -109,7 +109,7 @@
                         ".$linha['sexo']."
                     </th>
                     <th>
-                        <a class='voltar' href='alterausuario.php?id_user=".$linha['id_user']."'>Alterar</a>&nbsp;
+                        <a class='voltar' href='alteraUsuarioFront.php?id_user=".$linha['id_user']."'>Alterar</a>&nbsp;
                         <a class='voltar' href='excluiusuario.php?id_user=".$linha['id_user']."'>Excluir</a>&nbsp;
                     </th>
                 </tr> "; 
