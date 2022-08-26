@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Perline</title>
-        <link rel="icon" href="../imagens/P E R L I N E.svg"
+        <link rel="icon" href="../imagens/perlineLogo.svg">
         <link rel="stylesheet" type="text/css" href="../estilo.css">
     </head>
     <body>
         <div class="divfixa">
-            <div class="divimg"><img src="../imagens/logo.png" height="90px"></div>
+            <div class="divimg"><img src="../imagens/perlineLogo.svg" height="90px"></div>
                 <br><br>
                 <table width="85%">
                     <tr>
