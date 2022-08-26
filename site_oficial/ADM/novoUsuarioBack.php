@@ -31,6 +31,7 @@
         {
             $userSenha = $userSenha1;
         }
+        
         $sql = "insert into usuario values (nextval('usuario_id_user_seq'::regclass), '$userName', '$userEmail', '$userSenha',
                 '$userFone', '$userAdm', '$userNasc', '$userCpf', '$userCep', '$userSex', '$excluido')";
 

@@ -47,7 +47,7 @@
                     <th width="200px" align="center"><a class="botao" href="#vercarrinho">Visualizar Tabela</a></th>
                 </tr>
                 <tr height="100px">
-                    <th width="200px" align="center"><a class="botao" href="../novouser.html">Novo Item</a></th>
+                    <th width="200px" align="center"><a class="botao" href="./novouser.html">Novo Item</a></th>
                     <th width="200px" align="center"><a class="botao" href="./novoProduto.html">Novo Item</a></th>
                     <th width="200px" align="center"><a class="botao" href="./novovenda.html">Novo Item</a></th>
                     <th width="200px" align="center"><a class="botao" href="./novoitemvenda.html">Novo Item</a></th>

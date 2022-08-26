@@ -31,7 +31,7 @@
         <!-- Início da página -->
         <center><div class="menu"><br><br><br>
             <h1>Cadastro de novo usuário</h1><br>
-            <form action="./ADM/novoUsuarioBack.php" method="post">
+            <form action="./novoUsuarioBack.php" method="post">
             <table>
                 <tr align="left">
                     <th width="300px"><p>Digite seu Nome Completo:</p></th>
@@ -47,7 +47,7 @@
                 </tr>
                 <tr align="left">
                    <th><p>Digite seu CPF:</p></th>
-                   <th><input type="text" name="USERCPF" placeholder="Somente números" max="99999999999" required></th>
+                   <th><input type="text" name="USERCPF" placeholder="Somente números" max="99999999999" maxlength="11" required></th>
                 </tr>
                 <tr align="left">
                    <th><p>Digite seu CEP:</p></th>
@@ -63,10 +63,10 @@
                    <input type="radio" name="USERSEX" value="FEMI" required>FEMININO</th>
                 </tr>
                 <tr align="left">
-                   <th><p>Digite uma Senha:</p></th><th><input type="password" name="USERSENHA" maxlength="32" size="26" required></th>
+                   <th><p>Digite uma Senha:</p></th><th><input type="password" name="USERSENHA" maxlength="10" size="26" required></th>
                 </tr>
                 <tr align="left">
-                   <th><p>Confirme sua Senha:</p></th><th><input type="password" name="USERSENHA2" maxlength="32" size="26" required></th>
+                   <th><p>Confirme sua Senha:</p></th><th><input type="password" name="USERSENHA2" maxlength="10" size="26" required></th>
                 </tr>
                 <tr>
                     <th colspan="2"><input type="submit" value="Cadastrar">&nbsp;&nbsp;<input type="reset" value="Limpar"></th>
