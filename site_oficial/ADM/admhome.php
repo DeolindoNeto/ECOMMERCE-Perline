@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Perline</title>
-        <link rel="icon" <
+        <link rel="icon" href="../imagens/P E R L I N E.svg"
         <link rel="stylesheet" type="text/css" href="../estilo.css">
     </head>
     <body>
