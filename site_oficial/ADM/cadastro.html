@@ -48,44 +48,43 @@
             <form action="#" method="post">
                
                <div class="centralizar_cadastro">
-               <label class="labels">Nome</label><br>
-               <input type="text" placeholder="Ex: Evelyn Pinnheiro" required>
+                <label class="labels">Nome Completo</label><br>
+                <input type="text" name="USERNAME" maxlength="80" size="26" placeholder="Ex. Seu Nome" required>
                
                <br>
                
                <label class="labels">E-mail</label><br>
-               <input type="email" size="30" placeholder="Ex: seuemail@gmail.com.br" required>
+               <input type="email" name="USEREMAIL" maxlength="40" size="26" placeholder="Ex. seuemail@gmail.com.br" required>
                
                <br>
                
                <label class="labels">Telefone</label><br>
-               <input type="number" maxlength="11" placeholder="Ex: 14981665544" size="11" required>
-               
-               <br>
-               
-               <label class="labels">Data de Nascimento</label><br>
-               <input type="date" required>
+               <input type="text" name="USERFONE" maxlength="11" placeholder="Ex. 14999999999 ou 143103-9999" size="26" required>
                
                <br>
                
                <label class="labels">CPF</label><br>
-               <input type="number" maxlength="11" placeholder="Ex: 09610068422" required>
-               
+                <input type="text" name="USERCPF" placeholder="Somente números" max="99999999999" maxlength="11" required>
+
                <br>
                
                <label class="labels">CEP</label><br>
-               <input type="number" maxlength="8" placeholder="Ex: 17250000" required>
+                <input type="number" name="USERCEP" placeholder="Somente números" max="99999999" required>
                
                <br>
                
-               <label class="labels">Senha</label><br>
-               <input type="password" required>
+               <label class="labels">Data de Nascimento</label><br>
+                <input type="date" name="USERNASC" required>
+               
+               <br>
+               
+               <label class="labels">Senha</label><br><input type="password" name="USERSENHA" maxlength="10" size="26" required>
                
                <br>
                
                <label class="labels">Sexo</label><br>
-                <input type="radio" name="sexo" value="FEM" checked><label>Feminino</label><br> 
-                <input type="radio" name="sexo" value="MASC"><label>Masculino</label>
+                <input type="radio" name="USERSEX" value="FEMI" checked><label>Feminino</label><br> 
+                <input type="radio" name="USERSEX" value="MASC"><label>Masculino</label>
                 </div>
                 
             </form>

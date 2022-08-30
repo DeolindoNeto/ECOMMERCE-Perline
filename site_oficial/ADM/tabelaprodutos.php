@@ -79,8 +79,8 @@
                     ".$linha['preco']."
                 </div>
                 <div class='celula celulaacoes'>
-                    <a href='cad_altera_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Alterar</a>&nbsp;
-                    <a href='cad_exclui_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Excluir</a>&nbsp;
+                    <a href='alteraproduto.php?cod_produto=".$linha['id_produto']."'> Alterar</a>&nbsp;
+                    <a href='excluiProdutoFront.php?cod_produto=".$linha['id_produto']."'> Excluir</a>&nbsp;
                 </div>
             </div> "; 
         } 
