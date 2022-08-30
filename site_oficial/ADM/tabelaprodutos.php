@@ -39,7 +39,7 @@
     </div>
         
         <?php
-            include "tabelaprodutos_back.php";
+            include "./tabelaprodutos_back.php";
 
             if ($qtde == 0) {
                 echo "Nenhum produto encontrado!<br><br>";
@@ -79,8 +79,8 @@
                     ".$linha['preco']."
                 </div>
                 <div class='celula celulaacoes'>
-                    <a href='alteraproduto.php?cod_produto=".$linha['id_produto']."'> Alterar</a>&nbsp;
-                    <a href='excluiProdutoFront.php?cod_produto=".$linha['id_produto']."'> Excluir</a>&nbsp;
+                    <a href='alteraproduto.php?id_produto=".$linha['id_produto']."'> Alterar</a>&nbsp;
+                    <a href='excluiProdutoFront.php?id_produto=".$linha['id_produto']."'> Excluir</a>&nbsp;
                 </div>
             </div> "; 
         } 

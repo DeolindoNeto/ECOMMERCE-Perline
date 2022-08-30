@@ -45,7 +45,7 @@
            </div>
                 
                 <center>
-            <form action="#" method="post">
+            <form action="./novoUsuarioBack.php" method="post">
                
                <div class="centralizar_cadastro">
                 <label class="labels">Nome Completo</label><br>
@@ -82,9 +82,15 @@
                
                <br>
                
-               <label class="labels">Sexo</label><br>
-                <input type="radio" name="USERSEX" value="FEMI" checked><label>Feminino</label><br> 
+               <label class="labels">Confirme sua senha</label><br><input type="password" name="USERSENHA2" maxlength="10" size="26" required>
+
+               <br>
+
+                <label class="labels">Sexo</label><br>
+                <input type="radio" name="USERSEX" value="FEMI" checked><label>Feminino</label>
                 <input type="radio" name="USERSEX" value="MASC"><label>Masculino</label>
+                <br><br>
+                <input type="submit" value="Cadastrar"> &nbsp;&nbsp;&nbsp; <input type="reset" value="Limpar">
                 </div>
                 
             </form>
