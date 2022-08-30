@@ -39,7 +39,7 @@
     </div>
         
         <?php
-            include "tabelausuarios_back.php";
+            include "./tabelausuarios_back.php";
 
             if ($qtde == 0) {
                 echo "Nenhum produto encontrado!<br><br>";
@@ -91,8 +91,8 @@
                     ".$linha['cpf_user']."
                 </div>
                 <div class='celula_usuario celulaacoes_usuario'>
-                    <a href='cad_altera_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Alterar</a>&nbsp;
-                    <a href='cad_exclui_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Excluir</a>&nbsp;
+                    <a href='alteraUsuarioFront.php?id_user=".$linha['id_user']."'> Alterar</a>&nbsp;
+                    <a href='excluiusuario.php?id_user=".$linha['id_user']."'> Excluir</a>&nbsp;
                 </div>
             </div> "; 
         } 
