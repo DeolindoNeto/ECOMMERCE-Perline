@@ -1,7 +1,7 @@
 <?php
     include "./conection.php"; 
 
-    $sql="SELECT * FROM Usuario WHERE excluido='false' ORDER BY id_user;";
+    $sql="SELECT * FROM usuario WHERE excluido='false' ORDER BY id_user;";
     
     $resultado= pg_query($conecta, $sql);
     $qtde=pg_num_rows($resultado);

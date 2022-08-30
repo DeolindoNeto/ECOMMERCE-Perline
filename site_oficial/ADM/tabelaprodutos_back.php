@@ -1,7 +1,7 @@
 <?php
     include "./conection.php"; 
 
-    $sql="SELECT * FROM Produto WHERE excluido='false' ORDER BY id_produto;";
+    $sql="SELECT * FROM produto WHERE excluido='false' ORDER BY id_produto;";
     
     $resultado= pg_query($conecta, $sql);
     $qtde=pg_num_rows($resultado);

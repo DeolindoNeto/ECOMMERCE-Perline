@@ -1,144 +1,98 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Perline</title>
-        <link rel="stylesheet" type="text/css" href="../estilo.css">
-    </head>
-    <body>
-        <div class="divfixa">
-            <div class="divimg"><img src="../imagens/logo.png" height="90px"></div>
-                <br><br>
-                <table width="85%">
-                    <tr>
-                        <th align="left">
-                        <a class="botao" href="../index.html">Home</a>&nbsp;
-                        <a class="botao" href="#Produtos" target="_blank">Produtos</a>&nbsp;
-                        <a class="botao" href="../local.html" target="_blank">Conheça Nossa Loja Física</a>&nbsp;
-                        <a class="botao" href="../sobre.html" target="_blank">Sobre</a>&nbsp;
-                        <a class="botao" href="../patrocinadores.html" target="_blank">Patrocinadores</a>&nbsp;
-                        </th>
-                        <th align="right">
-                        <a class="botao" href="#Carrinho" target="_blank">Carrinho</a>&nbsp;
-                        <a class="botao" href="../login.html" target="_blank">Login</a>&nbsp;
-                        </th>
-                    </tr>
-                </table>       
-            </div>  
-        <a name="topo"></a>
-        <br><br><br><br><br>
+<head>
+    <meta charset="UTF-8">
+    <title>P R O D U T O S</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+       
+    <div class="mae">
+       
+       <div class="tpfix">
         
-        <!-- Início da página -->
+           
+         
+           <abbr title="Home"><a href="index.html"><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
+           
+           <a id="titulo_login">P E R L I N E</a>
+            
+           <div id="icons_login">
+           
+           <abbr title="Local"><a href="local.html"><img class="icon_menu_local" src="../imagens/icon_menu_mapa.png"></a></abbr>
+           
+           <abbr title="Login"><a href="login.html"><img class="icon_menu_login" src="../imagens/icon_menu_login.png"></a></abbr>
+           
+           <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="../imagens/icon_menu_sacola.png"></a></abbr>
+           </div>  
+           
+           <div class="tpfix2">
+             
+               <div class="botoes">
+               <a class="prod" title="Produtos" href="tabelaprodutos.php">Produtos</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <a class="desen" title="Desenvolvedores" href="#">Desenvolvedores</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <a class="quem" title="Quem Somos" href="#">Quem Somos</a>
+               </div>
+          </div> 
+          
+    </div>
         
-        <br><br>
-        <center><div class="menu"><br><br><br>
-        <a class="voltar" href='./novoProduto.html'>Cadastrar novo Produto</a><br><br>
         <?php
             include "tabelaprodutos_back.php";
 
             if ($qtde == 0) {
-                echo "Não foi encontrado nenhum produto !!!<br><br>";
+                echo "Nenhum produto encontrado!<br><br>";
                 return;
             }
-        // Começar tabela e criar o cabeçalho
-        echo "
-        <table class='table1' border='1' width='95%'>
-            <tr height='90px'>
-                <th width='200px'>
-                    ID
-                </th>
-                <th width='200px'>
-                    Nome
-                </th>
-                <th width='200px'>
-                    Preço
-                </th>
-                <th width='200px'>
-                    Codigo Visual
-                </th>
-                <th width='200px'>
-                    Custo 
-                </th>
-                <th width='200px'>
-                    Preço de Venda
-                </th>
-                <th width='200px'>
-                    Margem de Lucro
-                </th>
-                <th width='200px'>
-                    Campo Imagem
-                </th>
-                <th width='200px'>
-                    Manufaturado?
-                </th>
-                <th width='200px'>
-                    Ações
-                </th>
-            </tr>";
+            
+    // Começar tabela e criar o cabeçalho
+    echo "
+    <div class='table'>
+        <div class='row'>
+            <div class='celula celulacod cellHeader'>
+                Cód. Produto
+            </div>
+            <div class='celula celulanome cellHeader'>
+                Nome
+            </div>
+            <div class='celula celulapreco cellHeader'>
+                Preço
+            </div>
+            <div class='celula celulaacoes'>
+                &nbsp;
+            </div>
+        </div>";
 
-            // Criar linhas com os dados dos produtos
-            foreach ($resultado_lista as $linha)
-            {
-                echo "
-                <tr height='90px'>
-                    <th>
-                        ".$linha['id_produto']."
-                    </th>
-                    <th>
-                        ".$linha['nome']."
-                    </th>
-                    <th>
-                        ".$linha['preco']."
-                    </th>
-                    <th>
-                        ".$linha['codigo_visual']."
-                    </th>
-                    <th>
-                        ".$linha['custo']."
-                    </th>
-                    <th>
-                        ".$linha['preco_venda']."
-                    </th>
-                    <th>
-                        ".$linha['margem_lucro']."
-                    </th>
-                    <th>
-                        ".$linha['campo_imagem']."
-                    </th>
-                    <th>
-                        ".$linha['manufaturado']."
-                    </th>
-                    <th>
-                        <a class='voltar' href='alteraProdutosFront.php?id_produto=".$linha['id_produto']."'>Alterar</a>&nbsp;
-                        <a class='voltar' href='excluiProdutoFront.php?id_produto=".$linha['id_produto']."'>Excluir</a>&nbsp;
-                    </th>
-                </tr> "; 
-            } 
-        // Fechando a tag da tabela
-        echo "</table>";    
-        ?>  
-        <br><br><br><br><br></div></center>  
+    // Criar linhas com os dados dos produtos
+        foreach ($resultado_lista as $linha)
+        {
+            echo "
+            <div class='row'>
+                <div class='celula celulacod'>
+                    ".$linha['id_produto']."
+                </div>
+                <div class='celula celulanome'>
+                    ".$linha['nome']."
+                </div>
+                <div class='celula celulapreco'>
+                    ".$linha['preco']."
+                </div>
+                <div class='celula celulaacoes'>
+                    <a href='cad_altera_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Alterar</a>&nbsp;
+                    <a href='cad_exclui_produtos_front.php?cod_produto=".$linha['cod_produto']."'> Excluir</a>&nbsp;
+                </div>
+            </div> "; 
+        } 
+    // Fechando a tag da tabela
+    echo "</div>";
+        ?>
         
-        <!-- Fim da página -->
         
-        <div id="divrodape">
-            <center>
-                <br>
-                <a class="voltar" href="#topo">Clique aqui para voltar ao topo</a>
-                <br><hr><br>
-                <a class="botao" href="./admhome.php">Menu de Desenvolvimento</a>&nbsp;
-                <br><br><hr>
-                <table>
-                    <tr>
-                        <td><white>Camila Eduarda - n°8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
-                        <td><white>Deolindo Neto - n°12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
-                        <td><white>Evelyn Mayra - n°15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
-                        <td><white>Mariana Caroline - n°28 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
-                        <td><white>Matheus Soares - n°30</white></td>
-                    </tr>
-                </table>
-
-            </center>
         </div>
-    </body>
+        
+    <footer>
+        <a> </a>
+    </footer>
+</body>
 </html>
