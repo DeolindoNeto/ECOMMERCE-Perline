@@ -37,7 +37,7 @@
                 excluido = '$excluido',
                 manufaturado = '$manufaturado',
                  quantidade = $quantidade
-           WHERE id_produto = $id_produto";
+           WHERE id_produto = $id_produto;";
     $resultado = pg_query($conecta, $sql);
     $linhas = pg_affected_rows($resultado);
 
@@ -48,8 +48,7 @@
     }
     else
         echo "<script type='text/javascript'>alert('Erro na Gravação !!!')</script>";
-        //echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
-        echo $sql;
+        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
 
     // Fechando conexão com o Banco de Dados
     pg_close($conecta);

@@ -79,7 +79,7 @@
                     ".$linha['preco']."
                 </div>
                 <div class='celula celulaacoes'>
-                    <a href='alteraproduto.php?id_produto=".$linha['id_produto']."'> Alterar</a>&nbsp;
+                    <a href='alteraProdutosFront.php?id_produto=".$linha['id_produto']."'> Alterar</a>&nbsp;
                     <a href='excluiProdutoFront.php?id_produto=".$linha['id_produto']."'> Excluir</a>&nbsp;
                 </div>
             </div> "; 
