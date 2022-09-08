@@ -1,3 +1,13 @@
+body
+{
+    margin: 0px;
+}
+html
+{
+background:rgb(255,221,233);
+font-family: arial, verdana;
+}
+
 /*----------- TELA HOME ------------*/
 
 .mae
@@ -101,6 +111,7 @@ a.quem:link
     margin-left: 580px;
     font-family: Georgia;
     font-size: 28px;
+    cursor: pointer;
 }
 
 
@@ -287,10 +298,37 @@ footer /*rodapé*/
     width: 30%;
 }
 
-/*----------- TELA DE PRODUTO ------------*/
+/*----------- TELA DE TABELA PRODUTO ------------*/
+.pesquisa
+{
+    margin-top: 150px;
+    margin-left: 400px;
+    border-radius: 5px;
+    background-color: #1ABC9C;
+    width: 500px;
+    height: 35px;
+    
+}
+
+.pesquisa2
+{
+    padding:4 10px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    color: white;
+    margin-top: -25px;
+}
+
+.icon_pesquisa
+{
+    margin-left: 450px
+}
+
 .table 
 {
-    margin-top: 140px;
+    margin-top: 30px;
     margin-left: 25%;
     width: 700px;
     display:grid;
@@ -337,10 +375,16 @@ footer /*rodapé*/
     width:105px;
 }
 
+.erro
+{
+    margin-left: 565px;
+}
+
 /*----------- TELA DE USUARIO ------------*/
+
 .table_usuario
 {
-    margin-top: 140px;
+    margin-top: 30px;
     margin-left: 10%;
     width: 1200px;
     display:grid;
@@ -394,4 +438,49 @@ footer /*rodapé*/
 .celulaacoes_usuario
 {
     width:105px;
+}
+
+/*----------- TELA EXCLUSAO USER ------------*/
+.forms
+{
+    margin-top: 150px;
+}
+
+/*----------- TELA SELEÇÃO PRODUTO ------------*/
+.divproduto
+{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+}
+
+.cada_prod
+{
+    text-align:center;  
+    width: 300px;
+    background-color: #1ABC9C;
+    border-radius: 10px;
+    font-family: Georgia;
+    font-size: 15px;
+}
+
+.content
+{
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+/*----------- TELA SELEÇÃO DETALHES PRODUTO ------------*/
+.detalhes_produtos
+{
+    margin-left: 30%;
+    margin-top: 12%;
+    width: 500px;
+    background-color: #1ABC9C;
+    border-radius: 10px;
+    font-family: Georgia;
+    font-size: 15px;
+    text-align: center;
 }

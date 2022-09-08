@@ -23,7 +23,7 @@
     $manufaturado = $_POST['PRODUCTMANFACTURED'];
     $dataExclusao = "2022-08-19 12:01:53.096966-03";
     $excluido = "false";
-    
+
     $sql = "UPDATE produto
              SET  nome = '$nomeProd',
                  preco = '$precoProd', 
@@ -37,19 +37,19 @@
                 excluido = '$excluido',
                 manufaturado = '$manufaturado',
                  quantidade = $quantidade
-           WHERE id_produto = $id_produto;";
-
+           WHERE id_produto = $id_produto";
     $resultado = pg_query($conecta, $sql);
     $linhas = pg_affected_rows($resultado);
 
     if ($linhas > 0){
         echo "<script type='text/javascript'>alert('Gravação OK !!!')</script>";
         echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
+
     }
     else
         echo "<script type='text/javascript'>alert('Erro na Gravação !!!')</script>";
-        echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
-
+        //echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=tabelaprodutos.php'>";
+        echo $sql;
 
     // Fechando conexão com o Banco de Dados
     pg_close($conecta);
