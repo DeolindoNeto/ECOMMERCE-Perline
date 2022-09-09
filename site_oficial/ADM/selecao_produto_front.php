@@ -39,7 +39,7 @@
     </div> 
     
     <?php 
-        include "./selecao_produto_back.phpselecao_produto_back.php";
+        include "./selecao_produto_back.php";
 
         // <!--<img src='img/".$linha['imagem']."' height=250 width=250>-->
 
