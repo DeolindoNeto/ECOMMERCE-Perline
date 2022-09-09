@@ -1,5 +1,5 @@
 <?php
-    include "conection.php"; 
+    include "./conection.php"; 
 
     $sql="SELECT * FROM produto WHERE excluido='false' ORDER BY nome;";
     

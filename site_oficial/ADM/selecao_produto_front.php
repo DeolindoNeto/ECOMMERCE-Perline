@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>P R O D U T O S</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!--conectando com o styles-->
-    <link rel="icon" href="favicon.png"> <!--icone na guia-->
+    <link rel="stylesheet" type="text/css" href="./styles.css"> <!--conectando com o styles-->
+    <link rel="icon" href="../imagens/favicon.png"> <!--icone na guia-->
 </head>
 <body>
      <div class="mae">
@@ -61,10 +61,9 @@
                 <div>
                     <br>
                     <a href='selecao_detalhes_front.php?id=".$linha['id_produto']."'> 
-                       <img src='icon_produto.png'/>
+                       <img src='../imagens/".$linha['campo_imagem']."'>
                     </a>
                 </div>
-
                 <div>
                     <div><p>".$linha['nome']."</p></div>
                     <div>R$ ".$preco."</div><br>";

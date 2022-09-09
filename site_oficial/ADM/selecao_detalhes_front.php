@@ -50,8 +50,7 @@
         <h1>
         <?php echo $linha['nome'];?>
         </h1>
-
-        <img src='icon_produto.png' />
+        "<img src='image/".$linha['imagem']."' /> <br />
         <br><br>
         Id do produto:<?php echo $linha['id_produto']; ?>
         <br><br>
