@@ -11,17 +11,17 @@
   
     <div class="tpfix">
            
-            <abbr title="Home"><a href=#><img class="icon_menu_home" src="icon_menu_home.png"></a></abbr>
+            <abbr title="Home"><a href=#><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
            
            <a id="titulo_home" title="Perline">P E R L I N E</a>
            
            <div id="icons_home">
            
-           <abbr title="Local"><a href=#><img class="icon_menu_local" src="icon_menu_mapa.png"></a></abbr>
+           <abbr title="Local"><a href=#><img class="icon_menu_local" src="../imagens/icon_menu_mapa.png"></a></abbr>
            
-           <abbr title="Login"><a href=#><img class="icon_menu_login" src="icon_menu_login.png"></a></abbr>
+           <abbr title="Login"><a href=#><img class="icon_menu_login" src="../imagens/icon_menu_login.png"></a></abbr>
            
-           <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="icon_menu_sacola.png"></a></abbr>
+           <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="../imagens/icon_menu_sacola.png"></a></abbr>
            
            </div>  
           
@@ -30,7 +30,7 @@
     <div class="tpfix2">
              
                <div class="botoes">
-               <a class="prod" title="Produtos" href="selecao_produto_front.php">Produtos</a>
+               <a class="prod" title="Produtos" href="./selecao_produto_front.php">Produtos</a>
                &nbsp;&nbsp;&nbsp;&nbsp;
                <a class="desen" title="Desenvolvedores" href="#">Desenvolvedores</a>
                &nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,7 +39,7 @@
     </div> 
     
     <?php 
-        include "selecao_produto_back.php";
+        include "./selecao_produto_back.phpselecao_produto_back.php";
 
         // <!--<img src='img/".$linha['imagem']."' height=250 width=250>-->
 
