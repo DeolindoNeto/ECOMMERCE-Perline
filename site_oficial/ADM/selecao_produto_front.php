@@ -10,7 +10,6 @@
      <div class="mae">
   
     <div class="tpfix">
-           
             <abbr title="Home"><a href=#><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
            
            <a id="titulo_home" title="Perline">P E R L I N E</a>
@@ -24,7 +23,6 @@
            <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="../imagens/icon_menu_sacola.png"></a></abbr>
            
            </div>  
-          
     </div>
 
     <div class="tpfix2">
@@ -51,7 +49,7 @@
 
         echo "<div class='content'>";
         echo "<div class='divproduto'>";
-
+        
         // Criar linhas com os dados dos produtos
         foreach ($resultado_lista as $linha)
         {
@@ -61,7 +59,7 @@
                 <div>
                     <br>
                     <a href='selecao_detalhes_front.php?id=".$linha['id_produto']."'> 
-                       <img src='../imagens/".$linha['campo_imagem']."'>
+                    <img src='../imagens/pulseira_hp.png'>
                     </a>
                 </div>
                 <div>
