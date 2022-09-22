@@ -10,7 +10,7 @@
      <div class="mae">
   
     <div class="tpfix">
-            <abbr title="Home"><a href=#><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
+            <abbr title="Home"><a href=./index.html><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
            
            <a id="titulo_home" title="Perline">P E R L I N E</a>
            
