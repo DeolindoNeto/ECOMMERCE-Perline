@@ -4,15 +4,33 @@ body
 }
 html
 {
-background:#E4E4E4;
+background:#e6f8ff;
 font-family: arial, verdana;
 }
+.pj
+{
+    font-size: 150%;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.pc
+{
+    font-size: 150%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+iframe
+{
+    border-radius: 10px;
+}
 /*----------- TELA HOME ------------*/
 
 .mae
 {
-    background-color: white;
+    background-color: #e6f8ff;
     top: 0;
     left: 0;
 }
@@ -21,7 +39,6 @@ font-family: arial, verdana;
 {
     text-align: left;
     color: white;
-    margin-left: 20px;
     
 }
 
@@ -33,17 +50,30 @@ font-family: arial, verdana;
 
 .voltartopo
 {
-   
+   width: 25%;
 }
 
 .logo
 {
-  width: 25%;
+    width: 25%;
 }
 
 .imghome
 {
+    width: 98%;
+    background-color: #be80ff;
+    border-radius: 10px;
+    margin-top: 8%;
+    font-family: Georgia;
+    font-size: 35px;
+}
+
+.hometotal
+{
     width: 100%;
+    font-size: 150%;
+    display: flex;
+    justify-items: auto; 
 }
 
 .tpfix 
@@ -74,12 +104,12 @@ font-family: arial, verdana;
 
 .icon_menu_home
 {
-    margin-left: 20px;    
+
 }
 
 .botoes
 {
-    width: 50%;
+    width: 80%;
 }
 
 .desen, .prod, .quem
@@ -148,9 +178,8 @@ a.quem:link
 
 #icons_home
 {
-    text-align: center;
-    width: 25%;
-    margin-left: 410px;    
+    text-align: right;
+    width: 25%;   
 }
   
 #titulo_home
@@ -165,6 +194,7 @@ a.quem:link
 footer /*rodapé*/
 {
     justify-content: space-around;
+    margin-top: 5%;
     bottom: 0;
     display: flex;
     background-color: #003040;
@@ -174,6 +204,7 @@ footer /*rodapé*/
     text-align: center;
     left: 0;
     align-items: center;
+    font-size: 125%;
 }
 
 /*----------- TELA DE LOGIN ------------*/
@@ -520,6 +551,28 @@ footer /*rodapé*/
     margin-left: 20%;
 }
 
+.home_produtos
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 30%;
+    background-color: #be80ff;
+    border-radius: 10px;
+    font-family: Georgia;
+    font-size: 15px;
+    text-align: center;
+}
+.home_video
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 62.5%;
+    background-color: #be80ff;
+    border-radius: 10px;
+    font-family: Georgia;
+    font-size: 15px;
+    text-align: center;
+}
 /*----------- TELA SELEÇÃO DETALHES PRODUTO ------------*/
 .detalhes_produtos
 {
