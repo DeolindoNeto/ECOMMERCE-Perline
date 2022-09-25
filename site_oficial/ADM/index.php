@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>P E R L I N E</title>
     <link rel="stylesheet" type="text/css" href="styles.css"> <!--conectando com o styles-->
-    <link rel="icon" href="../imagens/favicon.png"> <!--icone na guia-->
+    <link rel="icon" href="../imagens/perlineLogo_reverso.svg"> <!--icone na guia-->
 </head>
 <body>
     <div class="mae">
@@ -31,9 +31,8 @@
 
                     </div> 
         </div>
-        
-        <center><div class="imghome"><br><img src="../imagens/imggrandehome.jpg" width="95%"><br>
-             <p>A Perline é uma empresa que foi criada com o intuito de comercializar pulseiras de miçanga.</p><br>
+        <center><div class="imghome"><br><img src="../imagens/bannerPerline.png" height="55%" width="80%"><br>
+             <p>A Perline é uma empresa que foi criada com o intuito de tornar você, mais estiloso</p><br>
         </div></center>
         
         <div class="hometotal">
@@ -42,17 +41,26 @@
                     <h1>
                     Pulseira Harry Potter
                     </h1>
+                    <a href='selecao_detalhes_front.php?id=6'> 
                     <img src='../imagens/sonserina.png' width="70%">
-                    <br><p class="pc">Pulseira com tema das casas da série de livros Harry Potter.</p><br>
+                    </a>
+                    <br><br><a href=# id="link">Comprar</a>
+                    <br><p class="pc">Pulseira com tema das casas da série de livros Harry Potter.</p>
+                    <p class="pc">Valor: R$ 5.00</p>
                 </div>
             </div>
+            
             <div class="home_produtos">    
                 <div>
                     <h1>
                     Pulseira Stranger Things
                     </h1>
+                    <a href='selecao_detalhes_front.php?id=3'> 
                     <img src='../imagens/stranger_things.png' width="70%">
-                    <br><p class="pc">Pulseira com tema da série Stranger Things.</p><br>
+                    </a>
+                    <br><br><a href=# id="link">Comprar</a>
+                    <br><p class="pc">Pulseira com tema da série Stranger Things.</p>
+                    <p class="pc">Valor: R$5.00</p>
                 </div>
             </div>
             <div class="home_produtos">    
@@ -60,12 +68,15 @@
                     <h1>
                     Pulseira de coração
                     </h1>
+                    <a href='selecao_detalhes_front.php?id=2'> 
                     <img src='../imagens/coracao.png' width="70%">
-                    <br><p class="pc">Pulseira decorada com miçangas de corações nela.</p><br>
+                    </a>
+                    <br><br><a href=# id="link">Comprar</a>
+                    <br><p class="pc">Pulseira decorada com miçangas de corações nela.</p>
+                    <p class="pc">Valor: R$5.00</p>
                 </div>
             </div>
         </div>
-            
         <div class="hometotal">
             <div class="home_produtos">    
                     <div>

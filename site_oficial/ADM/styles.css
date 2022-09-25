@@ -20,6 +20,7 @@ font-family: arial, verdana;
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: Arial, Verdana;
 }
 
 iframe
@@ -66,7 +67,7 @@ img
 .imghome
 {
     width: 98%;
-    background-color: #be80ff;
+    background-color: #5bc498;
     border-radius: 10px;
     margin-top: 8%;
     font-family: Georgia;
@@ -546,7 +547,7 @@ footer /*rodapé*/
     width: 300px;
     background-color: #1ABC9C;
     border-radius: 10px;
-    font-family: Georgia;
+    font-family: Arial;
     font-size: 15px;
 }
 
@@ -561,9 +562,9 @@ footer /*rodapé*/
     margin-left: 2.5%;
     margin-top: 3%;
     width: 30%;
-    background-color: #be80ff;
+    background-color: #5bc498;
     border-radius: 10px;
-    font-family: Georgia;
+    font-family: Arial;
     font-size: 15px;
     text-align: center;
 }
@@ -572,9 +573,9 @@ footer /*rodapé*/
     margin-left: 2.5%;
     margin-top: 3%;
     width: 62.5%;
-    background-color: #be80ff;
+    background-color: #5bc498;
     border-radius: 10px;
-    font-family: Georgia;
+    font-family: Arial;
     font-size: 15px;
     text-align: center;
 }
@@ -582,11 +583,53 @@ footer /*rodapé*/
 .detalhes_produtos
 {
     margin-left: 30%;
-    margin-top: 12%;
+    margin-top: 2%;
     width: 500px;
     background-color: #1ABC9C;
     border-radius: 10px;
-    font-family: Georgia;
+    font-family: Arial;
     font-size: 15px;
     text-align: center;
+}
+
+#link:link{
+    background-color: beige;
+    color: black;
+    border: 2px solid;
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 5%;
+    text-decoration: none;
+}
+
+#link:hover {
+    background-color:#006d40;
+    color: black;
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    padding: 6px 3%;
+    font-size: 20px;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+#link:active {
+    background-color: #006d40;
+    color: black;
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    padding: 6px 3%;
+    text-decoration: none;
+}
+
+#link:visited {                             
+    background-color: darkred;  /*não foi colocado uma cor diferente pois estava dando problema com os clicks no "voltar ao topo"*/
+    color: #ECE5C7;
+    border: 1px solid;
+    border-radius: 7px;
+    text-align: center;
+    padding: 6px 3%;
+    text-decoration: none;
 }

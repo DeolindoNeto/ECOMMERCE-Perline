@@ -11,18 +11,18 @@
   
     <div class="tpfix">
            
-           <abbr title="Home"><a href=#><img class="icon_menu_home" src="icon_menu_home.png"></a></abbr>
+           <abbr title="Home"><a href=#><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>
 
            
            <a id="titulo_home" title="Perline">P E R L I N E</a>
            
            <div id="icons_home">
            
-           <abbr title="Local"><a href=#><img class="icon_menu_local" src="icon_menu_mapa.png"></a></abbr>
+           <abbr title="Local"><a href=#><img class="icon_menu_local" src="../imagens/icon_menu_mapa.png"></a></abbr>
            
-           <abbr title="Login"><a href=#><img class="icon_menu_login" src="icon_menu_login.png"></a></abbr>
+           <abbr title="Login"><a href=#><img class="icon_menu_login" src="../imagens/icon_menu_login.png"></a></abbr>
            
-           <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="icon_menu_sacola.png"></a></abbr>
+           <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="../imagens/icon_menu_sacola.png"></a></abbr>
            
            </div>  
           
@@ -50,7 +50,7 @@
         <h1>
         <?php echo $linha['nome'];?>
         </h1>
-        "<img src='image/".$linha['imagem']."' /> <br />
+        <img src="../imagens/sonserina.png" width="70%"> <br />
         <br><br>
         Id do produto:<?php echo $linha['id_produto']; ?>
         <br><br>
