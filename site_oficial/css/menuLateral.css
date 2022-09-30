@@ -13,16 +13,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.frase_local
+{
+    margin-left: 36.5%;
+}
+
 body{
     transition: 0.2s;
-    background: #DAF7F0;
+    background: #fff;
+    overflow-x: hidden;
 } 
 
 header {
-    padding: 20px;
     transition: 0.2s;
     position: fixed;
-    height: 8%;
+    height: 120px;
     width: 100%;
     top: 0;
     left: 0;
@@ -31,13 +36,265 @@ header {
     align-items: center;
     text-align: center;
 }
+/*----------- TELA HOME ------------*/
 
+.mae
+{
+    background-color: #fff;
+    top: 0;
+    left: 0px;
+}
+
+.redondo
+{
+    border-radius: 8px;
+}
+
+.navegacao
+{
+    text-align: left;
+    color: white;
+    margin-left: 18%;
+}
+
+
+.desenvolvedores
+{
+   text-align: left;
+    color: white;
+}
+
+.voltartopo
+{
+   width: 25%;
+}
+
+.carrinhohome
+{
+    width: 60%;
+}
+
+.logo
+{
+    width: 20%;
+}
+
+.imghome
+{
+    width: 91%;
+    background-color: white;
+    margin-top: 8%;
+    font-family: Georgia;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+}
+
+.mapa
+{
+    padding-top:100px;
+}
+
+.quemsomostotales
+{
+    width: 91%;
+    background-color: transparent;
+    margin-top: 200px;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+    display:flex;
+    justify-items:center; 
+    padding-left: 30px;
+    
+}
+
+ComicSans{
+    Font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-size: 200%;
+}
+.quemsomostotal
+{
+    width: 91%;
+    background-color: transparent;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+    display:flex;
+    justify-items:center; 
+    margin-top: 50px;
+}
+
+
+/*---------- config do p ------------*/
+.enrolation
+{
+    padding-bottom:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top:10px;
+    text-align: justify;
+}
+/*---------- fim ------------*/
+
+.hometotal
+{
+    width: 93%;
+    font-size: 150%;
+    margin-left: 7%;
+    display: flex;
+    justify-items: auto; 
+}
+
+.tpfix 
+{
+    position: fixed;
+    height: 14%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1ABC9C;
+    display: flex;
+    align-items: center;
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 14%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: #1ABC9C;
+    text-align: center;
+}
+
+
+
+.botoes
+{
+    width: 80%;
+    margin-left: 7%;
+}
+
+.desen, .prod, .quem
+{
+    margin: 0 15px;
+    cursor: pointer;
+    font-family: Georgia;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+a.btnnav1:visited,
+a.btnnav1:link,
+a.btnnav2:visited,
+a.btnnav2:link,
+a.btnnav3:visited,
+a.btnnav3:link
+{
+    color: white;
+    text-decoration: none;
+}
+a.btnnav2:hover,
+a.btnnav1:hover,
+a.btnnav3:hover,
+a.desen:hover,
+a.prod:hover,
+a.quem:hover
+{
+    color: white;
+    text-decoration:underline;
+}
+
+a.desen:active,
+a.desen:visited,
+a.desen:link
+{
+    color: white;
+}
+
+a.prod:active,
+a.prod:visited,
+a.prod:link
+{
+    color: white;
+}
+
+a.quem:active,
+a.quem:visited,
+a.quem:link
+{
+    color: white;
+}
+
+.icon_menu_login
+{
+   
+    margin: 0 15px;
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+.icon_menu_sacola
+{
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+#icons_home
+{
+    text-align: right;
+    width: 300px; 
+}
+  
+#titulo_home
+{
+    margin-left: 580px;
+    font-family: Georgia;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+footer /*rodapé*/
+{
+    justify-content: space-around;
+    margin-top: 5%;
+    bottom: 0;
+    display: flex;
+    background-color: #003040;
+    color: #1ABC9C;
+    width: 100%;
+    height: 70%;    
+    text-align: center;
+    left: 0;
+    align-items: center;
+    font-size: 125%;
+}
 /*------------------ INDEX --------------------*/
+
+.hometotal
+{
+    width: 100%;
+    font-size: 150%;
+    display: flex;
+    justify-items: auto; 
+}
+
 
 #icons_home
 {
     margin-left: 37%;
     margin-bottom: 10px;
+}
+
+.icon_menu_home
+{
+    margin-left: 5px;
 }
 
 .icon_menu_login
@@ -57,7 +314,7 @@ header {
     position: fixed;
     height: 5%;
     width: 100%;
-    top: 10%;
+    top: 14%;
     background-color: black;
     color: #1ABC9C;
 }
@@ -91,9 +348,10 @@ a.prod:link
 
 .sidebar{
     position: fixed;
+    top: 120px;
     width: 300px;
-    height: 100%;
-    margin-top: 90px;
+    height: 100vh;
+    margin-top: 0px;
     padding-top: 30px;
     left: 0;
     background: #47d8b7;
@@ -204,6 +462,31 @@ footer /*rodapé*/
     align-items: center
 }
 
+.home_produtos
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+}
+.home_video
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 57.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    
+}
 /*----------- TELA DE LOGIN ------------*/
 
 #titulo_login
@@ -446,6 +729,24 @@ input[class="reset"]:hover {
     border-radius: 20px;
     border: solid 3px black;
     box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    
+  
+}
+
+.cada_prodindex
+{
+    text-align:center;  
+    background-color: #1ABC9C;
+    font-family: Georgia;
+    font-size: 15px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+  
 }
 
 .cada_prod:hover
@@ -495,10 +796,12 @@ input[class="reset"]:hover {
 {
     margin-left: 30%;
     margin-top: 12%;
+    padding:5px;
     width: 500px;
     background-color: #1ABC9C;
     border-radius: 10px;
     font-family: Georgia;
     font-size: 15px;
     text-align: center;
+    border-style:solid;
 }
