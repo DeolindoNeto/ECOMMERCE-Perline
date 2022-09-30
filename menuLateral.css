@@ -1,0 +1,721 @@
+/*------------------ GERAL --------------------*/
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    transition: 0.2s;
+    background: #DAF7F0;
+} 
+
+header {
+    transition: 0.2s;
+    position: fixed;
+    height: 14%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1ABC9C;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+/*----------- TELA HOME ------------*/
+
+.mae
+{
+    background-color: #e6f8ff;
+    top: 0;
+    left: 0px;
+}
+
+.redondo
+{
+    border-radius: 10px;
+}
+
+.navegacao
+{
+    text-align: left;
+    color: white;
+    margin-left: 13.5%;
+    
+}
+
+.desenvolvedores
+{
+   text-align: left;
+    color: white;
+}
+
+.voltartopo
+{
+   width: 25%;
+}
+
+.carrinhohome
+{
+    width: 60%;
+}
+
+.logo
+{
+    width: 20%;
+}
+
+.imghome
+{
+    width: 91%;
+    background-color: white;
+    margin-top: 8%;
+    font-family: Georgia;
+    font-size: 35px;
+    margin-left: 7%;
+}
+
+.hometotal
+{
+    width: 93%;
+    font-size: 150%;
+    margin-left: 7%;
+    display: flex;
+    justify-items: auto; 
+}
+
+.tpfix 
+{
+    position: fixed;
+    height: 14%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #003040;
+    display: flex;
+    align-items: center;
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 14%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: #1ABC9C;
+    text-align: center;
+}
+
+.botoes
+{
+    width: 80%;
+    margin-left: 7%;
+}
+
+.desen, .prod, .quem
+{
+    margin: 0 15px;
+    cursor: pointer;
+    font-family: Georgia;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+
+a.btnnav1:visited,
+a.btnnav1:link,
+a.btnnav2:visited,
+a.btnnav2:link,
+a.btnnav3:visited,
+a.btnnav3:link
+{
+    color: white;
+    text-decoration: none;
+}
+a.btnnav2:hover,
+a.btnnav1:hover,
+a.btnnav3:hover,
+a.desen:hover,
+a.prod:hover,
+a.quem:hover
+{
+    color: white;
+    text-decoration:underline;
+}
+
+a.desen:active,
+a.desen:visited,
+a.desen:link
+{
+    color: white;
+}
+
+a.prod:active,
+a.prod:visited,
+a.prod:link
+{
+    color: white;
+}
+
+a.quem:active,
+a.quem:visited,
+a.quem:link
+{
+    color: white;
+}
+
+.icon_menu_login
+{
+   
+    margin: 0 15px;
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+.icon_menu_sacola
+{
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+#icons_home
+{
+    text-align: right;
+    width: 20%;   
+}
+  
+#titulo_home
+{
+    margin-left: 580px;
+    font-family: Georgia;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+footer /*rodapé*/
+{
+    justify-content: space-around;
+    margin-top: 5%;
+    bottom: 0;
+    display: flex;
+    background-color: #003040;
+    color: #1ABC9C;
+    width: 100%;
+    height: 70%;    
+    text-align: center;
+    left: 0;
+    align-items: center;
+    font-size: 125%;
+}
+/*------------------ INDEX --------------------*/
+
+.hometotal
+{
+    width: 100%;
+    font-size: 150%;
+    display: flex;
+    justify-items: auto; 
+}
+
+
+#icons_home
+{
+    margin-left: 37%;
+    margin-bottom: 10px;
+}
+
+.icon_menu_login
+{
+   
+    margin: 0 15px;
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+.icon_menu_sacola
+{
+    cursor: pointer; /*mudar o ponteiro do mouse*/
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 14%;
+    background-color: black;
+    color: #1ABC9C;
+}
+
+.prod
+{
+    cursor: pointer;
+    font-family: Georgia;
+    text-decoration: none;
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
+
+a.prod:active,
+a.prod:hover,
+a.prod:visited,
+a.prod:link
+{
+    color: #1ABC9C;
+}
+
+#titulo_home
+{
+    margin-left: 580px;
+    font-family: Georgia;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: -30px;
+}
+
+
+.sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    margin-top: 1%;
+    padding-top: 30px;
+    left: 0;
+    background: #47d8b7;
+    transition: 0.3s;
+}
+
+.sidebar .image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.sidebar h2{
+    color: #fff;
+    margin-top: 0;
+}
+
+.sidebar .icon{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.sidebar .icon:hover{
+    background: black;
+}
+
+.sidebar ion-icon{
+    padding-right: 10px;
+}
+
+label #btnSidebar{
+    position: fixed;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s;
+    transition-property: color;
+    left: 30px;
+    top: 20px;
+}
+
+label #btnSidebar:hover{
+    color: black;
+}
+
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+
+#check:checked ~ .sidebar .unesp h3 span{
+    display: none;
+}
+
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check:checked ~ .sidebar .unesp h3 img{
+    margin-left: 180px;
+    width: 27px;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar .cad{
+    text-transform: uppercase;
+}
+
+
+.content {
+    transition: 0.2s;
+}
+
+.logo_no_carrinho
+{
+    margin-top: 450px;
+    font-family: Georgia;
+}
+
+.pricinpal container-fluid
+{
+    margin-top: 500px;
+}
+
+footer /*rodapé*/
+{
+    bottom: 0;
+    background-color: black;
+    color: #1ABC9C;
+    width: 100%;
+    height: 5%;    
+    text-align: center;
+    left: 0;
+    align-items: center
+}
+
+.home_produtos
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+}
+.home_video
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 57.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+}
+/*----------- TELA DE LOGIN ------------*/
+
+#titulo_login
+{
+    margin-left: 550px;
+    font-family: Georgia;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#icons_login
+{
+    text-align: center;
+    margin-left: 400px;
+}
+
+.card 
+{
+    margin-top: 10%;
+    background-color: #1ABC9C;
+    padding: 40px;
+    width:280px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.card-header_login 
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.card-header_login:after 
+{
+    content: "";
+    width: 70px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 105px;
+}
+
+.card-content_login label 
+{
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.card-content-area_login
+{
+    display: flex;
+    flex-direction: column;
+    padding:10px 0;
+}
+
+.card-content-area_login input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.card-footer 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.esquesenha
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s; 
+    margin-left: 32%;
+    font-size: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquesenha:hover {
+    color: #fff;
+}
+
+.criarconta {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.criarconta:hover {
+    color: black;
+}
+
+input[type="submit"]{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover{
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- TELA DE LOGIN ------------*/
+
+.cadastro{
+    margin-top: 9%;
+    background-color: #1ABC9C;
+    padding: 40px;
+    height: 350px;
+    width: 600px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.card-header_cadastro
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+    margin-top: -25px;
+    margin-left: -5%;
+}
+
+.card-header_cadastro:after 
+{
+    content: "";
+    width: 106px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 263px;
+}
+
+.cadastro label 
+{
+    color: #fff;
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+.cadastro input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.form1{
+    margin-left: 6%;
+}
+.form2 {
+    margin-left: 63%;
+    margin-top: -47%;
+}
+
+input[class="submit"],
+input[class="reset"] {
+    width: 25%;
+    margin-top: 7%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[class="submit"]:hover,
+input[class="reset"]:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+
+/*----------- TELA DE SELEÇAO PRODUTOS ------------*/
+
+.divproduto
+{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+    margin-top: 10%;
+}
+
+.cada_prod
+{
+    text-align:center;  
+    width: 300px;
+    height: 300px;
+    background-color: #1ABC9C;
+    font-family: Georgia;
+    font-size: 15px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.cada_prod:hover
+{
+        box-shadow:
+        3px 3px #236C5B,
+        4px 4px #236C5B,
+        5px 5px #236C5B;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.imgproduto{
+    margin-top: 5%;
+}
+
+.textocomprar{
+    margin-top: 8%;
+}
+
+.botaocomprar {
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocomprar:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- TELA DE DETALHES PRODUTOS ------------*/
+
+.detalhes_produtos
+{
+    margin-left: 30%;
+    margin-top: 12%;
+    width: 500px;
+    background-color: #1ABC9C;
+    border-radius: 10px;
+    font-family: Georgia;
+    font-size: 15px;
+    text-align: center;
+}
