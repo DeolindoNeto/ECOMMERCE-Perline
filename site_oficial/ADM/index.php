@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>P E R L I N E</title>
-    <link rel="stylesheet" type="text/css" href="styles.css"> <!--conectando com o styles-->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css"> <!--conectando com o styles-->
     <link rel="icon" href="../imagens/perlineLogo_reverso.svg"> <!--icone na guia-->
 </head>
 <body>
