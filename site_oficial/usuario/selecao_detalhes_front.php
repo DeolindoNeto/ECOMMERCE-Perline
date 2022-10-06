@@ -6,6 +6,7 @@
     <title>P R O D U T O S</title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+     <link rel="icon" href="../img/faviconproddeta.png"> <!--icone na guia-->
 </head>
 
 <body>
