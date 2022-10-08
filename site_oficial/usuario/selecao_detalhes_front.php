@@ -13,7 +13,9 @@
     <input type="checkbox" id="check">
     <header>
         <div class="carrinhohome">
-        
+        <label for="check">
+            <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+        </label>
         </div>
         
         <div class="logo">
@@ -26,13 +28,13 @@
            <abbr title="Login"><a href="../usuario/login.html"><img class="icon_menu_login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
            </div>  
     </header>
-    <!--<div class="sidebar">
+    <div class="sidebar">
         <center>
-           <!-- <div class="logo_no_carrinho">
+            <!--<div class="logo_no_carrinho">
                 <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
-            </div>
+            </div>-->
         </center>
-    </div>-->
+    </div>
     
     <div class="tpfix2">
                
