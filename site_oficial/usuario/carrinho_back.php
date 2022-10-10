@@ -2,13 +2,13 @@
     include "../ADM/conection.php"; 
 
     // Verifica se o produto já está no carrinho
-    function getQtdeProdutoCarrinho($conecta, $codusuario, $codproduto) {
+    function getQtdeProdutoCarrinho($conecta, $id_user, $id_produto) {
 
         /* seleciona o carrinho */
         $sql="SELECT qtde
                 FROM carrinho
-               WHERE cod_usuario = $codusuario
-                 AND cod_produto = $codproduto";
+               WHERE id_usuer = $id_user
+                 AND id_produto = $id_produto";
 
         $resultado=pg_query($conecta,$sql);
         $qtde=pg_num_rows($resultado);
@@ -21,9 +21,9 @@
         return intval($produto_carrinho['qtde']);
     }
 
-    function addCarrinho($conecta, $codusuario, $codproduto) {
+    function addCarrinho($conecta, $id_user, $id_produto) {
 
-        $qtdeProduto = getQtdeProdutoCarrinho($conecta, $codusuario, $codproduto);
+        $qtdeProduto = getQtdeProdutoCarrinho($conecta, $id_user, $id_produto);
 
         // Se o produto ainda não existe no carrinho
         if ($qtdeProduto == 0) {
@@ -35,32 +35,32 @@
         else {
             $sql="UPDATE carrinho
                      set qtde = ".($qtdeProduto + 1).
-                  "where cod_produto = $codproduto
-                     and cod_usuario = $codusuario";
+                  "where cod_produto = $id_produto
+                     and cod_usuario = $id_user";
         }
 
         // Execução
         pg_query($conecta,$sql);
     }
 
-    function removeCarrinho($conecta, $codusuario, $codproduto) {
+    function removeCarrinho($conecta, $id_user, $id_produto) {
         $sql="DELETE FROM carrinho
-               where cod_produto = $codproduto
-                 and cod_usuario = $codusuario";
+               where cod_produto = $id_produto
+                 and cod_usuario = $id_user";
 
         // Execução
         pg_query($conecta,$sql);
     }
 
-    function updateCarrinho($conecta, $codusuario, $prods) {
+    function updateCarrinho($conecta, $id_user, $prods) {
 
         //var_dump($prods);
 
-        foreach($prods as $codproduto => $qtd){
+        foreach($prods as $id_produto => $qtd){
             $sql="UPDATE carrinho
                     set qtde = $qtd
-                where cod_produto = $codproduto
-                    and cod_usuario = $codusuario";
+                where id_produto = $id_produto
+                    and id_user = $id_user";
             
             pg_query($conecta,$sql);
         }
@@ -72,13 +72,13 @@
     if (!empty($acao))
     {
         if ($acao == 'add') {
-            addCarrinho($conecta, $codusuario, $codproduto);
+            addCarrinho($conecta, $id_user, $id_produto);
         }
         else if($acao == 'del'){
-            removeCarrinho($conecta, $codusuario, $codproduto);
+            removeCarrinho($conecta, $id_user, $id_produto);
         }
         else if($acao == 'up'){
-            updateCarrinho($conecta, $codusuario, $prods);
+            updateCarrinho($conecta, $id_user, $prods);
         }
 
         // Modifica a url para remover qualquer uma das ações: add, del ou up, evita que a ação seja
@@ -94,9 +94,9 @@
                  p.descricao,
                  p.qtde as estoque
             FROM carrinho c
-           inner join produtoscrud p
-              on c.cod_produto = p.cod_produto
-           WHERE c.cod_usuario = $codusuario
+           inner join produto p
+              on c.id_produto = p.id_produto
+           WHERE c.id_user = $id_usuario
            ORDER BY p.descricao;";
 
     $resultado= pg_query($conecta, $sql);

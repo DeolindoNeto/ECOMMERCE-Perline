@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../css/menuLateral.css">
 <?php
      $acao = $_GET['acao'] ?? '';
-     $idproduto = $_GET['idproduto'] ?? 0;
+     $id_produto = $_GET['id_produto'] ?? 0;
      $id_usuer = 1; // Depois precisamos alterar para pegar da $_SESSION
  
      if ($acao=='up') {
@@ -53,14 +53,14 @@
                      <?php echo $linha['preco']; ?>
                  </div>
                  <div class='cell cellPreco'>
-                     <input type="text" size="3" name="prod[<?php echo $idprod; ?>]"
+                     <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
                          value="<?php echo $linha['qtde']; ?>" />
                  </div>
                  <div class='cell cellPreco'>
                      <?php echo $linha['subtotal']; ?>
                  </div>
                  <div class='cell cellAcoes'>
-                     <a href='?acao=del&codproduto=<?php echo $idprod; ?>'>Excluir</a>
+                     <a href='?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                  </div>
              </div>
      <?php 
