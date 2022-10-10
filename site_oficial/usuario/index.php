@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
 </head> 
-
 <body>
     <div class="mae">
     <input type="checkbox" id="check">
@@ -33,6 +32,7 @@
            <!-- <div class="logo_no_carrinho">
                 <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
             </div> -->
+            <iframe src="http://ftp.projetoscti.com.br/projetoscti21/site_oficial/usuario/carrinho_front.php" width="285" height="675"></iframe>
         </center>
     </div>
     

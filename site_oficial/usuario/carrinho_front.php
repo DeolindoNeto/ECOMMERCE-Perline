@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../css/menuLateral.css">
-<div class= "sidebar">
 <?php
      $acao = $_GET['acao'] ?? '';
      $idproduto = $_GET['idproduto'] ?? 0;
@@ -70,10 +69,5 @@
      ?>
  
      <br><br>
-     <input type="submit" value="Atualizar Carrinho" />&nbsp;&nbsp;
-     <a href="selecao_produtos_front.php">Continuar Comprando</a>&nbsp;&nbsp;
-     <a href="finalizacompra.php">Finalizar Compra</a>
-     
      </form>
- </div>
 ?>
