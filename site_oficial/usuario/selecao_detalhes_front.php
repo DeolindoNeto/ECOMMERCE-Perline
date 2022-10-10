@@ -77,7 +77,7 @@
         <br><br>
         Manufaturado: <?php echo $linha['manufaturado']; ?>
         <br><br>
-        <a href='carrinho_front.php?acao=add&codproduto=<?php echo $id_produto; ?>'>Comprar</a>
+        <a href='carrinho_front.php?acao=add&idproduto=<?php echo $id_produto; ?>'>Comprar</a>
         &nbsp;<a href="../usuario/selecao_produto_front.php">Voltar</a>
         <br>
     </div>
@@ -88,5 +88,3 @@
     </footer>
 </body>
 </html>
-
-

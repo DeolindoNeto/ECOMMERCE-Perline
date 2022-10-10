@@ -3,8 +3,8 @@
 <div class= "sidebar">
 <?php
      $acao = $_GET['acao'] ?? '';
-     $codproduto = $_GET['codproduto'] ?? 0;
-     $codusuario = 1; // Depois precisamos alterar para pegar da $_SESSION
+     $idproduto = $_GET['idproduto'] ?? 0;
+     $id_usuer = 1; // Depois precisamos alterar para pegar da $_SESSION
  
      if ($acao=='up') {
          if (is_array($_POST['prod']))
@@ -43,7 +43,7 @@
          // Criar linhas com os dados dos produtos
          foreach ($resultado_lista as $linha)
          { 
-             $idprod = $linha['cod_produto'];
+             $id_produto = $linha['id_produto'];
              $total += floatval($linha['subtotal']);
      ?>
              <div class='row'>
