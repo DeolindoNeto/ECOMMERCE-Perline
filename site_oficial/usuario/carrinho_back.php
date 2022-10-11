@@ -7,7 +7,7 @@
         /* seleciona o carrinho */
         $sql="SELECT qtde
                 FROM carrinho
-               WHERE id_usuer = $id_user
+               WHERE id_user = $id_user
                  AND id_produto = $id_produto";
 
         $resultado=pg_query($conecta,$sql);
@@ -29,14 +29,14 @@
         if ($qtdeProduto == 0) {
             // Insere o produto
             $sql="INSERT INTO carrinho 
-                (cod_produto, cod_usuario, qtde)   VALUES 
-                ($codproduto, $codusuario, 1);";
+                (id_produto, id_user, qtde)   VALUES 
+                ($id_produto, $id_user, 1);";
         }
         else {
             $sql="UPDATE carrinho
-                     set qtde = ".($qtdeProduto + 1).
-                  "where cod_produto = $id_produto
-                     and cod_usuario = $id_user";
+                     set quantidade = ".($qtdeProduto + 1).
+                  "where id_produto = $id_produto
+                     and id_user = $id_user";
         }
 
         // Execução
@@ -45,8 +45,8 @@
 
     function removeCarrinho($conecta, $id_user, $id_produto) {
         $sql="DELETE FROM carrinho
-               where cod_produto = $id_produto
-                 and cod_usuario = $id_user";
+               where id_produto = $id_produto
+                 and id_user = $id_user";
 
         // Execução
         pg_query($conecta,$sql);
@@ -56,9 +56,9 @@
 
         //var_dump($prods);
 
-        foreach($prods as $id_produto => $qtd){
+        foreach($prods as $id_produto => $qtde){
             $sql="UPDATE carrinho
-                    set qtde = $qtd
+                    set qtde = $qtde
                 where id_produto = $id_produto
                     and id_user = $id_user";
             
@@ -91,13 +91,11 @@
     $sql="SELECT c.*,
                  p.preco,
                  c.qtde * p.preco as subtotal,
-                 p.descricao,
-                 p.qtde as estoque
+                 p.quantidade as estoque
             FROM carrinho c
            inner join produto p
               on c.id_produto = p.id_produto
-           WHERE c.id_user = $id_usuario
-           ORDER BY p.descricao;";
+           WHERE c.id_user = $id_user"; 
 
     $resultado= pg_query($conecta, $sql);
     $qtde=pg_num_rows($resultado);

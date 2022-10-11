@@ -63,7 +63,7 @@
                     <h2>
                     Pulseira Harry Potter
                     </h2>
-                    <a href='selecao_detalhes_front.php?id=6'> 
+                    <a href='selecao_detalhes_front.php?id_produto=6'> 
                     <img class="redondo" src='../imagens/sonserina.png' width="70%">
                     </a>
                     <br><br><a href=# id="link">Comprar</a>
@@ -78,7 +78,7 @@
                     <h2>
                     Pulseira Stranger Things
                     </h2>
-                    <a href='selecao_detalhes_front.php?id=3'> 
+                    <a href='selecao_detalhes_front.php?id_produto=3'> 
                     <img class="redondo" src='../imagens/stranger_things.png' width="70%">
                     </a>
                     <br><br><a href=# id="link">Comprar</a>
@@ -92,7 +92,7 @@
                     <h2>
                     Pulseira de coração
                     </h2>
-                    <a href='selecao_detalhes_front.php?id=2'> 
+                    <a href='selecao_detalhes_front.php?id_produto=2'> 
                     <img class="redondo" src='../imagens/coracao.png' width="70%">
                     </a>
                     <br><br><a href=# id="link">Comprar</a>

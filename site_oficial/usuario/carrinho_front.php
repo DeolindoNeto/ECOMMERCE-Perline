@@ -3,7 +3,7 @@
 <?php
      $acao = $_GET['acao'] ?? '';
      $id_produto = $_GET['id_produto'] ?? 0;
-     $id_usuer = 1; // Depois precisamos alterar para pegar da $_SESSION
+     $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
  
      if ($acao=='up') {
          if (is_array($_POST['prod']))
@@ -17,9 +17,6 @@
  
  <div class='table'>
      <div class='row'>
-         <div class='cell cellDescricao cellHeader'>
-             Descrição
-         </div>
          <div class='cell cellPreco cellHeader'>
              Preço
          </div>
@@ -46,9 +43,6 @@
              $total += floatval($linha['subtotal']);
      ?>
              <div class='row'>
-                 <div class='cell cellDescricao'>
-                     <?php echo $linha['descricao']; ?>
-                 </div>
                  <div class='cell cellPreco'>
                      <?php echo $linha['preco']; ?>
                  </div>
@@ -60,14 +54,16 @@
                      <?php echo $linha['subtotal']; ?>
                  </div>
                  <div class='cell cellAcoes'>
-                     <a href='?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
+                     <a href='./carrinho_back.php?id_user=<?php echo $id_user; ?>&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                  </div>
              </div>
      <?php 
          }  
          echo "<h3>Total da compra: R$ ".number_format($total, 2, ',', '.');".</h3>";
      ?>
- 
+    <input type="submit" value="Atualizar Carrinho" />&nbsp;&nbsp;
+	<a href="./selecao_produto_front.php" target="_blank">Continuar Comprando</a>&nbsp;&nbsp;
+	<a href="finaliza_compra.php">Finalizar Compra</a>
      <br><br>
      </form>
 ?>

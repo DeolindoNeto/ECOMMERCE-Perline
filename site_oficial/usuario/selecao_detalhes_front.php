@@ -33,6 +33,7 @@
             <!--<div class="logo_no_carrinho">
                 <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
             </div>-->
+            <iframe src="http://ftp.projetoscti.com.br/projetoscti21/site_oficial/usuario/carrinho_front.php" width="285" height="675"></iframe>
         </center>
     </div>
     
@@ -41,7 +42,7 @@
                <div class="botoes">
                <center>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
+               <a class="prod" title="Home" href="../usuario/index.php">Home</a> 
                &nbsp;&nbsp;&nbsp;&nbsp;
                 
                <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
@@ -56,7 +57,7 @@
     <div class="detalhes_produtos">
  <!-- Recuperando as informações do produto -->
         <?php
-           $id_produto = $_GET["id"];
+           $id_produto = $_GET["id_produto"];
            include "../utils/info_produto_back.php"; 
         ?>
 
@@ -77,7 +78,7 @@
         <br><br>
         Manufaturado: <?php echo $linha['manufaturado']; ?>
         <br><br>
-        <a href='carrinho_front.php?acao=add&idproduto=<?php echo $id_produto; ?>'>Comprar</a>
+        <a href='carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
         &nbsp;<a href="../usuario/selecao_produto_front.php">Voltar</a>
         <br>
     </div>
