@@ -55,7 +55,7 @@
                      <?php echo $linha['subtotal']; ?>
                  </div>
                  <div class='cell cellAcoes'>
-                     <a href='./carrinho_back.php?id_user=<?php echo $id_user; ?>&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
+                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'target="_blank">Excluir</a>
                  </div>
              </div>
      <?php 

@@ -35,6 +35,7 @@
             <!--<div class="logo_no_carrinho">
                 <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
             </div>-->
+            <iframe src="http://ftp.projetoscti.com.br/projetoscti21/site_oficial/usuario/carrinho_front.php" width="285" height="675"></iframe>
         </center>
     </div>
     <?php 
@@ -59,7 +60,7 @@
             echo "<div class='cada_prod'>
                 <div class='imgproduto' >
                     <br>
-                    <a href='../usuario/selecao_detalhes_front.php?id=".$linha['id_produto']."'> 
+                    <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."'> 
                        <img src='../img/icon_produto.png'/>
                     </a>
                 </div>

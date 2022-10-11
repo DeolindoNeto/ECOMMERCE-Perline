@@ -1,9 +1,10 @@
 <?php
     include "../ADM/conection.php"; 
     $id_user=1;
+    $id_produto=$_GET['id_produto'];
+    $acao=$_GET['acao'];
     // Verifica se o produto já está no carrinho
     function getQtdeProdutoCarrinho($conecta, $id_user, $id_produto) {
-
         /* seleciona o carrinho */
         $sql="SELECT qtde
                 FROM carrinho
@@ -47,7 +48,6 @@
         $sql="DELETE FROM carrinho
                where id_produto = $id_produto
                  and id_user = $id_user";
-
         // Execução
         pg_query($conecta,$sql);
     }
