@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../css/menuLateral.css">
+<body bgcolor="#47d8b7"></body>
 <?php
      $acao = $_GET['acao'] ?? '';
      $id_produto = $_GET['id_produto'] ?? 0;
@@ -63,7 +64,7 @@
      ?>
     <input type="submit" value="Atualizar Carrinho" />&nbsp;&nbsp;
 	<a href="./selecao_produto_front.php" target="_blank">Continuar Comprando</a>&nbsp;&nbsp;
-	<a href="finaliza_compra.php">Finalizar Compra</a>
+	<a href="finaliza_compra_front.php" target="_blank">Finalizar Compra</a>
      <br><br>
      </form>
 ?>

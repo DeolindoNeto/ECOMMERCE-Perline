@@ -1,6 +1,6 @@
 <?php
     include "../ADM/conection.php"; 
-
+    $id_user=1;
     // Verifica se o produto já está no carrinho
     function getQtdeProdutoCarrinho($conecta, $id_user, $id_produto) {
 
