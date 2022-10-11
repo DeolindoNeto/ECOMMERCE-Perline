@@ -3,6 +3,8 @@
 
     $compraFinalizada = FALSE;
 
+    $id_produto = $_GET['id_produto'];
+
     function validarProdutos($resultado_lista)
     {
         // ESSE CODIGO ESTÁ INCOMPLETO!!!
@@ -10,10 +12,10 @@
         // Realizar as validações com os produtos aqui
         foreach($resultado_lista as $linha)
         {
-            //$sql = "SELECT QTDE FROM PROD.... ";
-            // $res = pg_query($conecta,$sql);
-            // if ///
-            //   return false;
+            $sql = "SELECT quantidade 
+                    FROM produto 
+                    WHERE id_produto=$id_produto";
+            $res = pg_query($conecta,$sql);
         }
 
         return true;

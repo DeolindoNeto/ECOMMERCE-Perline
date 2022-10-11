@@ -45,6 +45,10 @@
          { 
              $id_produto = $linha['id_produto'];
              $total += floatval($linha['subtotal']);
+             if($id_produto == 0)
+             {
+                echo"O carrinho está vazio ;-;";
+             }
      ?>        
             <div class='row'>
                  <div class='cell cellNome'>
@@ -61,7 +65,7 @@
                      <?php echo $linha['subtotal']; ?>
                  </div>
                  <div class='cell cellAcoes'>
-                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'target="_blank">Excluir</a>
+                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                  </div>
              </div>
      <?php 
@@ -69,8 +73,8 @@
          echo "<h3>Total da compra: R$ ".number_format($total, 2, ',', '.');".</h3>";
      ?>
     <input type="submit" value="Atualizar Carrinho" />&nbsp;&nbsp;
-	<a href="./selecao_produto_front.php" target="_blank">Continuar Comprando</a>&nbsp;&nbsp;
-	<a href="finaliza_compra_front.php" target="_blank">Finalizar Compra</a>
+	<a href="./selecao_produto_front.php">Continuar Comprando</a>&nbsp;&nbsp;
+	<a href="./confirma_compra_front.php" target="_blank">Finalizar Compra</a>
      <br><br>
      </form>
 ?>
