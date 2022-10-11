@@ -66,7 +66,7 @@
                     <a href='selecao_detalhes_front.php?id_produto=6'> 
                     <img class="redondo" src='../imagens/sonserina.png' width="70%">
                     </a>
-                    <br><br><a href=# id="link">Comprar</a>
+                    <br><a class='botaocomprar' href="../usuario/carrinho_front.php?acao=add&codproduto=6".>Comprar</a>
                     <br><p class="pc">Pulseira com tema das casas da série de livros Harry Potter.</p>
                     <p class="pc">Valor: R$ 5.00</p>
                 </div>
@@ -81,7 +81,7 @@
                     <a href='selecao_detalhes_front.php?id_produto=3'> 
                     <img class="redondo" src='../imagens/stranger_things.png' width="70%">
                     </a>
-                    <br><br><a href=# id="link">Comprar</a>
+                    <br><a class='botaocomprar' href="../usuario/carrinho_front.php?acao=add&codproduto=3".>Comprar</a>
                     <br><p class="pc">Pulseira com tema da série Stranger Things.</p>
                     <p class="pc">Valor: R$5.00</p>
                 </div>
@@ -95,7 +95,7 @@
                     <a href='selecao_detalhes_front.php?id_produto=2'> 
                     <img class="redondo" src='../imagens/coracao.png' width="70%">
                     </a>
-                    <br><br><a href=# id="link">Comprar</a>
+                    <br><a class='botaocomprar' href="../usuario/carrinho_front.php?acao=add&codproduto=2".>Comprar</a>
                     <br><p class="pc">Pulseira decorada com miçangas de corações nela.</p>
                     <p class="pc">Valor: R$5.00</p>
                 </div>
