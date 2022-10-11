@@ -18,6 +18,9 @@
  
  <div class='table'>
      <div class='row'>
+     <div class='cell cellPreco cellHeader'>
+             Nome
+         </div>
          <div class='cell cellPreco cellHeader'>
              Preço
          </div>
@@ -42,8 +45,11 @@
          { 
              $id_produto = $linha['id_produto'];
              $total += floatval($linha['subtotal']);
-     ?>
-             <div class='row'>
+     ?>        
+            <div class='row'>
+                 <div class='cell cellNome'>
+                     <?php echo $linha['nome']; ?>
+                 </div>
                  <div class='cell cellPreco'>
                      <?php echo $linha['preco']; ?>
                  </div>

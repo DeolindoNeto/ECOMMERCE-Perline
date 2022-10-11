@@ -89,6 +89,7 @@
 
     /* seleciona todos os itens do carrinho do usuário */
     $sql="SELECT c.*,
+                 p.nome,
                  p.preco,
                  c.qtde * p.preco as subtotal,
                  p.quantidade as estoque
