@@ -2,10 +2,11 @@
     include "../ADM/conection.php"; 
 
     $compraFinalizada = FALSE;
+    $id_user=1;
 
     $id_produto = $_GET['id_produto'];
 
-    function validarProdutos($resultado_lista)
+    /*function validarProdutos($resultado_lista)
     {
         // ESSE CODIGO ESTÁ INCOMPLETO!!!
 
@@ -19,14 +20,32 @@
         }
 
         return true;
-    }
+    }*/
 
+    function getQtdeProdutoCarrinho($conecta, $id_user, $id_produto) {
+        /* seleciona o carrinho */
+        $sql="SELECT qtde
+                FROM carrinho
+               WHERE id_user = $id_user
+                 AND id_produto = $id_produto";
+
+        $resultado=pg_query($conecta,$sql);
+        $qtde=pg_num_rows($resultado);
+
+        if ( $qtde == 0 )
+            return 0;
+        
+        // retornará a quantidade atual do item já existente no carrinho
+        $qtdeVendida = pg_fetch_array($resultado);
+        return intval($qtdeVendida['qtde']);
+        
     function atualizarEstoque($id_produto, $qtdeVendida)
     {
-        // ESSE CODIGO ESTÁ INCOMPLETO!!!
-
-        //$sql = "UPDATE ..."
-        //$res = pg_query($conecta,$sql);
+        $sql="UPDATE carrinho
+                     set quantidade = ".($qtdeVendida).
+                  "where id_produto = $id_produto
+                     and id_user = $id_user";
+        $res = pg_query($conecta,$sql);
     }
 
     session_start();
@@ -58,7 +77,7 @@
 
     // Limpar carrinho
     $sql=" DELETE FROM carrinho
-            where id_usuario = $idusuario";
+            where id_user = $id_user";
 
     pg_query($conecta,$sql);
 

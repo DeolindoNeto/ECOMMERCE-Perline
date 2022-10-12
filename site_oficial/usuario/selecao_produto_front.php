@@ -130,7 +130,7 @@
                         <div><span style='color:red'>Produto esgotado</span></div>";
                     }
 					
-					echo "<br><a class='botaocomprar' href='carrinho_front.php?acao=add&id_produto=$id_produto'>Comprar</a>";
+					echo "<br><a class='botaocomprar' href=carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'Comprar</a>";
 
                 echo "</div><br>";
             echo "</div>";
