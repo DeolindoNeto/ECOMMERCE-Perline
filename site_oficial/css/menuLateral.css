@@ -27,7 +27,7 @@ body{
 header {
     transition: 0.2s;
     position: fixed;
-    height: 120px;
+    height: 110px;
     width: 100%;
     top: 0;
     left: 0;
@@ -35,6 +35,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+    z-index: 999999;
 }
 /*----------- TELA HOME ------------*/
 
@@ -157,6 +158,7 @@ ComicSans{
     background-color: #1ABC9C;
     display: flex;
     align-items: center;
+    z-index: 999999;
 }
 
 .tpfix2
@@ -171,6 +173,8 @@ ComicSans{
     align-items: center;
     color: #1ABC9C;
     text-align: center;
+    z-index: 999999;
+
 }
 
 
@@ -309,15 +313,6 @@ footer /*rodapé*/
     cursor: pointer; /*mudar o ponteiro do mouse*/
 }
 
-.tpfix2
-{
-    position: fixed;
-    height: 5%;
-    width: 100%;
-    top: 14%;
-    background-color: black;
-    color: #1ABC9C;
-}
 
 .prod
 {
@@ -354,8 +349,10 @@ a.prod:link
     margin-top: 0px;
     padding-top: 30px;
     left: 0;
+    color: #fff;
     background: #47d8b7;
     transition: 0.3s;
+    z-index: 999999;
 }
 
 .sidebar .image{
@@ -729,8 +726,6 @@ input[class="reset"]:hover {
     border-radius: 20px;
     border: solid 3px black;
     box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
-    
-  
 }
 
 .cada_prodindex
@@ -804,4 +799,52 @@ input[class="reset"]:hover {
     font-size: 15px;
     text-align: center;
     border-style:solid;
+}
+
+/*----------- CARRINHO ------------*/
+
+.btn-atualizar {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.btn-atualizar:hover {
+    color: black;
+}
+
+.btn-finalizar {
+    width: 25%;
+    margin-left: 31%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 3px;
+    transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.title-carrinho {
+    color:black;
+    margin-bottom: 10%;
+    margin-left: 26%;
 }

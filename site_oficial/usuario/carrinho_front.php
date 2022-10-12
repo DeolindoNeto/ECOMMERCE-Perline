@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="../css/menuLateral.css">
-<body bgcolor="#47d8b7"></body>
+<html lang="pt-br">
+
 <?php
      $acao = $_GET['acao'] ?? '';
      $id_produto = $_GET['id_produto'] ?? 0;
@@ -15,25 +15,32 @@
  
      include "carrinho_back.php";
  ?>
- 
- <div class='table'>
-     <div class='row'>
-     <div class='cell cellPreco cellHeader'>
-             Nome
-         </div>
-         <div class='cell cellPreco cellHeader'>
-             Preço
-         </div>
-         <div class='cell cellPreco cellHeader'>
-             Qtde.
-         </div>
-         <div class='cell cellPreco cellHeader'>
-             Subtotal
-         </div>
-         <div class='cell cellAcoes'>
-             &nbsp;
-         </div>
-     </div>
+
+<head>
+    <meta charset="UTF-8">
+    <title>C A R R I N H O</title>
+    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+    <link rel="icon" href="../img/faviconlogin.png"> <!--icone na guia-->
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <header>
+    
+    
+    </header>
+    
+    <div class="tpfix2">
+               
+    </div> 
+    
+    
+    <div class="content">
+
+            <div class="card">
+
+                <div class='table'>
  
      <form action="?acao=up" method="post">
      
@@ -47,34 +54,44 @@
              $total += floatval($linha['subtotal']);
              if($id_produto == 0)
              {
-                echo"O carrinho está vazio ;-;";
+                echo"Nenhum produto adicionado";
              }
      ?>        
             <div class='row'>
                  <div class='cell cellNome'>
                      <?php echo $linha['nome']; ?>
-                 </div>
-                 <div class='cell cellPreco'>
+                     
                      <?php echo $linha['preco']; ?>
-                 </div>
-                 <div class='cell cellPreco'>
+                     
+                     <?php echo "<br>"; ?>
+                 
                      <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
                          value="<?php echo $linha['qtde']; ?>" />
-                 </div>
-                 <div class='cell cellPreco'>
+                 
                      <?php echo $linha['subtotal']; ?>
-                 </div>
-                 <div class='cell cellAcoes'>
+        
                      <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                  </div>
+                 <br>
              </div>
      <?php 
          }  
-         echo "<h3>Total da compra: R$ ".number_format($total, 2, ',', '.');".</h3>";
+         
+         
+         echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
      ?>
-    <input type="submit" value="Atualizar Carrinho" />&nbsp;&nbsp;
-	<a href="./selecao_produto_front.php">Continuar Comprando</a>&nbsp;&nbsp;
-	<a href="./confirma_compra_front.php" target="_blank">Finalizar Compra</a>
-     <br><br>
+    <input type="submit" id="btn-atualizar" value="Atualizar" />&nbsp;&nbsp;
+	<br><br>
+	<a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
+    <br><br>
+    <center>
+    <a href="./selecao_produto_front.php">Continuar Comprando</a>&nbsp;&nbsp;
+     </center>
+     
      </form>
-?>
+
+            </div>
+        </div>
+    
+</body>
+</html>

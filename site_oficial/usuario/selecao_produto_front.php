@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<?php
+     $acao = $_GET['acao'] ?? '';
+     $id_produto = $_GET['id_produto'] ?? 0;
+     $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
+ 
+     if ($acao=='up') {
+         if (is_array($_POST['prod']))
+             $prods = $_POST['prod'];
+         else
+             $prods = array();
+     }
+ 
+     include "carrinho_back.php";
+ ?>
+
 <head>
     <meta charset="UTF-8">
     <title>P R O D U T O S</title>
@@ -19,9 +34,9 @@
         </label>
         </div>
         
-        <div class="logo">
+       <!-- <div class="logo">
             <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="100%" >
-        </div>
+        </div>-->
            
            <div id="icons_home">
             <abbr title="Home"><a href="./index.html"><img class="icon_menu_local" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -31,12 +46,52 @@
     </header>
     
     <div class="sidebar">
-        <center>
-            <!--<div class="logo_no_carrinho">
-                <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
-            </div>-->
-            <iframe src="http://ftp.projetoscti.com.br/projetoscti21/site_oficial/usuario/carrinho_front.php" width="285" height="675"></iframe>
-        </center>
+ 
+   
+    <h4 class="title-carrinho">C A R R I N H O</h4>
+     <form action="?acao=up" method="post">
+      <center>
+     <?php
+         $total = 0.0;
+ 
+         // Criar linhas com os dados dos produtos
+         foreach ($resultado_lista as $linha)
+         { 
+             $id_produto = $linha['id_produto'];
+             $total += floatval($linha['subtotal']);
+             if($id_produto == 0)
+             {
+                echo"Nenhum produto adicionado";
+             }
+     ?>        
+           
+            <div class='row'>
+                 <div class='cell cellNome'>
+                     <?php echo $linha['nome']; ?>
+                
+                     <?php echo $linha['preco']; ?>
+                 
+                     <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
+                         value="<?php echo $linha['qtde']; ?>" />
+                 
+                     <?php echo $linha['subtotal']; ?>
+        
+                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
+                 </div>
+                 <br>
+             </div>
+     <?php 
+         }  
+         echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
+     ?>
+      </center>
+     
+    <input type="submit" id="btn-atualizar" value="Atualizar" />
+    <br><br>
+	<a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
+     </form>
+
+  
     </div>
     <?php 
         include "../usuario/selecao_produto_back.php";
@@ -45,7 +100,7 @@
 
         if ($qtde == 0) 
         {
-            echo "Não foi encontrado nenhum produto !!!<br><br>";
+            echo "Não foi encontrado nenhum produto !!!<br><br>"; 
             return;
         }
 
@@ -75,7 +130,7 @@
                         <div><span style='color:red'>Produto esgotado</span></div>";
                     }
 					
-					echo "<br><a class='botaocomprar' href='../usuario/carrinho_front.php?acao=add&codproduto=".$linha['id_produto']."'>Comprar</a>";
+					echo "<br><a class='botaocomprar' href='carrinho_front.php?acao=add&id_produto=$id_produto'>Comprar</a>";
 
                 echo "</div><br>";
             echo "</div>";
