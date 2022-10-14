@@ -1,23 +1,6 @@
 <link rel="stylesheet" href="../css/menuLateral.css">
 <div class="mae">
 <input type="checkbox" id="check">
-<header>
-        <div class="carrinhohome">
-        <label for="check">
-            <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
-        </label>
-        </div>
-        
-        <div class="logo">
-            <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="100%" >
-        </div>
-           
-           <div id="icons_home">
-            <abbr title="Home"><a href="./index.html"><img class="icon_menu_local" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <abbr title="Local"><a href="../usuario/local.html"><img class="icon_menu_local" src="../img/icon_menu_mapa.png"></a></abbr>
-           <abbr title="Login"><a href="../usuario/login.html"><img class="icon_menu_login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
-           </div>  
-    </header>
 <?php
     //session_start();
     $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
