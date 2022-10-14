@@ -8,9 +8,9 @@
     $dat_nasc = $_POST['dat_nasc_usuario'];
     $cpf = $_POST['cpf_usuario'];
     $cep = $_POST['cep_usuario'];
-    $senha = $_POST['senha_usuario'];
+    $senha = MD5($_POST['senha_usuario']);
     $sexo = $_POST['sexo_usuario'];
-    $user_adm = $_POST['user_adm'];
+    $user_adm = "FALSE";
 
     // Inserção
     $sql="INSERT INTO usuario (nome_user, email, senha_user, telefone, user_adm, data_nasc, cpf_user, cep_user, sexo)
