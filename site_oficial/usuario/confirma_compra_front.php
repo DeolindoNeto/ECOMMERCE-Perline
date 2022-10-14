@@ -52,7 +52,7 @@
 				</div>
             </div>
 	<?php 
-		}  
+		}
 		echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
 	?>
 
