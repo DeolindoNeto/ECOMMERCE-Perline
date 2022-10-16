@@ -9,7 +9,7 @@
 </head> 
 <body>
     <div class="mae">
-    <input type="checkbox" id="check">
+    <input type="checkbox" id="check" checked>
     <header>
         <div class="carrinhohome">
         <label for="check">
