@@ -34,8 +34,8 @@
                     <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
                 </label>
             </div>
-
-            <img scr="../img/logo_perline.svg"></img>
+            
+            
             
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.html"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -147,9 +147,7 @@
                     echo "</div><br>";
                 echo "</div>";
             }
-        ?>
-        
-    
+        ?>    
         <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

@@ -43,6 +43,10 @@ header {
     margin-left: 27.5%;
 }
 
+.logo_perline{
+    z-index: 1;
+}
+
 .header-btn-login{
     margin-left: 10%;
 }
@@ -54,12 +58,14 @@ header {
     width: 100%;
     top: 9%;
     left: 0;
-    background-color: black;
+    background-color: #fff;
     display: flex;
     align-items: center;
-    color: #1ABC9C;
+    color: black;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     z-index: 999999;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.05);
 }
 
 .sidebar{
@@ -71,7 +77,7 @@ header {
     padding-top: 30px;
     left: 0;
     color: #fff;
-    background: #47d8b7;
+    background: #168F77;
     transition: 0.3s;
     z-index: 999999;
 }
@@ -239,32 +245,21 @@ ComicSans{
     justify-items: auto; 
 }
 
-.tpfix 
-{
-    position: fixed;
-    height: 14%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #1ABC9C;
-    display: flex;
-    align-items: center;
-    z-index: 999999;
-}
 
 .tpfix2-btn
 {
     width: 80%;
     margin-left: 7%;
+    font-family: 'papernotes';
 }
 
 .desen, .prod, .quem
 {
     margin: 0 15px;
     cursor: pointer;
-    font-family: Georgia;
     text-decoration: none;
     font-size: 22px;
+    font-family: 'papernotes';
 }
 
 
@@ -294,6 +289,7 @@ a.desen:visited,
 a.desen:link
 {
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 a.prod:active,
@@ -301,6 +297,7 @@ a.prod:visited,
 a.prod:link
 {
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 a.quem:active,
@@ -308,6 +305,7 @@ a.quem:visited,
 a.quem:link
 {
     color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 footer /*rodapé*/
@@ -350,7 +348,7 @@ a.prod:hover,
 a.prod:visited,
 a.prod:link
 {
-    color: #1ABC9C;
+    color: black;
 }
 
 .content {
@@ -538,7 +536,7 @@ input[type="submit"]:hover{
     box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 
-/*----------- TELA DE LOGIN ------------*/
+/*----------- TELA DE CADASTRO ------------*/
 
 .cadastro{
     margin-top: 9%;
@@ -640,12 +638,16 @@ input[class="reset"]:hover {
     text-align:center;  
     width: 300px;
     height: 300px;
-    background-color: #1ABC9C;
+    background-color: #BE80FF;
     font-family: Georgia;
     font-size: 15px;
+    box-shadow:
+        3px 3px #D0AAF8,
+        4px 4px #D0AAF8,
+        5px 5px #D0AAF8;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
     border-radius: 20px;
-    border: solid 3px black;
-    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
 }
 
 .cada_prodindex
@@ -666,12 +668,7 @@ input[class="reset"]:hover {
 
 .cada_prod:hover
 {
-        box-shadow:
-        3px 3px #236C5B,
-        4px 4px #236C5B,
-        5px 5px #236C5B;
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
 }
 
 .imgproduto{
@@ -687,8 +684,8 @@ input[class="reset"]:hover {
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: #fff;
     font-size: 11px;
     text-transform: uppercase;
     overflow: hidden;
@@ -699,7 +696,7 @@ input[class="reset"]:hover {
 }
 
 .botaocomprar:hover {
-    background: #47d8b7;
+    background: black;
     color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
@@ -707,7 +704,13 @@ input[class="reset"]:hover {
 
 /*----------- TELA DE DETALHES PRODUTOS ------------*/
 
-.detalhes_produtos
+.detalhe_foto_produto{
+    margin-top: 30%;
+    margin-left: 50%;
+    background-color: #168F77;
+}
+
+/* .detalhes_produtos
 {
     margin-left: 30%;
     margin-top: 12%;
@@ -719,7 +722,7 @@ input[class="reset"]:hover {
     font-size: 15px;
     text-align: center;
     border-style:solid;
-}
+} */
 
 /*----------- CARRINHO ------------*/
 
