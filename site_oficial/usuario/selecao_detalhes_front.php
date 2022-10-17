@@ -123,11 +123,13 @@
                 <?php echo $linha['nome'];?>
                 </h1>
                 <br><br>
-                <?php echo $linha['nome']; ?>
+                <p>A pulseira praia conta com nossas lindas miçangas de conchinhas e estrelas. Esta peça é uma das mais vendidas da nossa loja, garanta já a sua!</p>
+                <!-- <?php echo $linha['descricao']; ?> -->
                 <br><br>
-                Estoque:<?php echo $linha['quantidade']; ?>
+                <h6>Estoque:<?php echo $linha['quantidade']; ?></h6>
                 <br><br>
                 <a href='carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                <img scr="../img/icon_comprar.png"></img>
                 &nbsp;<a href="../usuario/selecao_produto_front.php">Voltar</a>
                 <br>
             </div>

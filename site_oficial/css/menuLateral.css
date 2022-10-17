@@ -714,27 +714,37 @@ input[class="reset"]:hover {
 
 .detalhes_produtos{
     float: right;
-    width: 30%;
+    width: 40%;
     height: 384px;
     margin-top: -20%;
-    margin-right: 30%;
+    margin-right: 20%;
     background-color: #D42F68;
     border-radius: 0px 30px 30px 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* .detalhes_produtos
-{
-    margin-left: 30%;
-    margin-top: 12%;
-    padding:5px;
-    width: 500px;
-    background-color: #1ABC9C;
-    border-radius: 10px;
-    font-family: Georgia;
-    font-size: 15px;
-    text-align: center;
-    border-style:solid;
-} */
+h1{
+    color:#fff;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+p{
+    margin-left: 5%;
+    font-size: 20px;
+    width: 550px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+h6{
+    margin-left: 5%;
+    font-size: 12px;
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
 
 /*----------- CARRINHO ------------*/
 
