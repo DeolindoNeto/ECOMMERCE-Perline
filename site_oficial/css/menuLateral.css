@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
 }
 
 * {
@@ -27,7 +26,7 @@ body{
 header {
     transition: 0.2s;
     position: fixed;
-    height: 110px;
+    height: 9%;
     width: 100%;
     top: 0;
     left: 0;
@@ -36,6 +35,98 @@ header {
     align-items: center;
     text-align: center;
     z-index: 999999;
+}
+
+.header-btn
+{
+    margin-top: 1.5%;
+    margin-left: 27.5%;
+}
+
+.header-btn-login{
+    margin-left: 10%;
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 9%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: #1ABC9C;
+    text-align: center;
+    z-index: 999999;
+}
+
+.sidebar{
+    position: fixed;
+    top: 14%;
+    width: 300px; /*largura*/
+    height: 100%; /*altura*/
+    margin-top: 0px;
+    padding-top: 30px;
+    left: 0;
+    color: #fff;
+    background: #47d8b7;
+    transition: 0.3s;
+    z-index: 999999;
+}
+
+label #btnSidebar{
+    position: fixed;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s;
+    transition-property: color;
+    left: 1%;
+    top: 2%;
+}
+
+label #btnSidebar:hover{
+    color: black;
+}
+
+.sidebar h5{
+    margin-top: 5%;
+}
+
+/* ------ obj sumir checked ------- */
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+
+#check:checked ~ .sidebar .title-carrinho{
+    display: none;
+}
+
+#check:checked ~ .sidebar .cellNome{
+    display: none;
+}
+
+#check:checked ~ .sidebar h5{
+    display: none;
+}
+
+#check:checked ~ .sidebar #btn-atualizar{
+    display: none;
+}
+
+#check:checked ~ .sidebar .btn-finalizar{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/* ------ obj sumir checked fim ------- */
+
+.sidebar .cad{
+    text-transform: uppercase;
 }
 /*----------- TELA HOME ------------*/
 
@@ -161,24 +252,7 @@ ComicSans{
     z-index: 999999;
 }
 
-.tpfix2
-{
-    position: fixed;
-    height: 5%;
-    width: 100%;
-    top: 14%;
-    left: 0;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    color: #1ABC9C;
-    text-align: center;
-    z-index: 999999;
-}
-
-
-
-.botoes
+.tpfix2-btn
 {
     width: 80%;
     margin-left: 7%;
@@ -236,33 +310,6 @@ a.quem:link
     color: white;
 }
 
-.icon_menu_login
-{
-   
-    margin: 0 15px;
-    cursor: pointer; /*mudar o ponteiro do mouse*/
-}
-
-.icon_menu_sacola
-{
-    cursor: pointer; /*mudar o ponteiro do mouse*/
-}
-
-#icons_home
-{
-    text-align: right;
-    width: 300px; 
-}
-  
-#titulo_home
-{
-    margin-left: 580px;
-    font-family: Georgia;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-
 footer /*rodapé*/
 {
     justify-content: space-around;
@@ -289,30 +336,6 @@ footer /*rodapé*/
 }
 
 
-#icons_home
-{
-    margin-left: 37%;
-    margin-bottom: 10px;
-}
-
-.icon_menu_home
-{
-    margin-left: 5px;
-}
-
-.icon_menu_login
-{
-   
-    margin: 0 15px;
-    cursor: pointer; /*mudar o ponteiro do mouse*/
-}
-
-.icon_menu_sacola
-{
-    cursor: pointer; /*mudar o ponteiro do mouse*/
-}
-
-
 .prod
 {
     cursor: pointer;
@@ -330,114 +353,12 @@ a.prod:link
     color: #1ABC9C;
 }
 
-#titulo_home
-{
-    margin-left: 580px;
-    font-family: Georgia;
-    font-size: 25px;
-    cursor: pointer;
-    margin-top: -30px;
-}
-
-
-.sidebar{
-    position: fixed;
-    top: 120px;
-    width: 300px;
-    height: 100vh;
-    margin-top: 0px;
-    padding-top: 30px;
-    left: 0;
-    color: #fff;
-    background: #47d8b7;
-    transition: 0.3s;
-    z-index: 999999;
-}
-
-.sidebar .image{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-}
-
-.sidebar h2{
-    color: #fff;
-    margin-top: 0;
-}
-
-.sidebar .icon{
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    padding-left: 40px;
-    box-sizing: border-box;
-    transition: 0.2s;
-}
-
-.sidebar .icon:hover{
-    background: black;
-}
-
-.sidebar ion-icon{
-    padding-right: 10px;
-}
-
-label #btnSidebar{
-    position: fixed;
-    color: #fff;
-    cursor: pointer;
-    font-size: 25px;
-    transition: 0.2s;
-    transition-property: color;
-    left: 30px;
-    top: 20px;
-}
-
-label #btnSidebar:hover{
-    color: black;
-}
-
-#check:checked ~ .sidebar{
-    left: -190px;
-}
-
-#check:checked ~ .sidebar a span{
-    display: none;
-}
-
-#check:checked ~ .sidebar .unesp h3 span{
-    display: none;
-}
-
-#check:checked ~ .sidebar a{
-    font-size: 20px;
-    margin-left: 170px;
-    width: 80px;
-}
-
-#check:checked ~ .sidebar .unesp h3 img{
-    margin-left: 180px;
-    width: 27px;
-}
-
-#check{
-    display: none;
-}
-
-.sidebar .cad{
-    text-transform: uppercase;
-}
-
-
 .content {
     transition: 0.2s;
 }
 
 .logo_no_carrinho
 {
-    margin-top: 450px;
     font-family: Georgia;
 }
 
@@ -845,7 +766,7 @@ input[class="reset"]:hover {
 .title-carrinho {
     color:black;
     margin-bottom: 10%;
-    margin-left: 26%;
+    margin-left: 31%;
 }
 .table {width:800px; display:grid;}
 .row { display:block;}

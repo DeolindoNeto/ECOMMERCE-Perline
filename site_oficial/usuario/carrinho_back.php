@@ -83,7 +83,7 @@
 
         // Modifica a url para remover qualquer uma das ações: add, del ou up, evita que a ação seja
         // processada novamente caso a página seja recarregada
-        header("location:carrinho_front.php");
+        header("location:selecao_produto_front.php");
         return;
     }
 
