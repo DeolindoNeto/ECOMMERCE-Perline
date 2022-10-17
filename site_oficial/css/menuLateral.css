@@ -704,10 +704,22 @@ input[class="reset"]:hover {
 
 /*----------- TELA DE DETALHES PRODUTOS ------------*/
 
-.detalhe_foto_produto{
-    margin-top: 30%;
-    margin-left: 50%;
+.detalhe_produto_foto{
+    margin-top: 12%;
+    margin-left: 20%;
+    width: 20%;
+    height: 500px;
     background-color: #168F77;
+    border-radius: 30px 30px 0px 30px;}
+
+.detalhes_produtos{
+    float: right;
+    width: 30%;
+    height: 384px;
+    margin-top: -20%;
+    margin-right: 30%;
+    background-color: #D42F68;
+    border-radius: 0px 30px 30px 0px;
 }
 
 /* .detalhes_produtos
