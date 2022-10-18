@@ -51,9 +51,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" id="home-btn" title="Home" href="../usuario/index.html">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                            
-                    <a class="prod" id="prod-sublinhado" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                
+                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
                 </center>
@@ -118,17 +116,17 @@
 
             echo "<div class='content'>";
             echo "<div class='divproduto'>";
-
             // Criar linhas com os dados dos produtos
             foreach ($resultado_lista as $linha)
             {
                 $preco= number_format($linha['preco'], 2, ',', '.');
+                $imagemproduto = $linha['campo_imagem'];
 
                 echo "<div class='cada_prod'>
                     <div class='imgproduto' >
                         <br>
                         <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."'> 
-                        <img src='../img/icon_produto.png'/>
+                        <img src='../img/$imagemproduto'>
                         </a>
                     </div>
 

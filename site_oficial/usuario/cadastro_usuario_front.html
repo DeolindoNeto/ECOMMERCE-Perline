@@ -6,6 +6,16 @@
     <title>L O G I N</title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+    <script>
+        function mascara_cpf(){
+            var cpf = document.getElementById('cpf')
+            if(cpf.value.length == 3 || cpf.value.length == 7){
+                cpf.value += "."
+            } else if (cpf.value.length == 11){
+                cpf.value += "-"
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -89,7 +99,7 @@
                <div class="form2">
                
                     <label class="labels">CPF</label><br>
-                    <input type="number" size="11" maxlength="11" name="cpf_usuario"  required>
+                    <input type="text" size="14" maxlength="14" id="cpf" name="cpf_usuario" onkeyup="mascara_cpf()" autocomplete="off"   required>
 
                     <br><br>
 
