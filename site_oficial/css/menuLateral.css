@@ -420,21 +420,14 @@ footer /*rodapé*/
     cursor: pointer;
 }
 
-#icons_login
-{
-    text-align: center;
-    margin-left: 400px;
-}
-
 .card 
 {
     margin-top: 10%;
-    background-color: #1ABC9C;
+    background-color: #046789;
     padding: 40px;
-    width:280px;
+    width: 700px;
     border-radius: 20px;
-    border: solid 3px black;
-    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
 }
 
 .card-header_login 
@@ -442,6 +435,7 @@ footer /*rodapé*/
     padding-bottom: 30px;
     opacity: 0.8;
     color: #fff;
+    margin-left: 20px;
 }
 
 .card-header_login:after 
