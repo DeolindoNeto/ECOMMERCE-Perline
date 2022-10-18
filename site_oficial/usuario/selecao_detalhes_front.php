@@ -106,9 +106,11 @@
             </form>
         </div> 
 
+    <?php $imagemproduto = $linha['campo_imagem']; ?>
+
     <div class="content-detalhes">
         <div class="detalhe_produto_foto">
-            <img src='../img/icon_produto.png'></img>
+    <?php echo "<img src='../img/$imagemproduto'>"; ?>
         </div>
             
     
