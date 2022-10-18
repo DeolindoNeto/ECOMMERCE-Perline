@@ -35,7 +35,7 @@
                 </label>
             </div>
             
-            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png"></abbr>
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.html"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,10 +49,10 @@
             <div class="tpfix2-btn">
                 <center>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
+                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.html">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                             
-                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                    <a class="prod" id="prod-sublinhado" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>

@@ -26,7 +26,7 @@
 <body>
     <div class="mae">
 
-        <input type="checkbox" id="check" checked>
+        <input type="checkbox" id="check">
         <header>
 
             <div class="carrinhohome">
@@ -35,7 +35,7 @@
                 </label>
             </div>
             
-            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png"></abbr>
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.html"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -52,7 +52,7 @@
                     <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                             
-                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                    <a class="prod" id="prod-sublinhado" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
@@ -106,6 +106,7 @@
             </form>
         </div> 
 
+    <div class="content-detalhes">
         <div class="detalhe_produto_foto">
             <img src='../img/icon_produto.png'></img>
         </div>
@@ -122,18 +123,18 @@
                 <h1>
                 <?php echo $linha['nome'];?>
                 </h1>
-                <br><br>
+                <br>
                 <p>A pulseira praia conta com nossas lindas miçangas de conchinhas e estrelas. Esta peça é uma das mais vendidas da nossa loja, garanta já a sua!</p>
                 <!-- <?php echo $linha['descricao']; ?> -->
-                <br><br>
+                <br>
+                <?php echo "<div class='preco-detalhes'>R$" .$linha['preco'];"</div>" ?>
+                <br><br><br>
                 <h6>Estoque:<?php echo $linha['quantidade']; ?></h6>
-                <br><br>
-                <a href='carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
-                <img scr="../img/icon_comprar.png"></img>
-                &nbsp;<a href="../usuario/selecao_produto_front.php">Voltar</a>
+                <br><br><br>
+                <a class="detalhes-btn-comprar" href='carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
                 <br>
             </div>
-        
+    </div>
         </div><!--fim da div mae-->
         <footer>
             <a> </a>
