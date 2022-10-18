@@ -51,9 +51,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="../img/pulseiracoração.png" width="10%" height="10%">
                     <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
                 </center>
@@ -128,7 +126,7 @@
                     <div class='imgproduto' >
                         <br>
                         <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."'> 
-                        <img src='../img/pulseiracoração.png'>
+                        <img src='../img/$imagemproduto'>
                         </a>
                     </div>
 
