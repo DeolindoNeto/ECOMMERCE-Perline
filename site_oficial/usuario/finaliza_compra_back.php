@@ -69,13 +69,13 @@
         $preco = $linha['preco'];
         $qtdVendida = $linha['qtde'];//AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
         $id_produto = $linha['id_produto'];
-        $sql = " INSERT INTO itemvenda (id_itemvenda, id_produto, qtde, valor) VALUES (DEFAULT,".$idproduto.",".$qtdVendida.",".$preco." );";
+        $sql = " INSERT INTO itemvenda (id_itemvenda, id_produto, qtde, valor) VALUES (DEFAULT,".$id_produto.",".$qtdVendida.",".$preco." );";
        // echo $sql; 
         $res = pg_query($conecta, $sql);
 
         // Atualizar qtde estoque 
         // (ainda precisa programar)
-        atualizarEstoque($conecta, $idproduto, $qtdVendida);
+        atualizarEstoque($conecta, $id_produto, $qtdVendida);
     }  
  
     // Limpar carrinho
