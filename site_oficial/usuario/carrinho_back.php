@@ -95,7 +95,7 @@
                  p.quantidade as estoque
             FROM carrinho c
            inner join produto p
-              on c.id_produto = p.id_produto
+              on c.id_produto = p.id_produto,
            WHERE c.id_user = $id_user"; 
 
     $resultado= pg_query($conecta, $sql);
@@ -110,4 +110,4 @@
 
     // Fecha a conexão com o PostgreSQL
     pg_close($conecta);
-?>
+?>uku7777777jjjjjuihyiu

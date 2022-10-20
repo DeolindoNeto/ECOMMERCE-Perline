@@ -1,83 +1,92 @@
 <?php
-    include "../utils/conection.php";
-    
+    include "../utils/conection.php"; 
+   
     $compraFinalizada = FALSE;
-    $qtdeVendida = 0;
-    $id_user=1;
-    
-    $sql="SELECT * FROM produto WHERE id_produto=14";
-    
-    $resultado= pg_query($conecta, $sql);
-    $qtde=pg_num_rows($resultado);
 
-    $resultado_lista = null;
-
-    if ($qtde > 0)
+   function validarProdutos($conecta, $resultado_lista)
     {
-        $resultado_lista=pg_fetch_all($resultado);
-    } 
+        // ESSE CODIGO ESTÁ INCOMPLETO!!!
 
-    pg_close($conecta);
-    
-    function validarProdutos($conecta, $resultado_lista)
-    {
+        // Realizar as validações com os produtos aqui
+       /*foreach($prods as $id_produto => $qtd){ 
+            $sql="UPDATE carrinho
+                    set qtde = $qtd
+                where id_produto = $id_produto
+                    and id_usuario = $id_usuario";*/
+       if($resultado_lista)
+       {
         foreach($resultado_lista as $linha)
         {
-            $sql = "SELECT quantidade FROM produto WHERE id_produto = ".$linha['id_produto']. ";";
-            $res = pg_query($conecta, $sql);
+            $id_produto=$linha["id_produto"];
+            $sql="SELECT * FROM produto WHERE id_produto = $id_produto;";
+         //  echo $sql;
+            $res= pg_query($conecta,$sql); 
+           if($res<=0) 
+               return false;   
+                      
+            //$sql = "SELECT QTDE FROM PROD.... ";
+            // $res = pg_query($conecta,$sql);
+            // if ///
+            //   return false;
+        } 
+       }
+       
 
-            $resulta = pg_fetch_array($res);
-
-            if($linha['qtde'] > $resulta['quantidade'] || $resulta['quantidade'] == 0)
-            {
-                echo "<script type='text/javascript'>alert('Desculpe, mas não temos este item em estoque')</script>";
-                echo "<script type='text/javascript'>alert('Adicionamos a quantidade em estoque no seu carrinho xD')</script>";
-
-                $qtdeEstoque = $resulta['quantidade'];
-
-                $sqlCarrinho = "UPDATE carrinho SET qtde = $qtdeEstoque WHERE id_produto = ".$linha['id_produto'].";";
-
-                pg_query($conecta, $sqlCarrinho);
-                echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=selecao_produto_front.php'>";
-                exit;
-            }
-            return false;
-        }
+ 
         return true;
-    }
-
-    function atualizarEstoque($conecta, $id_produto, $qtdeVendida)
+    } 
+   
+    function atualizarEstoque($conecta, $id_produto, $qtdVendida)
     {
-        $sql = "UPDATE produto SET quantidade = quantidade-2 WHERE id_produto = $id_produto;";
+        // ESSE CODIGO ESTÁ INCOMPLETO!!
+       
+       
+           $sql =" UPDATE produto
+           set quantidade=quantidade- $qtdVendida
+             where id_produto=$id_produto;";
+            // echo $sql;
+            $res=pg_query($conecta, $sql); 
+            
+        //$sql = "UPDATE ..."
+        //$res = pg_query($conecta,$sql); 
+    } 
+    session_start();
+    $resultado_lista = $_SESSION['produtos'];
 
-        pg_query($conecta, $sql);
-    }
-
-    validarProdutos($conecta, $resultado_lista);
-
-    $sql = "INSERT INTO venda (id_user, data_hora_venda, observacoes) VALUES ($id_user, current_timestamp, 'Venda realizada');";
+  //  $idprod = $_SESSION['carrinho'];
+    
+    // (ainda precisa programar)
+   validarProdutos($conecta, $resultado_lista); 
+    $sql = " INSERT INTO venda (id_venda,id_user, datavenda, excluido) VALUES (DEFAULT, $id_user, NOW(),'f');";
     $res = pg_query($conecta, $sql);
     $qtdLinhas = pg_affected_rows($res);
 
     if ($qtdLinhas == 0)
-    echo "<h1>Erro ao finalizar a compra!!<h1>";
-
+        echo "<h1>Erro ao Finalizar a Compra!!!</h1>";
+ 
     foreach($resultado_lista as $linha)
-    {
+    { 
         $preco = $linha['preco'];
-        $qtde = $linha['qtde'];
-        $id_produto = $Linha['id_produto'];
-        $valortotal += $linha['subtotal'];
-
-        $sql = "INSERT INTO itemvenda (id_venda, id_produto, qtde, valor_unit, valor_total) VALUES (currval('venda_id_venda_seq'), $id_produto);";
+        $qtdVendida = $linha['qtde'];//AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        $id_produto = $linha['id_produto'];
+        $sql = " INSERT INTO itemvenda (id_itemvenda, id_produto, qtde, valor) VALUES (DEFAULT,".$idproduto.",".$qtdVendida.",".$preco." );";
+       // echo $sql; 
         $res = pg_query($conecta, $sql);
-        atualizarEstoque($conecta, $id_produto, $qtde);
-    }
-    // limpa carrinho
 
-    $sql="DELETE FROM carrinho WHERE id_user = $id_user";
-    pg_query($conecta, $sql);
+        // Atualizar qtde estoque 
+        // (ainda precisa programar)
+        atualizarEstoque($conecta, $idproduto, $qtdVendida);
+    }  
+ 
+    // Limpar carrinho
+    $sql=" DELETE FROM carrinho
+            where id_user = $id_user";
 
+    pg_query($conecta,$sql);
+
+    // Fecha a conexão com o PostgreSQL
     pg_close($conecta);
 
+
 ?>
+

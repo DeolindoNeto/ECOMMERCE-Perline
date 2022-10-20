@@ -28,7 +28,6 @@
     <input type="checkbox" id="check">
     <header>
     
-    
     </header>
     
     <div class="tpfix2">
@@ -84,10 +83,7 @@
 	<br><br>
 	<a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
     <br><br>
-    <center>
-    <a href="./selecao_produto_front.php">Continuar Comprando</a>&nbsp;&nbsp;
-     </center>
-     
+    
      </form>
 
             </div>
