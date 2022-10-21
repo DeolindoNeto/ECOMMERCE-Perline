@@ -46,7 +46,7 @@ header {
 .logo_perline{
     z-index: 1;
 }
-
+  
 .header-btn-login{
     margin-left: 10%;
 }
@@ -854,3 +854,83 @@ h6{
 .cellPrecoHeader {width:100px;}
 .cellPreco {width:60px; text-align:right;}
 .cellAcoes {width:100px;}
+
+
+/*----------- FINALIZACAO ------------*/
+.cada_prodindexfinal
+{
+    padding-left: 45px;
+    padding-right: 30px;
+    text-align:center;  
+    background-color: #F88DB1;
+    font-family:sans-serif;
+    border-radius: 15px;
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 850px;
+    align-items: center;
+    height: 400px;
+    box-shadow:
+        5px 5px #D42F68,
+        6px 6px #D42F68,
+        7px 7px #D42F68;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.pp{
+    text-align: center;
+    font-size: 50px;
+    margin-left: 210.5px;
+    font-weight: bold;
+    color: white;
+}
+.pf{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 210px;
+    color: white;
+}
+
+.pfinobg{
+    text-align:center;
+    font-size: 24px;
+    margin-left: 230px;
+    color: white;
+}
+
+.pfin{
+    text-align:center;
+    font-size: 13px;
+    margin-left: 205px;
+    color: white;
+}
+
+.afinal{
+    margin-left: 50px;
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color:black;
+    font-size: 10px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+a.email:visited,
+{
+    color: red;
+    text-decoration: none;
+    text-decoration:underline;
+}
+a.email:link
+{
+    color: black;
+    text-decoration:underline;
+}
