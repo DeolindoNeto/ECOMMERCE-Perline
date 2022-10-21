@@ -1,0 +1,936 @@
+/*------------------ GERAL --------------------*/
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frase_local
+{
+    margin-left: 36.5%;
+}
+
+body{
+    transition: 0.2s;
+    background: #fff;
+    overflow-x: hidden;
+} 
+
+header {
+    transition: 0.2s;
+    position: fixed;
+    height: 9%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1ABC9C;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 999999;
+}
+
+.header-btn
+{
+    margin-top: 1.5%;
+    margin-left: 25%;
+}
+
+.logo_perline{
+    z-index: 1;
+}
+  
+.header-btn-login{
+    margin-left: 10%;
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 9%;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    z-index: 999999;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.05);
+}
+
+.logo_perline{
+    margin-left: -25%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 14%;
+    width: 300px; /*largura*/
+    height: 100%; /*altura*/
+    margin-top: 0px;
+    padding-top: 30px;
+    left: 0;
+    color: #fff;
+    background: #168F77;
+    transition: 0.3s;
+    z-index: 999999;
+}
+
+label #btnSidebar{
+    position: fixed;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s;
+    transition-property: color;
+    left: 1%;
+    top: 2%;
+}
+
+label #btnSidebar:hover{
+    color: black;
+}
+
+.sidebar h5{
+    margin-top: 5%;
+}
+
+/* ------ obj sumir checked ------- */
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+
+#check:checked ~ .sidebar .title-carrinho{
+    display: none;
+}
+
+#check:checked ~ .sidebar .cellNome{
+    display: none;
+}
+
+#check:checked ~ .sidebar h5{
+    display: none;
+}
+
+#check:checked ~ .sidebar #btn-atualizar{
+    display: none;
+}
+
+#check:checked ~ .sidebar .btn-finalizar{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/* ------ obj sumir checked fim ------- */
+
+.sidebar .cad{
+    text-transform: uppercase;
+}
+/*----------- TELA HOME ------------*/
+
+.mae
+{
+    background-color: #fff;
+    top: 0;
+    left: 0px;
+}
+
+.redondo
+{
+    border-radius: 8px;
+}
+
+.navegacao
+{
+    text-align: left;
+    color: white;
+    margin-left: 18%;
+}
+
+
+.desenvolvedores
+{
+   text-align: left;
+    color: white;
+}
+
+.voltartopo
+{
+   width: 25%;
+}
+
+.carrinhohome
+{
+    width: 60%;
+}
+
+.logo
+{
+    width: 20%;
+}
+
+.imghome
+{
+    width: 91%;
+    background-color: white;
+    margin-top: 8%;
+    font-family: Georgia;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+}
+
+.mapa
+{
+    padding-top:100px;
+}
+
+.quemsomostotales
+{
+    width: 91%;
+    background-color: transparent;
+    margin-top: 200px;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+    display:flex;
+    justify-items:center; 
+    padding-left: 30px;
+    
+}
+
+ComicSans{
+    Font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+    font-size: 200%;
+}
+.quemsomostotal
+{
+    width: 91%;
+    background-color: transparent;
+    font-family: Arial;
+    font-size: 30px;
+    margin-left: 7%;
+    font-weight:bold;
+    display:flex;
+    justify-items:center; 
+    margin-top: 50px;
+}
+
+
+/*---------- config do p ------------*/
+.enrolation
+{
+    padding-bottom:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top:10px;
+    text-align: justify;
+}
+/*---------- fim ------------*/
+
+.hometotal
+{
+    width: 93%;
+    font-size: 150%;
+    margin-left: 7%;
+    display: flex;
+    justify-items: auto; 
+}
+
+
+.tpfix2-btn
+{
+    width: 80%;
+    margin-left: 9%;
+    font-family: 'papernotes';
+}
+
+#home-btn{
+    margin-right: 50px;
+}
+
+.desen, .prod, .quem
+{
+    margin: 0 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'papernotes';
+}
+
+
+a.btnnav1:visited,
+a.btnnav1:link,
+a.btnnav2:visited,
+a.btnnav2:link,
+a.btnnav3:visited,
+a.btnnav3:link
+{
+    color: white;
+    text-decoration: none;
+}
+a.btnnav2:hover,
+a.btnnav1:hover,
+a.btnnav3:hover,
+a.desen:hover,
+a.prod:hover,
+a.quem:hover
+{
+    color: white;
+    text-decoration:underline;
+}
+
+a.desen:active,
+a.desen:visited,
+a.desen:link
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.prod:active,
+a.prod:visited,
+a.prod:link
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.quem:active,
+a.quem:visited,
+a.quem:link
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer /*rodapé*/
+{
+    justify-content: space-around;
+    margin-top: 5%;
+    bottom: 0;
+    display: flex;
+    background-color: #003040;
+    color: #1ABC9C;
+    width: 100%;
+    height: 70%;    
+    text-align: center;
+    left: 0;
+    align-items: center;
+    font-size: 125%;
+}
+/*------------------ INDEX --------------------*/
+
+.hometotal
+{
+    width: 100%;
+    font-size: 150%;
+    display: flex;
+    justify-items: auto; 
+}
+
+
+.prod
+{
+    cursor: pointer;
+    font-family: Georgia;
+    text-decoration: none;
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
+
+a.prod:active,
+a.prod:hover,
+a.prod:visited,
+a.prod:link
+{
+    color: black;
+}
+
+.content {
+    transition: 0.2s;
+}
+
+.logo_no_carrinho
+{
+    font-family: Georgia;
+}
+
+.pricinpal container-fluid
+{
+    margin-top: 500px;
+}
+
+footer /*rodapé*/
+{
+    bottom: 0;
+    background-color: black;
+    color: #1ABC9C;
+    width: 100%;
+    height: 5%;    
+    text-align: center;
+    left: 0;
+    align-items: center
+}
+
+.home_produtos
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+}
+.home_video
+{
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 57.5%;
+    background-color: #5bc498;
+    border-radius: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    
+}
+/*----------- TELA DE LOGIN ------------*/
+
+#titulo_login
+{
+    margin-left: 550px;
+    font-family: Georgia;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.card 
+{
+    margin-top: 10%;
+    background-color: #046789;
+    padding: 40px;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+}
+
+.card-header_login 
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.card-header_login:after 
+{
+    content: "";
+    width: 70px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 105px;
+}
+
+.card-content_login label 
+{
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.card-content-area_login
+{
+    display: flex;
+    flex-direction: column;
+    padding:10px 0;
+}
+
+.card-content-area_login input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.card-footer 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.esquesenha
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s; 
+    margin-left: 32%;
+    font-size: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquesenha:hover {
+    color: #fff;
+}
+
+.criarconta {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.criarconta:hover {
+    color: black;
+}
+
+input[type="submit"]{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover{
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- TELA DE CADASTRO ------------*/
+
+.cadastro{
+    margin-top: 9%;
+    background-color: #1ABC9C;
+    padding: 40px;
+    height: 350px;
+    width: 600px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.card-header_cadastro
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+    margin-top: -25px;
+    margin-left: -5%;
+}
+
+.card-header_cadastro:after 
+{
+    content: "";
+    width: 106px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 263px;
+}
+
+.cadastro label 
+{
+    color: #fff;
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+.cadastro input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.form1{
+    margin-left: 6%;
+}
+.form2 {
+    margin-left: 63%;
+    margin-top: -47%;
+}
+
+input[class="submit"],
+input[class="reset"] {
+    width: 25%;
+    margin-top: 7%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[class="submit"]:hover,
+input[class="reset"]:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+
+/*----------- TELA DE SELEÇAO PRODUTOS ------------*/
+
+#prod-sublinhado{
+    text-decoration:underline;
+}
+
+.divproduto
+{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+    margin-top: 10%;
+}
+
+.cada_prod
+{
+    text-align:center;  
+    width: 300px;
+    height: 300px;
+    background-color: #D42F68;
+    font-family: Georgia;
+    font-size: 15px;
+    box-shadow:
+        3px 3px #e7729b,
+        4px 4px #e7729b,
+        5px 5px #e7729b;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
+}
+
+.cada_prodindex
+{
+    text-align:center;  
+    background-color: #1ABC9C;
+    font-family: Georgia;
+    font-size: 15px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+  
+}
+
+.cada_prod:hover
+{
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.imgproduto{
+    margin-top: 5%;
+}
+
+.textocomprar{
+    margin-top: 8%;
+}
+
+.botaocomprar {
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocomprar:hover {
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- TELA DE DETALHES PRODUTOS ------------*/
+
+.detalhe_produto_foto{
+    width: 20%;
+    height: 450px;
+    background-color: #168F77;
+    border-radius: 30px 30px 0px 30px;}
+
+.detalhes_produtos{
+    float: right;
+    width: 50%;
+    height: 400px;
+    margin-top: -400px;
+    margin-right: 30%;
+    background-color: #D42F68;
+    border-radius: 0px 30px 30px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-detalhes{
+    margin-top: 13%;
+    margin-left: 23%;
+}
+
+
+h1{
+    color:#fff;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+p{
+    margin-left: 5%;
+    font-size: 20px;
+    width: 400px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+h6{
+    font-size: 12px;
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.preco-detalhes{
+    margin-left: 5%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.detalhes-btn-comprar{
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.detalhes-btn-comprar:hover {
+    background: #FF2F77;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- CARRINHO ------------*/
+
+.btn-atualizar {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.btn-atualizar:hover {
+    color: black;
+}
+
+.btn-finalizar {
+    width: 25%;
+    margin-left: 31%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 3px;
+    transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.title-carrinho {
+    color:black;
+    margin-bottom: 10%;
+    margin-left: 31%;
+}
+.table {
+    width:800px; 
+    display:grid;
+}
+.row { 
+    display:block;
+    margin-left: 20px;
+}
+.cell {
+    display:inline-block;
+    padding: 5px 5px;
+    margin-bottom: .5%;
+    background-color: rgb(177, 255, 168);
+    font-size: 10pt;
+}
+.cellHeader {text-align: center !important;}
+.cellCodigo {width:100px; }
+.cellNome{
+    width: 200px;
+}
+.cellPrecoHeader {width:100px;}
+.cellPreco {width:60px; text-align:right;}
+.cellAcoes {width:100px;}
+
+
+/*----------- FINALIZACAO ------------*/
+.cada_prodindexfinal
+{
+    padding-left: 45px;
+    padding-right: 30px;
+    text-align:center;  
+    background-color: #F88DB1;
+    font-family:sans-serif;
+    border-radius: 15px;
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 850px;
+    align-items: center;
+    height: 400px;
+    box-shadow:
+        5px 5px #D42F68,
+        6px 6px #D42F68,
+        7px 7px #D42F68;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.pp{
+    text-align: center;
+    font-size: 50px;
+    margin-left: 210.5px;
+    font-weight: bold;
+    color: white;
+}
+.pf{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 210px;
+    color: white;
+}
+
+.pfinobg{
+    text-align:center;
+    font-size: 24px;
+    margin-left: 230px;
+    color: white;
+}
+
+.pfin{
+    text-align:center;
+    font-size: 13px;
+    margin-left: 205px;
+    color: white;
+}
+
+.afinal{
+    margin-left: 50px;
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color:black;
+    font-size: 10px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+a.email:visited,
+{
+    color: red;
+    text-decoration: none;
+    text-decoration:underline;
+}
+a.email:link
+{
+    color: black;
+    text-decoration:underline;
+}
