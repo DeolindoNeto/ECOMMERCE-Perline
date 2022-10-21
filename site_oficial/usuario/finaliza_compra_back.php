@@ -57,7 +57,7 @@
     
     // (ainda precisa programar)
    validarProdutos($conecta, $resultado_lista); 
-    $sql = " INSERT INTO venda (id_venda,id_user, datavenda, excluido) VALUES (DEFAULT, $id_user, NOW(),'f');";
+    $sql = " INSERT INTO venda (id_venda, id_user, data_hora_venda, excluido) VALUES (nextval('venda_id_venda_seq'::regclass), $id_user, timestamp without time zone, false);";
     $res = pg_query($conecta, $sql);
     $qtdLinhas = pg_affected_rows($res);
 
@@ -67,9 +67,10 @@
     foreach($resultado_lista as $linha)
     { 
         $preco = $linha['preco'];
-        $qtdVendida = $linha['qtde'];//AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+        $qtdVendida = $linha['qtde'];
         $id_produto = $linha['id_produto'];
-        $sql = " INSERT INTO itemvenda (id_itemvenda, id_produto, qtde, valor) VALUES (DEFAULT,".$id_produto.",".$qtdVendida.",".$preco." );";
+        $id_venda = $linha['id_venda'];
+        $sql = " INSERT INTO itemvenda (id_venda, id_itemvenda, id_produto, qtde, valor_unit) VALUES (".$id_venda.",".$id_produto.",".$qtdVendida.",".$preco." );";
        // echo $sql; 
         $res = pg_query($conecta, $sql);
 

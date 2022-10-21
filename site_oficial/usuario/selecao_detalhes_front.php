@@ -110,7 +110,7 @@
 
     <div class="content-detalhes">
         <div class="detalhe_produto_foto">
-    <?php echo "<img src='../img/$imagemproduto'>"; ?>
+    <?php echo "<img src='../img/$imagemproduto' height='100px' width='100px'>"; ?>
         </div>
             
     

@@ -70,30 +70,34 @@
                         foreach ($resultado_lista as $linha)
                         { 
                             $id_produto = $linha['id_produto'];
-                            $total += floatval($linha['subtotal']);
+                            $total += floatval($linha['preco']);
                             if($id_produto == 0)
                             {
                                 echo"Nenhum produto adicionado";
                             }
+                            
                     ?>        
                     
-                            <div class='row'>
-                                <div class='cell cellNome'>
+                            <div class="row">
+                                <div class="cell cellNome">
                                     <?php echo $linha['nome']; ?>
                                 
                                     <?php echo $linha['preco']; ?>
                                 
-                                    <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
+                                    <input type="number" name="prod[<?php echo $id_produto; ?>]"
                                         value="<?php echo $linha['qtde']; ?>" />
                                 
-                                    <?php echo $linha['subtotal']; ?>
+                                    <?php echo $total; ?>
                         
                                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                                 </div>
                                 <br>
                             </div>
+                        
+                        ?>
+                        
                     <?php 
-                        }  
+                        }
                     echo "<h5>Subtotal: R$ ".number_format($total, 2, ',', '.');".</h5>";
                     ?>
                 </center>
@@ -126,7 +130,7 @@
                     <div class='imgproduto' >
                         <br>
                         <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."'> 
-                        <img src='../img/$imagemproduto' width='150px' heigth='150'>
+                        <img src='../img/$imagemproduto' width='100px' heigth='100'>
                         </a>
                     </div>
 

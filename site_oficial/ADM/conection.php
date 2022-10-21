@@ -12,11 +12,4 @@
         echo '</script>';
         exit;
     }
-     
-    /*else {
-        echo '<script language="javascript">';
-        echo "alert('Conexão estabelecida com o banco de dados!')";
-        echo '</script>';
-    }*/
-//a
 ?>

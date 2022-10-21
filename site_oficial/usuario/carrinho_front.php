@@ -67,7 +67,7 @@
                      <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
                          value="<?php echo $linha['qtde']; ?>" />
                  
-                     <?php echo $linha['subtotal']; ?>
+                     <?php echo $total; ?>
         
                      <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                  </div>

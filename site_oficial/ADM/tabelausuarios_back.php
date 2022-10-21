@@ -3,8 +3,8 @@
 
     $sql="SELECT * FROM usuario WHERE excluido='false' ORDER BY id_user;";
     
-    $resultado= pg_query($conecta, $sql);
-    $qtde=pg_num_rows($resultado);
+    $resultado = pg_query($conecta, $sql);
+    $qtde = pg_num_rows($resultado);
 
     $resultado_lista = null;
 

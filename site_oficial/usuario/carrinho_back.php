@@ -1,6 +1,6 @@
 <?php
     include "../ADM/conection.php"; 
-    $id_user=1;
+    $id_user = $_SESSION['usuariologado']['id_user'];
     $id_produto=$_GET['id_produto'];
     $acao=$_GET['acao'];
     // Verifica se o produto já está no carrinho
@@ -110,4 +110,4 @@
 
     // Fecha a conexão com o PostgreSQL
     pg_close($conecta);
-?>uku7777777jjjjjuihyiu
+?>

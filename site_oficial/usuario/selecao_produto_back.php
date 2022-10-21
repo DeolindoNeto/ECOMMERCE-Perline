@@ -1,10 +1,10 @@
 <?php
-    include "../utils/conection.php"; 
+    include "../ADM/conection.php"; 
 
-    $sql="SELECT * FROM produto WHERE excluido='false' ORDER BY nome;";
+    $sql="SELECT * FROM produto WHERE excluido='false' ORDER BY id_produto;";
     
-    $resultado= pg_query($conecta, $sql);
-    $qtde=pg_num_rows($resultado);
+    $resultado = pg_query($conecta, $sql);
+    $qtde = pg_num_rows($resultado);
 
     $resultado_lista = null;
 

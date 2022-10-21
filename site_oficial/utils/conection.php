@@ -12,5 +12,4 @@
         echo '</script>';
         exit;
     }
-     
 ?>
