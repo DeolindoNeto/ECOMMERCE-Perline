@@ -28,7 +28,6 @@
     // Execução
     $resultado=pg_query($conecta,$sql);
     $linhas=pg_affected_rows($resultado);
-    echo $sql;
 
     if ($linhas > 0)
     {
@@ -36,7 +35,7 @@
         echo "alert('Usuario salvo com sucesso!')";
         echo '</script>';	
 
-        header("Location: ../usuario/index.html");
+        header("Location: ./login.html");
     }   
     else
     {

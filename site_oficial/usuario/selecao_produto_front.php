@@ -88,8 +88,6 @@
                                 
                                     <input type="number" name="prod[<?php echo $id_produto; ?>]"
                                         value="<?php echo $linhacar['qtde']; ?>" />
-                                
-                                    <?php echo $total; ?>
                         
                                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                                 </div>
