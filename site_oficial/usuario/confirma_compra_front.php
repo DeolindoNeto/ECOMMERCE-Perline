@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="../css/menuLateral.css">
 <?php
-    //session_start();
-    $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
+    session_start();
+    $id_user = $_SESSION['usuariologado']['id_user'];
     include "confirma_compra_back.php";
 ?>
 <hr>
@@ -34,7 +34,7 @@
 		// Criar linhas com os dados dos produtos
         foreach ($resultado_lista as $linha)
         { 
-			$idprod = $linha['id_produto'];
+			$id_produto = $linha['id_produto'];
 			$total += floatval($linha['subtotal']);
 	?>
             <div class='row'>

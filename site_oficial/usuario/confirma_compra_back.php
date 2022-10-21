@@ -1,6 +1,7 @@
 <?php
     include "../ADM/conection.php"; 
-    $id_user=1;
+    session_start();
+    $id_user = $_SESSION['usuariologado']['id_user'];
     /* seleciona todos os itens do carrinho do usuário */
     $sql="SELECT c.*,
                  p.nome,

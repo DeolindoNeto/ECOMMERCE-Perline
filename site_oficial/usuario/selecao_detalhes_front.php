@@ -9,9 +9,10 @@
 </head>
 
     <?php
+        session_start();
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
-        $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
+        $id_user = $_SESSION['usuariologado']['id_user'];
     
         if ($acao=='up') {
             if (is_array($_POST['prod']))
@@ -133,7 +134,7 @@
                 <br><br><br>
                 <h6>Estoque:<?php echo $linha['quantidade']; ?></h6>
                 <br><br><br>
-                <a class="detalhes-btn-comprar" href='carrinho_front.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
                 <br>
             </div>
     </div>

@@ -2,9 +2,10 @@
 <html lang="pt-br">
 
 <?php
+     session_start();
      $acao = $_GET['acao'] ?? '';
      $id_produto = $_GET['id_produto'] ?? 0;
-     $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
+     $id_user = $_SESSION['usuariologado']['id_user'];
  
      if ($acao=='up') {
          if (is_array($_POST['prod']))
@@ -47,7 +48,8 @@
          $total = 0.0;
  
          // Criar linhas com os dados dos produtos
-         foreach ($resultado_lista as $linha)
+         if ($res_lista)
+         foreach ($res_lista as $linha)
          { 
              $id_produto = $linha['id_produto'];
              $total += floatval($linha['subtotal']);

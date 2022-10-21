@@ -9,9 +9,10 @@
 </head>
 
     <?php
+        session_start();
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
-        $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
+        $id_user = $_SESSION['usuariologado']['id_user'];
     
         if ($acao=='up') {
             if (is_array($_POST['prod']))
@@ -67,10 +68,11 @@
                         $total = 0.0;
                 
                         // Criar linhas com os dados dos produtos
-                        foreach ($resultado_lista as $linha)
-                        { 
-                            $id_produto = $linha['id_produto'];
-                            $total += floatval($linha['preco']);
+                        if($res_lista)
+                        foreach ($res_lista as $linhacar)
+                        {
+                            $id_produto = $linhacar['id_produto'];
+                            $total += floatval($linhacar['subtotal']);
                             if($id_produto == 0)
                             {
                                 echo"Nenhum produto adicionado";
@@ -80,12 +82,12 @@
                     
                             <div class="row">
                                 <div class="cell cellNome">
-                                    <?php echo $linha['nome']; ?>
+                                    <?php echo $linhacar['nome']; ?>
                                 
-                                    <?php echo $linha['preco']; ?>
+                                    <?php echo $linhacar['preco']; ?>
                                 
                                     <input type="number" name="prod[<?php echo $id_produto; ?>]"
-                                        value="<?php echo $linha['qtde']; ?>" />
+                                        value="<?php echo $linhacar['qtde']; ?>" />
                                 
                                     <?php echo $total; ?>
                         
@@ -93,8 +95,7 @@
                                 </div>
                                 <br>
                             </div>
-                        
-                        ?>
+                    
                         
                     <?php 
                         }
@@ -120,7 +121,9 @@
 
             echo "<div class='content'>";
             echo "<div class='divproduto'>";
+
             // Criar linhas com os dados dos produtos
+            if ($resultado_lista)
             foreach ($resultado_lista as $linha)
             {
                 $preco= number_format($linha['preco'], 2, ',', '.');
@@ -144,7 +147,7 @@
                             <div><span style='color:red'>Produto esgotado</span></div>";
                         }
                         
-                        echo "<br><a class=botaocomprar href='carrinho_front.php?acao=add&id_produto=".$linha['id_produto']."'>Comprar</a>";
+                        echo "<br><a class=botaocomprar href='carrinho_back.php?acao=add&id_produto=".$linha['id_produto']."'>Comprar</a>";
 
                     echo "</div><br>";
                 echo "</div>";

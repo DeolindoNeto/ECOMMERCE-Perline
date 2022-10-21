@@ -1,5 +1,7 @@
 <?php
     include "../ADM/conection.php"; 
+
+    session_start();
     $id_user = $_SESSION['usuariologado']['id_user'];
     $id_produto=$_GET['id_produto'];
     $acao=$_GET['acao'];
@@ -95,17 +97,17 @@
                  p.quantidade as estoque
             FROM carrinho c
            inner join produto p
-              on c.id_produto = p.id_produto,
+              on c.id_produto = p.id_produto
            WHERE c.id_user = $id_user"; 
 
     $resultado= pg_query($conecta, $sql);
     $qtde=pg_num_rows($resultado);
 
-    $resultado_lista = null;
+    $res_lista = null;
 
     if ($qtde > 0)
     {
-        $resultado_lista=pg_fetch_all($resultado);
+        $res_lista=pg_fetch_all($resultado);
     }
 
     // Fecha a conexão com o PostgreSQL
