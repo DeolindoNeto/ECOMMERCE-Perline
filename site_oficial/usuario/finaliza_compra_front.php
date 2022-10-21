@@ -6,27 +6,37 @@
     //session_start();
     $id_user = 1; // Depois precisamos alterar para pegar da $_SESSION
     include "./finaliza_compra_back.php";
-?>
+?> 
+    <header>
 
-<div class="w-70" style="padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto" id="status-pedido-c">
+            <div class="carrinhohome">
+                <label for="check">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+                </label>
+            </div>
+            
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>  
+        </header>
+    
+        <div class="cada_prodindexfinal">    
+                        <div>
+                            <br>
+                            <p class="pp">Pedido confirmado</p><br>
+                            <br><p class="pf">Sua compra foi realizada com sucesso!</p><br>
+                            <p class="pfinobg">Obrigado por escolher nossa loja.</p><br><br><br>
+                            <p class="pfin">Verifique os detalhes e o valor da compra efetuada no link: <a class="email" href="https://mail.google.com">Email</a></p>
+                        </div>
+        </div>
+    <br><br>
 
-<p style="font-size: 3.25rem; color: rgba(0,0,0,.7)">Pedido Confirmado</p>
 
-<div id="bloco-confirma">
 
-<span style="font-size: 2rem; color: #137752; font-weight: 600">Seu pedido foi realizado com sucesso.</span>
-
-<p><span style="color: #137752; font-size: 2rem">Em breve você receberá um e-mail no endereço&nbsp;<strong id="email"></strong>&nbsp; com todos os detalhes do pedido.</span></p><p id="status-pedido"> Aguardamos a confirmação do pagamento</p></div>
-
-</div>
-
-<div class="w-70" style="padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto" id="status-pedido-c">
-
-<div style="border-radius: .5rem; background: #fff; padding: 2rem; border: 1px solid #000;"><p id="confirma-info"></p>
-
-</div>
-
-</div>
-
-<a href="./selecao_produto_front.php">Voltar</a>
+   
+    <a class="afinal" href="./selecao_produto_front.php">Voltar</a>
 </div>

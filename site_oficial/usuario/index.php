@@ -10,23 +10,24 @@
 <body>
     <div class="mae">
     <input type="checkbox" id="check" checked>
-    <header>
-        <div class="carrinhohome">
-        <label for="check">
-            <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
-        </label>
-        </div>
+        <header>
+
+            <div class="carrinhohome">
+                <label for="check">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+                </label>
+            </div>
+            
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>  
+        </header>
+
         
-        <div class="logo">
-            <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="100%" >
-        </div>
-           
-           <div id="icons_home">
-            <abbr title="Home"><a href="./index.html"><img class="icon_menu_local" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <abbr title="Local"><a href="../usuario/local.html"><img class="icon_menu_local" src="../img/icon_menu_mapa.png"></a></abbr>
-           <abbr title="Login"><a href="../usuario/login.html"><img class="icon_menu_login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
-           </div>  
-    </header>
     <div class="sidebar">
         <center>
            <!-- <div class="logo_no_carrinho">
@@ -37,20 +38,18 @@
     </div>
     
     <div class="tpfix2">
-               <div class="botoes">
-               <center>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
-               &nbsp;&nbsp;&nbsp;&nbsp;
                 
-               <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-      
-               &nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
-               </center>
-               </div>
-               
-    </div> 
+            <div class="tpfix2-btn">
+                <center>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Quem Somos" href="desen.html">Quem Somos</a>
+                </center>
+            </div>
+    </div>
 
         <center><div class="imghome"><br><img class="redondo" src="../imagens/bannerPerline.png" height="55%" width="80%"><br>
              <p>A Perline é uma empresa que foi criada com o intuito de tornar você, mais estiloso!</p><br>
@@ -123,7 +122,7 @@
                 Navegação<br><br>
                 <a class="btnnav1" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                 <br>
-                <a class="btnnav2" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+                <a class="btnnav2" title="Quem Somos" href="desen.html">Quem Somos</a>
                 <br>
                 <a class="btnnav3" title="Local" href="../usuario/local.html">Loja física</a><br><br><br><br>
             </div>
@@ -138,7 +137,7 @@
             </div>
 
             <div class="voltartopo"> 
-                <a href="../usuario/index.html"><img src="../imagens/voltar.png" width="60%"></a>
+                <a href="../usuario/index.php"><img src="../imagens/voltar.png" width="60%"></a>
             </div>
         </footer>
     </div>

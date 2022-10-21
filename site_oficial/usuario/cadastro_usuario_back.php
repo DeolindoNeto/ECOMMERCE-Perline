@@ -31,7 +31,10 @@
 
     if ($linhas > 0)
     {
-        echo "<script type='text/javascript'>alert('Usuário cadastrado!!')</script>";
+        echo '<script language="javascript">';
+        echo "alert('Usuario salvo com sucesso!')";
+        echo '</script>';	
+
         header("Location: ./login.html");
     }   
     else

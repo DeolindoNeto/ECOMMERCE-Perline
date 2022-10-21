@@ -39,7 +39,7 @@
             <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
-                <abbr title="Home"><a href="./index.html"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>  
@@ -50,7 +50,7 @@
             <div class="tpfix2-btn">
                 <center>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.html">Home</a> 
+                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
