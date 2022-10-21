@@ -6,15 +6,9 @@
     <title>L O G I N</title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
-    <script>
-        function mascara_cpf(){
-            var cpf = document.getElementById('cpf')
-            if(cpf.value.length == 3 || cpf.value.length == 7){
-                cpf.value += "."
-            } else if (cpf.value.length == 11){
-                cpf.value += "-"
-            }
-        }
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+</head>
     </script>
 </head>
 
@@ -86,7 +80,7 @@
                    <br><br>
 
                    <label class="labels">Telefone</label><br>
-                   <input type="text" maxlength="11" size="11" name="tel_usuario" required>
+                   <input type="text" maxlength="11" id="telefone" size="11" name="tel_usuario" required>
 
                    <br><br>
 
@@ -104,7 +98,7 @@
                     <br><br>
 
                     <label class="labels">CEP</label><br>
-                    <input type="text" maxlength="8" name="cep_usuario" required>
+                    <input type="text" maxlength="8" id="cep" name="cep_usuario" required>
 
                     <br><br>
 
@@ -123,6 +117,14 @@
                &nbsp;&nbsp;&nbsp;
                
                <input type="reset" value="Limpar" class="reset">
+               <script>
+                    $("#telefone").mask("(99) 99999-9999");
+
+                    $("#cep").mask("99999-999");
+
+                    $("#cpf").mask("999.999.999-99");
+
+               </script>
                 
         </form>
         
