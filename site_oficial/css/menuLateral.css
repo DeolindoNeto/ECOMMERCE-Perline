@@ -832,6 +832,7 @@ h6{
     margin-left: 31%;
 }
 .table {
+    padding-top: 50px;
     width:800px; 
     display:grid;
 }
@@ -843,7 +844,7 @@ h6{
     display:inline-block;
     padding: 5px 5px;
     margin-bottom: .5%;
-    background-color: #168F77; 
+    background-color: #e7729b; 
     font-size: 10pt;
 }
 .cellHeader {text-align: center !important;}
