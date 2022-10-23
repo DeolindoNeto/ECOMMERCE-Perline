@@ -94,7 +94,6 @@
                                 <br>
                             </div>
                     
-                        
                     <?php 
                         }
                     echo "<h5>Subtotal: R$ ".number_format($total, 2, ',', '.');".</h5>";
@@ -130,8 +129,8 @@
                 echo "<div class='cada_prod'>
                     <div class='imgproduto' >
                         <br>
-                        <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."'> 
-                        <img src='../img/$imagemproduto' width='100px' heigth='100'>
+                        <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."&imgprod=".$linha['campo_imagem']."'> 
+                        <img src='../img/$imagemproduto' width='100px' heigth='100px'>
                         </a>
                     </div>
 

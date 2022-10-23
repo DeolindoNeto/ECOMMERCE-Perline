@@ -13,6 +13,7 @@
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
         $id_user = $_SESSION['usuariologado']['id_user'];
+        $imagemproduto = $_GET['imgprod'];
     
         if ($acao=='up') {
             if (is_array($_POST['prod']))
@@ -70,33 +71,33 @@
                         $total = 0.0;
                 
                         // Criar linhas com os dados dos produtos
-                        foreach ($resultado_lista as $linha)
-                        { 
-                            $id_produto = $linha['id_produto'];
-                            $total += floatval($linha['subtotal']);
+                        if($res_lista)
+                        foreach ($res_lista as $linhacar)
+                        {
+                            $id_produto = $linhacar['id_produto'];
+                            $total += floatval($linhacar['subtotal']);
                             if($id_produto == 0)
                             {
                                 echo"Nenhum produto adicionado";
                             }
+                            
                     ?>        
                     
-                            <div class='row'>
-                                <div class='cell cellNome'>
-                                    <?php echo $linha['nome']; ?>
+                            <div class="row">
+                                <div class="cell cellNome">
+                                    <?php echo $linhacar['nome']; ?>
                                 
-                                    <?php echo $linha['preco']; ?>
+                                    <?php echo $linhacar['preco']; ?>
                                 
-                                    <input type="text" size="3" name="prod[<?php echo $id_produto; ?>]"
-                                        value="<?php echo $linha['qtde']; ?>" />
-                                
-                                    <?php echo $linha['subtotal']; ?>
+                                    <input type="number" name="prod[<?php echo $id_produto; ?>]"
+                                        value="<?php echo $linhacar['qtde']; ?>" />
                         
                                     <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
                                 </div>
                                 <br>
-                            </div>
+                            </div>                        
                     <?php 
-                        }  
+                        }
                     echo "<h5>Subtotal: R$ ".number_format($total, 2, ',', '.');".</h5>";
                     ?>
                 </center>
@@ -106,8 +107,6 @@
                 <a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
             </form>
         </div> 
-
-    <?php $imagemproduto = $linha['campo_imagem']; ?>
 
     <div class="content-detalhes">
         <div class="detalhe_produto_foto">
