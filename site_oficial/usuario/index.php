@@ -43,7 +43,7 @@
                 <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <?php
                     if($_SESSION['usuariologado']){
-                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/faviconlogoff.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                     else
                     {
@@ -118,7 +118,7 @@
 
         <div class="content-home">
 
-        <img src="../img/teste_home.jpg" width="50%" height="50%">
+        <img src="../img/teste_home.jpg" width="90%" height="90%">
 
         </div>
         <script src="script.js"></script>
