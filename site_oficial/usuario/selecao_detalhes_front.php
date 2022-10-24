@@ -57,7 +57,7 @@
                     <a class="prod" id="prod-sublinhado" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                 
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+                    <a class="prod" title="Quem Somos" href="quemsomos.php">Quem Somos</a>
                 </center>
             </div>
         </div>

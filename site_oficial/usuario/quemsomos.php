@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>P R O D U T O S</title>
+    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+	<link rel="icon" href="../img/faviconprod.png"> <!--icone na guia-->
+</head>
+
+    <?php
+        session_start();
+        $acao = $_GET['acao'] ?? '';
+        $id_produto = $_GET['id_produto'] ?? 0;
+        $id_user = $_SESSION['usuariologado']['id_user'];
+    
+        if ($acao=='up') {
+            if (is_array($_POST['prod']))
+                $prods = $_POST['prod'];
+            else
+                $prods = array();
+        }
+    
+        include "carrinho_back.php";
+    ?>
+
+<body>
+    <div class="mae">
+
+        <input type="checkbox" id="check" checked>
+        <header>
+
+            <div class="carrinhohome">
+                <label for="check">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+                </label>
+            </div>
+            
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>  
+        </header>
+
+        <div class="tpfix2">
+                
+            <div class="tpfix2-btn">
+                <center>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="prod-sublinhado" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+                </center>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+    
+            <h4 class="title-carrinho">C A R R I N H O</h4>
+            <form action="?acao=up" method="post">
+                <center>
+                    <?php
+                        $total = 0.0;
+                
+                        // Criar linhas com os dados dos produtos
+                        if($res_lista)
+                        foreach ($res_lista as $linhacar)
+                        {
+                            $id_produto = $linhacar['id_produto'];
+                            $total += floatval($linhacar['subtotal']);
+                            if($id_produto == 0)
+                            {
+                                echo"Nenhum produto adicionado";
+                            }
+                            
+                    ?>        
+                    
+                            <div class="row">
+                                <div class="cell cellNome">
+                                    <?php echo $linhacar['nome']; ?>
+                                
+                                    <?php echo $linhacar['preco']; ?>
+                                
+                                    <input type="number" name="prod[<?php echo $id_produto; ?>]"
+                                        value="<?php echo $linhacar['qtde']; ?>" />
+                        
+                                    <a href='carrinho_back.php?acao=del&id_produto=<?php echo $id_produto; ?>'>Excluir</a>
+                                </div>
+                                <br>
+                            </div>
+                    
+                    <?php 
+                        }
+                    echo "<h5>Subtotal: R$ ".number_format($total, 2, ',', '.');".</h5>";
+                    ?>
+                </center>
+            
+                <input type="submit" id="btn-atualizar" value="Atualizar"/>
+                <br><br>
+                <a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
+            </form>
+        </div>
+    
+        <div class="content-quem somos">
+            
+        </div>
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div> <!--fim da div mae-->
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Q U E M  S O M O S</title>
+    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+     <link rel="icon" href="../img/faviconquem.png"> <!--icone na guia
+</head>
+
+<body>
+    <div class="mae">
+    <input type="checkbox" id="check">
+    <header>
+        <div class="carrinhohome">
+        <label for="check">
+            <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+        </label>
+        </div>
+        
+        <div class="logo">
+            <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="100%" >
+        </div>
+           
+           <div id="icons_home">
+            <abbr title="Home"><a href="./index.html"><img class="icon_menu_local" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <abbr title="Local"><a href="../usuario/local.html"><img class="icon_menu_local" src="../img/icon_menu_mapa.png"></a></abbr>
+           <abbr title="Login"><a href="../usuario/login.html"><img class="icon_menu_login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+           </div>  
+    </header>
+    
+    <div class="sidebar">
+        <center>
+            <div class="logo_no_carrinho">
+                <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
+            </div>
+        </center>
+    </div>
+    
+      <div class="tpfix2">
+               <div class="botoes">
+               <center>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
+               &nbsp;&nbsp;&nbsp;&nbsp;
+                
+               <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+      
+               &nbsp;&nbsp;&nbsp;&nbsp;
+               <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+               </center>
+               </div>
+               
+    </div> 
+    
+        <div class="quemsomostotales"><ComicSans>Quem somos?</ComicSans></div>
+        <div class="quemsomostotal">
+            
+        <div class="cada_prodindex"><p class="enrolation">A Perline Art é uma empresa Startup criada com a finalidade de obter experiência profissional na área de gestão de negócios bem como desenvolver um projeto de e-commerce, gerenciando as operacionalidades empresariais.</p>
+        </div>
+            
+            <div class="cada_prodindex"><p class="enrolation">Ao mesmo tempo visamos proporcionar aos nossos clientes uma experiência única munidos de produtos de qualidade, produzidos parcialmente pelos integrantes da equipe e inspirados nos gostos de nossos colegas.</p>
+        </div>
+            
+            <div class="cada_prodindex"><p class="enrolation">Além disso somos uma organização que não visa ganho pessoal, todos os nossos lucros serão revertidos em fundos para a associação de pais e mestres do colegio tecnico indutrial que financia os estudos de alunos carentes.</p>
+        </div>
+        
+        </div>
+        
+        <div class="quemsomostotal">
+            
+            <div class="cada_prodindex"><img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
+            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
+            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
+            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p></div>
+            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
+        </div>
+        <footer>
+            <div class="navegacao"> 
+                Navegação<br><br>
+                <a class="btnnav1" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                <br>
+                <a class="btnnav2" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+                <br>
+                <a class="btnnav3" title="Local" href="../usuario/local.html">Loja física</a><br><br><br><br>
+            </div>
+            
+            <div class="desenvolvedores"> 
+                <br>Desenvolvedores<br><br>
+                Camila Eduarda Favaro<br>
+                Deolindo Scandolera Neto<br>
+                Evelyn Mayra Pinheiro Lopes<br>
+                Mariana Caroline Silva<br>
+                Matheus Gimenes Soares<br><br><br>
+            </div>
+
+            <div class="voltartopo"> 
+                <a href="../usuario/quemsomos.html"><img src="../imagens/voltar.png" width="60%"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> -->

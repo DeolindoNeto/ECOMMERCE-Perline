@@ -6,6 +6,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -105,6 +106,46 @@ label #btnSidebar:hover{
     margin-top: 5%;
 }
 
+.carrinhohome
+{
+    width: 60%;
+}
+
+.logo
+{
+    width: 20%;
+}
+
+.tpfix2-btn
+{
+    width: 80%;
+    margin-left: 9%;
+    font-family: 'papernotes';
+}
+
+#home-btn{
+    margin-right: 50px;
+}
+
+.prod
+{
+    margin: 0 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'papernotes';
+}
+
+a.prod:active,
+a.prod:visited,
+a.prod:link
+{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
 /* ------ obj sumir checked ------- */
 #check:checked ~ .sidebar{
     left: -190px;
@@ -135,12 +176,34 @@ label #btnSidebar:hover{
 }
 /* ------ obj sumir checked fim ------- */
 
-.sidebar .cad{
-    text-transform: uppercase;
+
+
+
+
+/*----------- TELA HOME FINAL------------*/
+.content-home{
+    margin-top: 8%;
+    background-color: #046789;
+    width: 100%;
+    height: 100%;
 }
+
+.content-home img{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
 /*----------- TELA HOME ------------*/
 
-.mae
+/* .mae
 {
     background-color: #fff;
     top: 0;
@@ -229,7 +292,7 @@ ComicSans{
 }
 
 
-/*---------- config do p ------------*/
+/*---------- config do p ------------
 .enrolation
 {
     padding-bottom:10px;
@@ -238,7 +301,7 @@ ComicSans{
     padding-top:10px;
     text-align: justify;
 }
-/*---------- fim ------------*/
+/*---------- fim ------------
 
 .hometotal
 {
@@ -316,7 +379,7 @@ a.quem:link
     font-family: 'Poppins', sans-serif;
 }
 
-footer /*rodapé*/
+footer 
 {
     justify-content: space-around;
     margin-top: 5%;
@@ -330,10 +393,10 @@ footer /*rodapé*/
     left: 0;
     align-items: center;
     font-size: 125%;
-}
+} */
 /*------------------ INDEX --------------------*/
 
-.hometotal
+/* .hometotal
 {
     width: 100%;
     font-size: 150%;
@@ -373,7 +436,7 @@ a.prod:link
     margin-top: 500px;
 }
 
-footer /*rodapé*/
+footer /*rodapé
 {
     bottom: 0;
     background-color: black;
@@ -409,7 +472,8 @@ footer /*rodapé*/
     border: solid 3px black;
     box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
     
-}
+} */
+
 /*----------- TELA DE LOGIN ------------*/
 
 #titulo_login
