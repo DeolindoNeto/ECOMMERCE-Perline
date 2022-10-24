@@ -43,7 +43,7 @@
                 <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <?php
                     if($_SESSION['usuariologado']){
-                        echo "Logado";
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/faviconlogoff.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                     else
                     {
