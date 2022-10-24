@@ -115,8 +115,10 @@
             </form>
         </div>
     
+
         <div class="content-home">
 
+        <img src="../img/teste_home.jpg" width="50%" height="50%">
 
         </div>
         <script src="script.js"></script>
