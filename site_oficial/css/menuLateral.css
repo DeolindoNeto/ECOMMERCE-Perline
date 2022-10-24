@@ -988,8 +988,7 @@ h6{
     transition: 0.2s;
 }
 
-a.email:visited,
-{
+a.email:visited{
     color: red;
     text-decoration: none;
     text-decoration:underline;
