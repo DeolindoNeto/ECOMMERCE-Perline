@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>P R O D U T O S</title>
+    <title> H O M E
+    </title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
 	<link rel="icon" href="../img/faviconprod.png"> <!--icone na guia-->
@@ -117,10 +118,42 @@
     
 
         <div class="content-home">
+        
+            <div class="content-texto-home">
+            <p>Levar beleza e qualidade para todos os nossos clientes é o principal objetivo da Perline Art. Proporcionamos a melhor experiência e excelência em nossos produtos.</p>
+            </div>
 
-        <img src="../img/teste_home.jpg" width="90%" height="90%">
+            <img class="foto-principal-home" src="../img/teste_home.jpg"> 
 
+
+            <div class="content-3-prod">
+                <div class="prod-home-1">
+                    <img class="img1" src="../img/corvinal.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>                </div>
+
+                <div class="prod-home-2">
+                    <img class="img2" src="../img/sonse.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                </div>
+
+                <div class="prod-home-3">
+                    <img class="img3" src="../img/grifinoria.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                </div>
+            </div>  
+              
+            <div class="content-texto2-home">
+            <p>Nossas pulseiras são feitas com muito carinho pela equipe Perline. Visando compartilhar este amor e multiplicar nossas experiências, indicamos o vídeo ao lado afim de aprender mais sobre como cada uma delas chegam até você.</p>
+            </div>
+
+            <iframe class="video-principal-home" align="center" src="https://www.youtube.com/embed/JcqbYpl8nZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
         </div>
+
+        <footer>
+            <div class="content-footer-home">
+            </div>
+        </footer>
         <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

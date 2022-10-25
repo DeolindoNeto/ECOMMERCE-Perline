@@ -182,297 +182,130 @@ a.prod:link
 
 /*----------- TELA HOME FINAL------------*/
 .content-home{
-    margin-top: 8%;
-    background-color: #046789;
+    margin-top: 10%;
     width: 100%;
     height: 100%;
 }
 
-.content-home img{
-    width: 200px;
+.foto-principal-home{
+    width: 450px;
+    height: 350px;
+    margin-left: 15%;
+    box-shadow:
+        -15px 15px #B3F1E5,
+        -16px 16px #B3F1E5,
+        -17px 17px #B3F1E5;
+        border-radius: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-/*----------- TELA HOME ------------*/
-
-/* .mae
-{
-    background-color: #fff;
-    top: 0;
-    left: 0px;
-}
-
-.redondo
-{
-    border-radius: 8px;
-}
-
-.navegacao
-{
-    text-align: left;
-    color: white;
-    margin-left: 18%;
-}
-
-
-.desenvolvedores
-{
-   text-align: left;
-    color: white;
-}
-
-.voltartopo
-{
-   width: 25%;
-}
-
-.carrinhohome
-{
-    width: 60%;
-}
-
-.logo
-{
-    width: 20%;
-}
-
-.imghome
-{
-    width: 91%;
-    background-color: white;
-    margin-top: 8%;
-    font-family: Georgia;
-    font-size: 30px;
-    margin-left: 7%;
-    font-weight:bold;
-}
-
-.mapa
-{
-    padding-top:100px;
-}
-
-.quemsomostotales
-{
-    width: 91%;
-    background-color: transparent;
-    margin-top: 200px;
-    font-size: 30px;
-    margin-left: 7%;
-    font-weight:bold;
-    display:flex;
-    justify-items:center; 
-    padding-left: 30px;
-    
-}
-
-ComicSans{
-    Font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
-    font-size: 200%;
-}
-.quemsomostotal
-{
-    width: 91%;
-    background-color: transparent;
-    font-family: Arial;
-    font-size: 30px;
-    margin-left: 7%;
-    font-weight:bold;
-    display:flex;
-    justify-items:center; 
+.content-texto-home{
+    font-family: 'Poppins', sans-serif;
+    float: right;
     margin-top: 50px;
-}
-
-
-/*---------- config do p ------------
-.enrolation
-{
-    padding-bottom:10px;
-    padding-left: 30px;
-    padding-right:30px;
-    padding-top:10px;
-    text-align: justify;
-}
-/*---------- fim ------------
-
-.hometotal
-{
-    width: 93%;
-    font-size: 150%;
-    margin-left: 7%;
-    display: flex;
-    justify-items: auto; 
-}
-
-
-.tpfix2-btn
-{
-    width: 80%;
-    margin-left: 9%;
-    font-family: 'papernotes';
-}
-
-#home-btn{
-    margin-right: 50px;
-}
-
-.desen, .prod, .quem
-{
-    margin: 0 30px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 22px;
-    font-family: 'papernotes';
-}
-
-
-a.btnnav1:visited,
-a.btnnav1:link,
-a.btnnav2:visited,
-a.btnnav2:link,
-a.btnnav3:visited,
-a.btnnav3:link
-{
-    color: white;
-    text-decoration: none;
-}
-a.btnnav2:hover,
-a.btnnav1:hover,
-a.btnnav3:hover,
-a.desen:hover,
-a.prod:hover,
-a.quem:hover
-{
-    color: white;
-    text-decoration:underline;
-}
-
-a.desen:active,
-a.desen:visited,
-a.desen:link
-{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-a.prod:active,
-a.prod:visited,
-a.prod:link
-{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-a.quem:active,
-a.quem:visited,
-a.quem:link
-{
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
-
-footer 
-{
-    justify-content: space-around;
-    margin-top: 5%;
-    bottom: 0;
-    display: flex;
-    background-color: #003040;
-    color: #1ABC9C;
-    width: 100%;
-    height: 70%;    
-    text-align: center;
-    left: 0;
+    margin-right: 10%;
+    width: 450px;
+    height: 250px;
+    background-color: #B3F1E5;
+    border-radius: 50px;
     align-items: center;
-    font-size: 125%;
-} */
-/*------------------ INDEX --------------------*/
-
-/* .hometotal
-{
-    width: 100%;
-    font-size: 150%;
     display: flex;
-    justify-items: auto; 
+    font-size: 10px;
 }
 
+.content-3-prod{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    margin-top: 10%;
+    margin-left: 12%;
+}
 
-.prod
-{
-    cursor: pointer;
+.img1, .img2, .img3{
+    width: 200px;
+    height: 240px;
+    margin-top: 20px;
+}
+.imgdetalhes{
+    border-radius: 7px;
+    margin-left: 9px;
+    margin-top: 10px;
+}
+
+.prod-home-1, .prod-home-2, .prod-home-3{
+    text-align:center;  
+    width: 330px;
+    height: 330px;
     font-family: Georgia;
-    text-decoration: none;
-    font-size: 20px;
-    vertical-align: text-bottom;
+    font-size: 15px;    
 }
 
-a.prod:active,
-a.prod:hover,
-a.prod:visited,
-a.prod:link
-{
-    color: black;
+.prod-home-1{
+    background-color: #D42F68;
+    box-shadow:
+    -15px 15px #792340,
+    -16px 16px #792340,
+    -17px 17px #792340;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
 }
 
-.content {
-    transition: 0.2s;
+.prod-home-2{
+    background-color: #02779E;
+    box-shadow:
+    -15px 15px #203F49,
+    -16px 16px #203F49,
+    -17px 17px #203F49;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
 }
 
-.logo_no_carrinho
-{
-    font-family: Georgia;
+.prod-home-3{
+    background-color: #9061C2;
+    box-shadow:
+    -15px 15px #4B2C6D,
+    -16px 16px #4B2C6D,
+    -17px 17px #4B2C6D;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
 }
 
-.pricinpal container-fluid
-{
-    margin-top: 500px;
+.content-texto2-home{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 200px;
+    margin-left: 12%;
+    width: 450px;
+    height: 250px;
+    background-color: #B3F1E5;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    font-size: 10px;    
 }
 
-footer /*rodapé
-{
-    bottom: 0;
-    background-color: black;
-    color: #1ABC9C;
+.video-principal-home{
+    margin-top: -300px;
+    width: 450px;
+    float: right;
+    height: 350px;
+    margin-right: 10%;
+    box-shadow:
+        15px 15px #B3F1E5,
+        16px 16px #B3F1E5,
+        17px 17px #B3F1E5;
+        border-radius: 20px;
+}
+
+footer{
+    margin-top: 15%;
     width: 100%;
-    height: 5%;    
-    text-align: center;
-    left: 0;
-    align-items: center
+    height: 100px;
+    background-color: #22947d;f
 }
 
-.home_produtos
-{
-    margin-left: 2.5%;
-    margin-top: 3%;
-    width: 27.5%;
-    background-color: #5bc498;
-    border-radius: 10px;
-    font-family: Arial;
-    font-size: 15px;
-    text-align: center;
-}
-.home_video
-{
-    margin-left: 2.5%;
-    margin-top: 3%;
-    width: 57.5%;
-    background-color: #5bc498;
-    border-radius: 10px;
-    font-family: Arial;
-    font-size: 15px;
-    text-align: center;
-    border: solid 3px black;
-    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
-    
-} */
 
 /*----------- TELA DE LOGIN ------------*/
 
@@ -706,11 +539,12 @@ input[class="reset"]:hover {
 .cada_prod
 {
     text-align:center;  
+    align-items: center;
     width: 300px;
     height: 300px;
     background-color: #D42F68;
     font-family: Georgia;
-    font-size: 15px;
+    font-size: 11px;
     box-shadow:
         3px 3px #e7729b,
         4px 4px #e7729b,
@@ -718,6 +552,11 @@ input[class="reset"]:hover {
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
     border-radius: 20px;
+}
+
+.cada_prod p 
+{
+    font-size: 15px;
 }
 
 .cada_prodindex
@@ -743,6 +582,8 @@ input[class="reset"]:hover {
 
 .imgproduto{
     margin-top: 5%;
+    width: 150px;
+    height: 150px;
 }
 
 .textocomprar{
