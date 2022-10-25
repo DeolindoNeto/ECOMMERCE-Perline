@@ -600,6 +600,58 @@ input[class="reset"]:hover {
     box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 
+
+
+.botaocon {
+    margin-left: 10px;
+    width: 90px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocon:hover {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+.botaocon2 {
+    margin-left: 50px;
+    width: 90px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocon2:hover {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.botoesconfirma{
+    margin-top: 20px;
+}
 /*----------- TELA DE DETALHES PRODUTOS ------------*/
 
 .detalhe_produto_foto{

@@ -31,17 +31,13 @@
 
     if ($linhas > 0)
     {
-        echo '<script language="javascript">';
-        echo "alert('Usuario salvo com sucesso!')";
-        echo '</script>';	
-
+        echo "<script type='text/javascript'>alert('Cadastrado no sistema Perline com sucesso!!')</script>";
         header("Location: ./login.html");
     }   
     else
     {
-        echo '<script language="javascript">';
-        echo "alert('Erro na gravação do usuario!')";
-        echo '</script>';	
+        echo "<script type='text/javascript'>alert('Oops, algo deu errado ;-;')</script>";
+        header("Location: ./login.html");
     }
 
     // Fecha a conexão com o PostgreSQL

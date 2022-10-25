@@ -20,11 +20,11 @@
     $icmsProd = $_POST['PRODUCTICMS'];
     $imgProd = $_POST['PRODUCTIMAGE'];
     $manufaturado = $_POST['PRODUCTMANFACTURED'];
-    $dataExclusao = "current_timestamp";
+    $dataExclusao = "NULL";
     $excluido = "false";
 
     $sql = "insert into produto values (nextval('produto_id_produto_seq'::regclass),'$nomeProd', '$precoProd',
-        $dataExclusao, '$codeVisual', '$custoProd', '$vendaProd', '$margemLucro',
+        '$dataExclusao', '$codeVisual', '$custoProd', '$vendaProd', '$margemLucro',
         '$icmsProd', '$imgProd', '$excluido',  '$manufaturado')";
     
     $resultado = pg_query($conecta, $sql);
