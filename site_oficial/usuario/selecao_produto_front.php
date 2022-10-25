@@ -82,7 +82,7 @@
                     
                             <div class="row">
                                 <div class="cell cellNome">
-                                    <?php echo $linhacar['nome']; ?>
+                                <?php echo "<b>" .$linhacar['nome']; "<b>"?>
                                 
                                     <?php echo $linhacar['preco']; ?>
                                 
