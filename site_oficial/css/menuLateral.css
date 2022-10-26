@@ -557,6 +557,7 @@ input[class="reset"]:hover {
 .cada_prod p 
 {
     font-size: 15px;
+    padding-top: 10px;
 }
 
 .cada_prodindex
@@ -584,6 +585,7 @@ input[class="reset"]:hover {
     margin-top: 5%;
     width: 150px;
     height: 150px;
+    margin-left: 70px;
 }
 
 .textocomprar{

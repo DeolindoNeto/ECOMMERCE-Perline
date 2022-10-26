@@ -130,7 +130,7 @@
                     <div class='imgproduto' >
                         <br>
                         <a href='../usuario/selecao_detalhes_front.php?id_produto=".$linha['id_produto']."&imgprod=".$linha['campo_imagem']."'> 
-                        <img src='../img/$imagemproduto'>
+                        <img src='../img/$imagemproduto' width='160px' height='160px'>
                         </a>
                     </div>
 
