@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de produtos</title>
+    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+</head>
+<style>
+.descri
+{
+    text-align:center;  
+    background-color: #1ABC9C;
+    font-family: Georgia;
+    font-size: 15px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 100%;
+  
+}
+
+</style>
+<body>
+    <input type="checkbox" id="check" checked>
+        <header>
+
+            <div class="carrinhohome">
+                <label for="check">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
+                </label>
+            </div>
+            
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="../usuario/index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>  
+        </header>
+
+    
+    <!--<div class="sidebar">
+        <center>
+           <!-- <div class="logo_no_carrinho">
+                <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
+            </div>
+        </center>
+    </div>-->
+    
+    <div class="tpfix2">
+                
+            <div class="tpfix2-btn">
+                <center>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Quem Somos" href="../usuario/quemsomos.php">Quem Somos</a>
+                </center>
+            </div>
+        </div>
+
+    
+    <div class="content">
+           
+        <form class="cadastro" action="./novoProdutoback.php" method="post">
+              
+               <div class="card-header_cadastro">
+                    <center>
+                    <h2>Cadastro</h2>
+                    </center>
+
+                </div>
+               
+               <div class="form1">
+               
+                   <label class="labels">Nome do produto:</label><br>
+                   <input type="text" name="PRODUCTNAME" maxlength="70" size="26" required>
+
+                   <br><br>
+
+                   <label class="labels">Preço:</label><br>
+                   <input type="number" name="PRODUCTPRICE" placeholder="Ex. 9.99" step="0.01" required>
+
+                   <br><br>
+
+                   <label class="labels">Código visual:</label><br>
+                   <input type="text" name="PRODUCTCODE" maxlength="50" size="26" required>
+
+                   <br><br>
+
+                   <label class="labels">Custo:</label><br>
+                   <input type="number" name="PRODUCTCOST" placeholder="Ex. 9.99" step="0.01" required>
+                   
+                   <br><br>
+                   
+                   <label class="labels">Quantidade</label><br>
+                   <input type="number" name="PRODUCTQTDE" placeholder="Ex. 10" required>
+                   
+                   <br><br>
+               </div>
+               
+               <div class="form2">
+               
+                    <label class="labels">Preço de Venda:</label><br>
+                    <input type="number" name="PRODUCTSELLPRICE" placeholder="Ex. 9.99" step="0.01" required>
+
+                    <br><br>
+
+                    <label class="labels">Margem de lucro (%):</label><br>
+                    <input type="number" name="PRODUCTMARGIN" placeholder="Ex. 33.33" step="0.01" required>
+
+                    <br><br>
+
+                    <label class="labels">ICMS (%):</label><br>
+                    <input type="number" name="PRODUCTICMS" placeholder="Ex. 33.33" step="0.01" required>
+
+                    <br><br>
+                    
+                    <label class="labels">Imagem:</label><br>
+                   <input type="text" name="PRODUCTIMAGE" maxlength="200" size="26" required>
+
+                    <br><br>
+
+                    <label class="labels">Manufaturado?</label><br>
+                    <input type="radio" name="PRODUCTMANFACTURED" value="Sim" checked required> <label>SIM</label>
+                   <input type="radio" name="PRODUCTMANFACTURED" value="Não" required> <label>NÃO</label>
+               </div>  
+                            
+               <br><br>
+            
+            <div class="content">
+            <div class="descri">    
+                <div>
+                   <br>
+                    <label class="labels">Descrição do produto:</label><br>
+                   <textarea name="PRODUCTDESCRICAO" cols="45" role="15"></textarea>
+                </div>
+                <br><br>
+            </div>
+            </div>
+            
+               <input type="submit" value="Confirmar" class="submit">
+
+               &nbsp;&nbsp;&nbsp;
+               
+               <input type="reset" value="Limpar" class="reset">
+
+        </form>
+    </div> 
+    
+    <footer>
+        <a> </a>
+    </footer>
+</body>
+</html>

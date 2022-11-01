@@ -64,7 +64,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Quem Somos" href="quemsomos.php">Quem Somos</a>
+                    <a class="prod" title="Quem Somos" href="http://ftp.projetoscti.com.br/projetoscti21/entregadesen/usuario/desen.html">Quem Somos</a>
                 </center>
             </div>
         </div>
