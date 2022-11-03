@@ -27,9 +27,29 @@
 
 <body>
     <div class="mae">
+<<<<<<< HEAD
 
         <input type="checkbox" id="check" checked>
             <header>
+=======
+       
+    <input type="checkbox" id="check" checked>
+        <header>
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <?php
+                    if($_SESSION['usuariologado']){
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    else
+                    {
+                        echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                ?>
+>>>>>>> c4f2324173fa66c97c851030e991888111a201c5
 
                 <div class="carrinhohome" >
                     <label for="check" class="admsumir">
