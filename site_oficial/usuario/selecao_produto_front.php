@@ -41,7 +41,15 @@
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
-                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+                <?php
+                    if($_SESSION['usuariologado']){
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    else
+                    {
+                        echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                ?>
             </div>  
         </header>
 
@@ -54,7 +62,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" id="prod-sublinhado" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Quem Somos" href="quemsomos.php">Quem Somos</a>
+                    <a class="prod" title="Quem Somos" href="http://ftp.projetoscti.com.br/projetoscti21/entregadesen/usuario/desen.html">Quem Somos</a>
                 </center>
             </div>
         </div>

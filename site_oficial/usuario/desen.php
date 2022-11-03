@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>P R O D U T O S</title>
+    <title>Q U E M  S O M O S</title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
-	<link rel="icon" href="../img/faviconprod.png"> <!--icone na guia-->
+     <link rel="icon" href="../img/faviconquem.png"> <!--icone na guia-->
 </head>
 
-    <?php
+<body>
+
+<?php
         session_start();
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
@@ -41,7 +44,16 @@
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
-                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+                <?php
+                    if($_SESSION['usuariologado']){
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    else
+                    {
+                        echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                ?>
+
             </div>  
         </header>
 
@@ -50,11 +62,11 @@
             <div class="tpfix2-btn">
                 <center>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="prod-sublinhado" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
+                    <a class="prod" title="Quem Somos" href="http://ftp.projetoscti.com.br/projetoscti21/entregadesen/usuario/desen.html">Quem Somos</a>
                 </center>
             </div>
         </div>
@@ -106,95 +118,54 @@
             </form>
         </div>
     
-        <div class="content-quem somos">
+
+
+<div class="content_desen">
+    
+        <div class="divdesencamila">
+            <img class="fotodesen" src="../img/camila.jpg">
             
+            <p class="nome">08 - Camila Eduarda Favaro</p>
+            <p class="email">E-mail: camila.e.favaro@unesp.br</p>
         </div>
-        <script src="script.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </div> <!--fim da div mae-->
-</body>
-</html>
+    
+        <div class="divdesendeola">
+            <img class="fotodesen" src="../img/deolindo.jpg">
+            
+            <p class="nomedeola">13 - Deolindo Scandolera Neto</p>
+            <p class="emaildeola">E-mail: deolindo.scandolera@unesp.br</p>
+        </div>
 
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Q U E M  S O M O S</title>
-    <link rel="stylesheet" href="../css/menuLateral.css">
-    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
-     <link rel="icon" href="../img/faviconquem.png"> <!--icone na guia
-</head>
-
-<body>
-    <div class="mae">
-    <input type="checkbox" id="check">
-    <header>
-        <div class="carrinhohome">
-        <label for="check">
-            <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
-        </label>
+        
+        <div class="divdesenevelyn">
+            <img class="fotodesen" src="../img/evelyn.jpg">
+            
+            <p class="nomeevelyn">15 - Evelyn Mayra Pinheiro Lopes</p>
+            <p class="email">E-mail: evelyn.pinheiro@unesp.br</p>
         </div>
         
-        <div class="logo">
-            <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="100%" >
+        
+        <div class="divdesenmariana">
+            <img class="fotodesen" src="../img/mariana.jpg">
+            
+            <p class="nome">28 - Mariana Caroline Silva</p>
+            <p class="emailmariana">E-mail: mariana.caroline@unesp.br</p>
         </div>
-           
-           <div id="icons_home">
-            <abbr title="Home"><a href="./index.html"><img class="icon_menu_local" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <abbr title="Local"><a href="../usuario/local.html"><img class="icon_menu_local" src="../img/icon_menu_mapa.png"></a></abbr>
-           <abbr title="Login"><a href="../usuario/login.html"><img class="icon_menu_login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
-           </div>  
-    </header>
-    
-    <div class="sidebar">
-        <center>
-            <div class="logo_no_carrinho">
-                <h3><span>P E R L I N E</span>&nbsp;<abbr title="Perline"></abbr></h3>
-            </div>
-        </center>
+        
+        <div class="divdesenmatheus">
+            <img class="fotodesen" src="../img/matheus.jpg">
+            
+            <p class="nome">30 - Matheus Gimenes Soares</p>
+            <p class="emailmatheus">E-mail: matheus.gimenes-soares@unesp.br</p>
+        </div>
+
     </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
-      <div class="tpfix2">
-               <div class="botoes">
-               <center>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="prod" title="Home" href="../usuario/index.html">Home</a> 
-               &nbsp;&nbsp;&nbsp;&nbsp;
-                
-               <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-      
-               &nbsp;&nbsp;&nbsp;&nbsp;
-               <a class="prod" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
-               </center>
-               </div>
-               
-    </div> 
-    
-        <div class="quemsomostotales"><ComicSans>Quem somos?</ComicSans></div>
-        <div class="quemsomostotal">
-            
-        <div class="cada_prodindex"><p class="enrolation">A Perline Art é uma empresa Startup criada com a finalidade de obter experiência profissional na área de gestão de negócios bem como desenvolver um projeto de e-commerce, gerenciando as operacionalidades empresariais.</p>
-        </div>
-            
-            <div class="cada_prodindex"><p class="enrolation">Ao mesmo tempo visamos proporcionar aos nossos clientes uma experiência única munidos de produtos de qualidade, produzidos parcialmente pelos integrantes da equipe e inspirados nos gostos de nossos colegas.</p>
-        </div>
-            
-            <div class="cada_prodindex"><p class="enrolation">Além disso somos uma organização que não visa ganho pessoal, todos os nossos lucros serão revertidos em fundos para a associação de pais e mestres do colegio tecnico indutrial que financia os estudos de alunos carentes.</p>
-        </div>
-        
-        </div>
-        
-        <div class="quemsomostotal">
-            
-            <div class="cada_prodindex"><img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
-            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
-            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
-            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p></div>
-            <div class="cada_prodindex"> <img class="redondo" src='../imagens/devs.png' width="70%"><p class="pc">Camila</p> </div>
-        </div>
-        <footer>
+    <footer>
             <div class="navegacao"> 
                 Navegação<br><br>
                 <a class="btnnav1" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
@@ -219,4 +190,4 @@
         </footer>
     </div>
 </body>
-</html> -->
+</html>

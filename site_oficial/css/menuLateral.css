@@ -434,6 +434,125 @@ input[type="submit"]:hover{
     border-radius: 5px;
     box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
+/*----------- TELA DESENVOLVEDORES ------------*/
+
+.content_desen{
+    margin-top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.divdesencamila{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesendeola{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenevelyn{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenmariana{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenmatheus{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.fotodesen{
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+
+.nome{
+    float: right;
+    margin-top: 7%;
+    margin-right: 31%;
+}
+
+.nomedeola{
+    float: right;
+    margin-top: 7%;
+    margin-right: 30%;
+}
+
+.nomeevelyn{
+    float: right;
+    margin-top: 7%;
+    margin-right: 25%;
+}
+
+.email{
+    float: right;
+    margin-top: -15%;
+    margin-right: 25%;
+}
+
+.emaildeola{
+    float: right;
+    margin-top: -15%;
+    margin-right: 20%;
+}
+
+.emailmariana{
+    float: right;
+    margin-top: -15%;
+    margin-right: 21%;
+}
+
+.emailmatheus{
+    float: right;
+    margin-top: -15%;
+    margin-right: 15%;
+}
+
+.nome:hover {
+    color: #fff;
+}
+
+/*QUEM SOMOS*/
 
 /*----------- TELA DE CADASTRO ------------*/
 
@@ -791,7 +910,7 @@ h6{
     margin-left: 31%;
 }
 .table {
-    padding-top: 50px;
+    padding-top: 200px;
     width:800px; 
     display:grid;
 }

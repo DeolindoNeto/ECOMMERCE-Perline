@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    include "./conection.php";
+    include "../utils/conection.php";
 
     $nomeProd = $_POST['PRODUCTNAME'];
     $precoProd = $_POST['PRODUCTPRICE'];
@@ -20,12 +20,14 @@
     $icmsProd = $_POST['PRODUCTICMS'];
     $imgProd = $_POST['PRODUCTIMAGE'];
     $manufaturado = $_POST['PRODUCTMANFACTURED'];
-    $dataExclusao = "NULL";
+    $dataExclusao = "2000-01-01";
     $excluido = "false";
+    $descricao = $_POST['PRODUCTDESCRICAO'];
+    $quantidade = $_POST['PRODUCTQTDE'];
 
     $sql = "insert into produto values (nextval('produto_id_produto_seq'::regclass),'$nomeProd', '$precoProd',
-        '$dataExclusao', '$codeVisual', '$custoProd', '$vendaProd', '$margemLucro',
-        '$icmsProd', '$imgProd', '$excluido',  '$manufaturado')";
+        '$dataExclusao', '$codeVisual', '$custoProd', '$vendaProd', '$margemLucro', '$quantidade',
+        '$icmsProd', '$imgProd', '$excluido',  '$manufaturado','$descricao')";
     
     $resultado = pg_query($conecta, $sql);
 
@@ -38,6 +40,7 @@
     else
     {
         echo "<br>Erro na gravação do produto !!!<br><br>";
+        echo "$sql";
         echo "<a href='./admhome.php'>Voltar Para o Menu de Desenvolvimento</a>&nbsp;";
     }
     // Fecha a conexão com o PostgreSQL
