@@ -42,13 +42,6 @@
        
     <input type="checkbox" id="check" checked>
         <header>
-
-            <div class="carrinhohome">
-                <label for="check">
-                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
-                </label>
-            </div>
-            
             <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
