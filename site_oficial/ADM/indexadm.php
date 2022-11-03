@@ -2,124 +2,114 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>P E R L I N E</title>
-    <link rel="stylesheet" type="text/css" href="../css/menuLateral.css"> <!--conectando com o styles-->
-    <link rel="icon" href="../imagens/perlineLogo_reverso.svg"> <!--icone na guia-->
+    <title> H O M E
+    </title>
+    <link rel="stylesheet" href="../css/menuLateral.css">
+    <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
+	<link rel="icon" href="../img/faviconprod.png"> <!--icone na guia-->
 </head>
+
+    <?php
+        session_start();
+        $acao = $_GET['acao'] ?? '';
+        $id_produto = $_GET['id_produto'] ?? 0;
+        $id_user = $_SESSION['usuariologado']['id_user'];
+    
+        if ($acao=='up') {
+            if (is_array($_POST['prod']))
+                $prods = $_POST['prod'];
+            else
+                $prods = array();
+        }
+    
+        include "carrinho_back.php";
+    ?>
+
 <body>
     <div class="mae">
-        <a name="Topo"></a>
-        <div class="tpfix">
-            <div class="logo">
-                <img class="icon_menu_local" src="../imagens/perlineLogo_reverso.svg" width="60%" >
-                </div>
-                   
-                    <div class="botoes">
-                       <a class="prod" title="Produtos" href="./tabelaprodutos.php">Produtos</a>
-                       &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a class="desen" title="Desenvolvedores" href="#">Estatísticas</a>
-                       &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a class="quem" title="Quem Somos" href="../usuario/quemsomos.html">Conheça-nos</a>
-                       &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a class="quem" title="Quem Somos" href="./tabelaprodutos.php">Tabela Produtos</a>
-                       &nbsp;&nbsp;&nbsp;&nbsp;
-                       <a class="quem" title="Quem Somos" href="./tabelausuarios.php">Tabela Usuários</a>
-                    </div>
-                    
-                    <div id="icons_home">
 
-                        <abbr title="Home"><a href="index.html"><img class="icon_menu_home" src="../imagens/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <abbr title="Local"><a href="local.html"><img class="icon_menu_local" src="../imagens/icon_menu_mapa.png"></a></abbr>
-                        <abbr title="Login"><a href="login.html"><img class="icon_menu_login" src="../imagens/icon_menu_login.png"></a></abbr>
-                        <abbr title="Carrinho"><a href=#><img class="icon_menu_sacola" src="../imagens/icon_menu_sacola.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="check" checked>
+        <header>
 
-                    </div> 
-        </div>
-        <center><div class="imghome"><br><img src="../imagens/bannerPerline.png" height="55%" width="80%"><br>
-             <p>A Perline é uma empresa que foi criada com o intuito de tornar você, mais estiloso</p><br>
-        </div></center>
+            <div class="carrinhohome" >
+                <label for="check" class="admsumir">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png" class="admsumir"></abbr>
+                </label>
+            </div>
+            
+            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            
+            <div class="header-btn">
+                <abbr title="Home"><a href="../ADM/indexadm.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="#"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <?php
+                    if($_SESSION['usuariologado']){
+                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                    else
+                    {
+                        echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
+                    }
+                ?>
+
+            </div>  
+        </header>
+
+        <div class="tpfix2">
+                
+            <div class="tpfix2-btn">
+                <center>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
+                </center>
+            </div>
+            </div>
+    
+
+        <div class="content-home">
         
-        <div class="hometotal">
-            <div class="home_produtos">    
-                <div>
-                    <h1>
-                    Pulseira Harry Potter
-                    </h1>
-                    <a href='selecao_detalhes_front.php?id=6'> 
-                    <img src='../imagens/sonserina.png' width="70%">
-                    </a>
-                    <br><br><a href=# id="link">Comprar</a>
-                    <br><p class="pc">Pulseira com tema das casas da série de livros Harry Potter.</p>
-                    <p class="pc">Valor: R$ 5.00</p>
-                </div>
-            </div>
-            
-            <div class="home_produtos">    
-                <div>
-                    <h1>
-                    Pulseira Stranger Things
-                    </h1>
-                    <a href='selecao_detalhes_front.php?id=3'> 
-                    <img src='../imagens/stranger_things.png' width="70%">
-                    </a>
-                    <br><br><a href=# id="link">Comprar</a>
-                    <br><p class="pc">Pulseira com tema da série Stranger Things.</p>
-                    <p class="pc">Valor: R$5.00</p>
-                </div>
-            </div>
-            <div class="home_produtos">    
-                <div>
-                    <h1>
-                    Pulseira de coração
-                    </h1>
-                    <a href='selecao_detalhes_front.php?id=2'> 
-                    <img src='../imagens/coracao.png' width="70%">
-                    </a>
-                    <br><br><a href=# id="link">Comprar</a>
-                    <br><p class="pc">Pulseira decorada com miçangas de corações nela.</p>
-                    <p class="pc">Valor: R$5.00</p>
-                </div>
-            </div>
-        </div>
-        <div class="hometotal">
-            <div class="home_produtos">    
-                    <div>
-                        <h1>
-                        Filme Ilustrativo
-                        </h1>
-                        <br><p class="pj">Ao lado está um vídeo ilustartivo do processo de produção das pulseiras feitas à mão que são completamente customizáveis, originais e de qualidade.</p><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-            </div>
-            <div class="home_video">    
-               <br><br><br><br><br>
-                <iframe align="center" width="70%" height="70%" src="https://www.youtube.com/embed/JcqbYpl8nZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-            
-        <footer>
-            <div class="navegacao"> 
-                Navegação<br><br>
-                <a class="btnnav1" title="Produtos" href="./tabelaprodutos.php">Produtos</a>
-                   <br>
-                <a class="btnnav3" title="Quem Somos" href="#">Estatísticas</a>
-                    <br>
-                <a class="btnnav3" title="Quem Somos" href="#">Quem Somos</a><br><br><br><br>
-            </div>
-            
-            <div class="desenvolvedores"> 
-                <br>Desenvolvedores<br><br>
-                Camila Eduarda Favaro<br>
-                Deolindo Scandolera Neto<br>
-                Evelyn Mayra Pinheiro Lopes<br>
-                Mariana Caroline Silva<br>
-                Matheus Gimenes Soares<br><br><br>
+            <div class="content-texto-home">
+            <p>Levar beleza e qualidade para todos os nossos clientes é o principal objetivo da Perline Art. Proporcionamos a melhor experiência e excelência em nossos produtos.</p>
             </div>
 
-            <div class="voltartopo"> 
-                <a href="#Topo"><img src="../imagens/voltar.png" width="60%"></a>
+            <img class="foto-principal-home" src="../img/teste_home.jpg"> 
+
+
+            <div class="content-3-prod">
+                <div class="prod-home-1">
+                    <img class="img1" src="../img/corvinal.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>                </div>
+
+                <div class="prod-home-2">
+                    <img class="img2" src="../img/sonse.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                </div>
+
+                <div class="prod-home-3">
+                    <img class="img3" src="../img/grifinoria.jpg"><br><br>
+                    <a class="detalhes-btn-comprar" href='carrinho_back.php?acao=add&id_produto=<?php echo $id_produto; ?>'>Comprar</a>
+                </div>
+            </div>  
+              
+            <div class="content-texto2-home">
+            <p>Nossas pulseiras são feitas com muito carinho pela equipe Perline. Visando compartilhar este amor e multiplicar nossas experiências, indicamos o vídeo ao lado afim de aprender mais sobre como cada uma delas chegam até você.</p>
+            </div>
+
+            <iframe class="video-principal-home" align="center" src="https://www.youtube.com/embed/JcqbYpl8nZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+
+        <footer>
+            <div class="content-footer-home">
             </div>
         </footer>
+        <script src="script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div> <!--fim da div mae-->
 </body>
 </html>
