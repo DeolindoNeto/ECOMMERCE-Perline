@@ -134,8 +134,8 @@
                 <?php echo $linha['nome'];?>
                 </h1>
                 <br>
-                <p>A pulseira praia conta com nossas lindas miçangas de conchinhas e estrelas. Esta peça é uma das mais vendidas da nossa loja, garanta já a sua!</p>
-                <!-- <?php echo $linha['descricao']; ?> -->
+                <p><?php echo $linha['descricao']; ?></p>
+                <!--A pulseira praia conta com nossas lindas miçangas de conchinhas e estrelas. Esta peça é uma das mais vendidas da nossa loja, garanta já a sua!-->
                 <br>
                 <?php echo "<div class='preco-detalhes'>R$" .$linha['preco'];"</div>" ?>
                 <br><br><br>
