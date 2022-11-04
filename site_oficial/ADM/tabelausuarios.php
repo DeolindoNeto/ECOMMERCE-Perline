@@ -26,6 +26,10 @@
         include "carrinho_back.php";
     ?>
 
+<<<<<<< HEAD
+<body>
+    <div class="mae">
+=======
 =======
     <title>P R O D U T O S</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
@@ -103,6 +107,7 @@
         <?php
             include "./tabelausuarios_back.php";
 >>>>>>> c4f2324173fa66c97c851030e991888111a201c5
+>>>>>>> parent of a2b1413 (.)
 
         <input type="checkbox" id="check" checked>
             <header>

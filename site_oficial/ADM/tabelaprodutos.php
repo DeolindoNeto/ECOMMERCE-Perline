@@ -31,6 +31,8 @@
 
         <input type="checkbox" id="check" checked>
             <header>
+<<<<<<< HEAD
+=======
 =======
        
     <input type="checkbox" id="check" checked>
@@ -50,6 +52,7 @@
                     }
                 ?>
 >>>>>>> c4f2324173fa66c97c851030e991888111a201c5
+>>>>>>> parent of a2b1413 (.)
 
                 <div class="carrinhohome" >
                     <label for="check" class="admsumir">
