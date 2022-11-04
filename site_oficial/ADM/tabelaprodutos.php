@@ -27,11 +27,9 @@
 
 <body>
     <div class="mae">
-<<<<<<< HEAD
 
         <input type="checkbox" id="check" checked>
             <header>
-=======
        
     <input type="checkbox" id="check" checked>
         <header>
@@ -49,7 +47,6 @@
                         echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                 ?>
->>>>>>> c4f2324173fa66c97c851030e991888111a201c5
 
                 <div class="carrinhohome" >
                     <label for="check" class="admsumir">

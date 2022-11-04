@@ -313,10 +313,9 @@ footer{
 
 /*----------- TELA DE LOGIN ------------*/
 
-#titulo_login
-{
+#titulo_login{
     margin-left: 550px;
-    font-family: Georgia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28px;
     cursor: pointer;
 }
