@@ -6,6 +6,23 @@
     <link rel="stylesheet" type="text/css" href="../css/menuLateral.css"> <!--conectando com o styles-->
     <link rel="icon" href="../img/faviconlocal.png">
 </head>
+
+        <?php
+        session_start();
+        $acao = $_GET['acao'] ?? '';
+        $id_produto = $_GET['id_produto'] ?? 0;
+        $id_user = $_SESSION['usuariologado']['id_user'];
+
+        if ($acao=='up') {
+            if (is_array($_POST['prod']))
+                $prods = $_POST['prod'];
+            else
+                $prods = array();
+        }
+
+        include "carrinho_back.php";
+        ?>
+        
 <body>
      <div class="mae">
   
@@ -22,7 +39,7 @@
             
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Local"><a href="../usuario/local.php"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>  
         </header>
@@ -39,28 +56,7 @@
     <br><br>
 
       <footer>
-            <div class="navegacao"> 
-                Navegação<br><br>
-                <a class="btnnav1" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                <br>
-                <a class="btnnav2" title="Quem Somos" href="desen.html">Quem Somos</a>
-                <br>
-                <a class="btnnav3" title="Local" href="../usuario/local.html">Loja física</a><br><br><br><br>
-            </div>
-            
-            <div class="desenvolvedores"> 
-                <br>Desenvolvedores<br><br>
-                Camila Eduarda Favaro<br>
-                Deolindo Scandolera Neto<br>
-                Evelyn Mayra Pinheiro Lopes<br>
-                Mariana Caroline Silva<br>
-                Matheus Gimenes Soares<br><br><br>
-            </div>
-
-            <div class="voltartopo"> 
-                <a href="../usuario/index.php"><img src="../imagens/voltar.png" width="60%"></a>
-            </div>
-        </footer>
+      </footer>
 
     </div>
 </body>

@@ -27,21 +27,21 @@
 
 <body>
     <div class="mae">
-<<<<<<< HEAD
 
         <input type="checkbox" id="check" checked>
-            <header>
-<<<<<<< HEAD
-=======
-=======
-       
-    <input type="checkbox" id="check" checked>
         <header>
+
+            <div class="carrinhohome" >
+                <label for="check" class="admsumir">
+                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png" class="admsumir"></abbr>
+                </label>
+            </div>
+            
             <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
-                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
+                <abbr title="Home"><a href="../ADM/indexadm.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Local"><a href="#"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <?php
                     if($_SESSION['usuariologado']){
                         echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -51,49 +51,23 @@
                         echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
                     }
                 ?>
->>>>>>> c4f2324173fa66c97c851030e991888111a201c5
->>>>>>> parent of a2b1413 (.)
 
-                <div class="carrinhohome" >
-                    <label for="check" class="admsumir">
-                        <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png" class="admsumir"></abbr>
-                    </label>
-                </div>
+            </div>  
+        </header>
+
+        <div class="tpfix2">
                 
-                <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
-                
-                <div class="header-btn">
-                <abbr title="Home"><a href="../ADM/indexadm.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                    <abbr title="Home"><a href="#"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
-                    <?php
-                        if($_SESSION['usuariologado']){
-                            echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                        else
-                        {
-                            echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
-                        }
-                    ?>
-
-                </div>  
-            </header>
-
-            <div class="tpfix2">
-                    
-                <div class="tpfix2-btn">
-                    <center>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a class="prod" id="home-btn" title="Home" href="../ADM/indexadm.php">Home</a> 
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a class="prod" id="prod-sublinhado" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
-                    </center>
-                </div>
+            <div class="tpfix2-btn">
+                <center>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
+                </center>
             </div>
 
-            
             <div class="content-tabela-produto-adm">
                 <?php
                     include "./tabelaprodutos_back.php";
@@ -143,20 +117,12 @@
                             } 
                     // Fechando a tag da tabela
                     echo "</div>";
-                ?>
-                    
-                    
+                ?> 
             </div>
-                
-
-            <footer>
-                <div class="content-footer-home">
-                </div>
-            </footer>
+            
         <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div> <!--fim da div mae-->
 </body>
 </html>
-
