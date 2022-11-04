@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title> H O M E
     </title>
     <link rel="stylesheet" href="../css/menuLateral.css">
@@ -25,6 +26,7 @@
         include "carrinho_back.php";
     ?>
 
+=======
     <title>P R O D U T O S</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
@@ -60,8 +62,11 @@
 }
 
 </style>
+>>>>>>> c4f2324173fa66c97c851030e991888111a201c5
 <body>
     <div class="mae">
+<<<<<<< HEAD
+=======
         <header>
             <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
@@ -97,6 +102,7 @@
         
         <?php
             include "./tabelausuarios_back.php";
+>>>>>>> c4f2324173fa66c97c851030e991888111a201c5
 
         <input type="checkbox" id="check" checked>
             <header>
