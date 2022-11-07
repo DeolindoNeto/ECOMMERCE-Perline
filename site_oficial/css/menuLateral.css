@@ -926,7 +926,7 @@ h6{
     display:inline-block;
     padding: 5px 5px;
     margin-bottom: .5%;
-    background-color: #e7729b; 
+    background-color: #168F77; 
     font-size: 10pt;
 }
 .cellHeader {text-align: center !important;}
@@ -950,7 +950,23 @@ h6{
     border-radius: 15px;
     margin-left: 300px;
     margin-top: 150px;
-    width: 850px;
+    min-width: 100px;
+    max-width: 1000px;    
+    align-items: center;
+    height: 500px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.cada_prodindexfinal2
+{
+    margin-top: 200px;
+    margin-left: 400px;
+    background-color: #046789;
+    font-family:sans-serif;
+    border-radius: 15px;
+    width: 800px;   
     align-items: center;
     height: 400px;
     box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
@@ -1017,6 +1033,7 @@ a.email:link
     color: black;
     text-decoration:underline;
 }
+
 
 /*----------- TELA DE TABELA PRODUTO ADM ------------*/
 .pesquisa

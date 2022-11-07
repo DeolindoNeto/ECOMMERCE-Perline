@@ -22,7 +22,6 @@
             
             <div class="header-btn">
                 <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <abbr title="Local"><a href="../usuario/local.php"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
             </div>  
         </header>
 
@@ -40,62 +39,61 @@
             </div>
         </div>
 
-<div class="cada_prodindexfinal">
+    <div class="cada_prodindexfinal">
 
-        <div class='pedido-finalizacao'>
-            <h2>Informações do pedido</h2><br>
-            <div class='row'>
-                <div class='cell cellNome cellHeader'>
-                    Produto
-                </div>
-                <div class='cell cellPreco cellHeader'>
-                    Preço
-                </div>
-                <div class='cell cellPreco cellHeader'>
-                    Qtde.
-                </div>
-                <div class='cell cellPreco cellHeader'>
-                    Subtotal
-                </div>
-            </div>
-
-            <?php
-                $total = 0.0;
-
-                // Criar linhas com os dados dos produtos
-                foreach ($resultado_lista as $linha)
-                { 
-                    $id_produto = $linha['id_produto'];
-                    $total += floatval($linha['subtotal']);
-            ?>
-                    <div class='row'>
-                        <div class='cell cellNome'>
-                        <?php echo $linha['nome']; ?>
-                        </div>
-                        <div class='cell cellPreco'>
-                            <?php echo $linha['preco']; ?>
-                        </div>
-                        <div class='cell cellPreco'>
-                            <?php echo $linha['qtde']; ?>
-                        </div>
-                        <div class='cell cellPreco'>
-                            <?php echo $linha['subtotal']; ?>
-                        </div>
+            <div class='pedido-finalizacao'>
+                <h2>Informações do pedido</h2><br>
+                <div class='row'>
+                    <div class='cell cellNome cellHeader'>
+                        Produto
                     </div>
+                    <div class='cell cellPreco cellHeader'>
+                        Preço
+                    </div>
+                    <div class='cell cellPreco cellHeader'>
+                        Qtde.
+                    </div>
+                    <div class='cell cellPreco cellHeader'>
+                        Subtotal
+                    </div>
+                </div>
 
-            <?php 
-                }
-                echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
-            ?>
+                <?php
+                    $total = 0.0;
+
+                    // Criar linhas com os dados dos produtos
+                    foreach ($resultado_lista as $linha)
+                    { 
+                        $id_produto = $linha['id_produto'];
+                        $total += floatval($linha['subtotal']);
+                ?>
+                        <div class='row'>
+                            <div class='cell cellNome'>
+                            <?php echo $linha['nome']; ?>
+                            </div>
+                            <div class='cell cellPreco'>
+                                <?php echo $linha['preco']; ?>
+                            </div>
+                            <div class='cell cellPreco'>
+                                <?php echo $linha['qtde']; ?>
+                            </div>
+                            <div class='cell cellPreco'>
+                                <?php echo $linha['subtotal']; ?>
+                            </div>
+                        </div>
+
+                <?php 
+                    }
+                    echo "<h3>Total: R$ ".number_format($total, 2, ',', '.');".</h3>";
+                ?>
+            </div>
+        <br>
+        <hr>
+        <h3>Deseja confirmar?</h3>
+        <div class="botoesconfirma">
+            <a class="botaocon" href="finaliza_compra_front.php">Finalizar</a>
+            <a class="botaocon2" href="./selecao_produto_front.php">Cancelar</a>&nbsp;&nbsp;
         </div>
-    <br><br>
-    <hr>
-    <br>
-    <h3>Deseja confirmar?</h3>
-    <br>
-    <div class="botoesconfirma">
-        <a class="botaocon" href="finaliza_compra_front.php">Finalizar</a>
-        <a class="botaocon2" href="./selecao_produto_front.php">Cancelar</a>&nbsp;&nbsp;
     </div>
 
 </div>
