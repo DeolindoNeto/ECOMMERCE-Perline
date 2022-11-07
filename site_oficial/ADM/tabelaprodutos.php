@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title> H O M E
+    <title> P R O D U T O S
     </title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
@@ -60,13 +60,15 @@
             <div class="tpfix2-btn">
                 <center>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    <a class="prod" id="home-btn" title="Home" href="../ADM/indexadm.php">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
+                    <a class="prod" id="prod-sublinhado" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
                 </center>
             </div>
+
+        </div>
 
             <div class="content-tabela-produto-adm">
                 <?php

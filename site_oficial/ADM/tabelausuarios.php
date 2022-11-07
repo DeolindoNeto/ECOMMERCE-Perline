@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title> H O M E
+    <title> P R O D U T O S
     </title>
     <link rel="stylesheet" href="../css/menuLateral.css">
     <link rel="shortcut icon" href="unesp.ico" type="image/x-icon">
@@ -25,48 +25,11 @@
         include "carrinho_back.php";
     ?>
 
-    <title>P R O D U T O S</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-</head>
-
 <body>
-    <div class="mae">
-        <header>
-            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
-            
-            <div class="header-btn">
-                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <abbr title="Local"><a href="../usuario/local.html"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
-                <?php
-                    if($_SESSION['usuariologado']){
-                        echo "<abbr title='Login'><a href='../usuario/logoff_back.php'><img class='header-btn-login' src='../img/icon_logoff.png' width='40px' height='40px'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
-                    }
-                    else
-                    {
-                        echo "<abbr title='Login'><a href='../usuario/login.html'><img class='header-btn-login' src='../img/icon_menu_login.png'></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;";
-                    }
-                ?>
-
-            </div>  
-        </header>
-
-        <div class="tpfix2">
-                
-            <div class="tpfix2-btn">
-                <center>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Quem Somos" href="quemsomos.php">Quem Somos</a>
-                </center>
-            </div>
-        </div>
-        
         <?php
             include "./tabelausuarios_back.php";
 
+        ?>
         <input type="checkbox" id="check" checked>
             <header>
 
@@ -172,21 +135,11 @@
                         // Fechando a tag da tabela
                     echo "</div>";
                 ?>
-                    
-                    
             </div>
                 
-
-            <footer>
-                <div class="content-footer-home">
-                </div>
-            </footer>
         <script src="script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div> <!--fim da div mae-->
 </body>
 </html>
-
-
-
