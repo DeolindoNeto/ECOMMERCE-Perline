@@ -21,8 +21,6 @@
             else
                 $prods = array();
         }
-    
-        include "carrinho_back.php";
     ?>
 
 <body>
@@ -30,14 +28,8 @@
 
         <input type="checkbox" id="check" checked>
         <header>
-
-            <div class="carrinhohome" >
-                <label for="check" class="admsumir">
-                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png" class="admsumir"></abbr>
-                </label>
-            </div>
             
-            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
+            <abbr class="header-adm" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
                 <abbr title="Home"><a href="../ADM/indexadm.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

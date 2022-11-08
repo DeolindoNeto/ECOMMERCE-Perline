@@ -647,13 +647,17 @@ input[class="reset"]:hover {
     text-decoration:underline;
 }
 
+.content-selecao-produto{
+    margin-top: 10-0px;
+    margin-left: 200px;
+}
+
 .divproduto
 {
     display:grid; 
     grid-template-columns: repeat(3,300px); 
     grid-column-gap: 50px;
-    grid-row-gap: 10px;
-    margin-top: 10%;
+    grid-row-gap: 20px;
 }
 
 .cada_prod
@@ -1065,8 +1069,8 @@ a.email:link
 
 /*----------- TELA DE TABELA PRODUTO ADM ------------*/
 .content-tabela-produto-adm{
-    margin-top: -180px;
-    margin-left: 460px;
+    margin-top: -100px;
+    margin-left: 350px;
 }
 
 .table 
@@ -1120,8 +1124,8 @@ a.email:link
 
 .table_usuario
 {
-    margin-top: 50px;
-    margin-left: 250px;
+    margin-top: 110px;
+    margin-left: 150px;
     width: 1300px;
     display:grid;
     margin-bottom: 5%;
@@ -1176,6 +1180,9 @@ a.email:link
     width:150px;
 }
 
-.content-tabela-usuario-adm{
-    margin-top: ;
+.header-adm{
+    margin-left: 450px;
+}
+
+.header-admteste{
 }
