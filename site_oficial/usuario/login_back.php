@@ -17,6 +17,9 @@
         $_SESSION["usuariologado"] = $linha;
         $_SESSION["isadm"] = $linha['adm'];
         $nome = $_SESSION["usuariologado"]["nome_user"];
+        echo '<script language="javascript">';
+        echo "alert('Usuário logado, bem vindo!!')";
+        echo '</script>';
         echo "<meta HTTP-EQUIV='refresh' CONTENT='0;URL=./index.php'>";
     }
     else

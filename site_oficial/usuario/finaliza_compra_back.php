@@ -1,6 +1,6 @@
 <?php
     include "../utils/conection.php";
-    
+    session_start();
     $id_user = $_SESSION['usuariologado']['id_user'];
     $compraFinalizada = FALSE;
     $cont = 0;
@@ -43,14 +43,14 @@
         $preco = $linha['preco_venda'];
         $qtde = $linha['qtde'];
         $id_produto = $linha['id_produto'];
-        $estoque = $linha['quantidade'];
+        $estoque = $linha['estoque'];
         $subtotal = $preco * $qtde;
         $total = $subtotal + $total;
         
         if ($qtde > $estoque)
         {
            $cont++;
-           break;
+          break;
         }
     }
 
@@ -80,12 +80,14 @@
             $res = pg_query($conecta, $sql);
             atualizarEstoque($conecta, $id_produto, $qtdVendida);
         }  
+        header ('Location: finaliza_compra_front.php');
     }
     else
     {
-        echo '<script language="javascript">';
-            echo "alert('Não temos esta quantidade em estoque ;-;')";
-            echo '</script>';
+        $_SESSION['erro_finalizacao'] = 1;
+
+            header ('Location: selecao_produto_front.php');
+            return;
     }
     
     // Limpar carrinho
