@@ -181,9 +181,6 @@ a.prod:link
 /* ------ obj sumir checked fim ------- */
 
 
-
-
-
 /*----------- TELA HOME FINAL------------*/
 .content-home{
     margin-top: 10%;
@@ -650,13 +647,17 @@ input[class="reset"]:hover {
     text-decoration:underline;
 }
 
+.content-selecao-produto{
+    margin-top: 10-0px;
+    margin-left: 200px;
+}
+
 .divproduto
 {
     display:grid; 
     grid-template-columns: repeat(3,300px); 
     grid-column-gap: 50px;
-    grid-row-gap: 10px;
-    margin-top: 10%;
+    grid-row-gap: 20px;
 }
 
 .cada_prod
@@ -1034,40 +1035,47 @@ a.email:link
     text-decoration:underline;
 }
 
+/*----------- TELA DE LOCAL ------------*/
+.tpfix2_local
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 14%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: #1ABC9C;
+    text-align: center;
+}
+
+.frase_local
+{
+    margin-left: 580px;
+    font-size: 18px;
+}
+
+.mapa
+{
+    margin-top: 30px;
+    width: 30%;
+    box-shadow:
+        15px 15px #B3F1E5,
+        16px 16px #B3F1E5,
+        17px 17px #B3F1E5;
+    border-radius: 20px;
+}
 
 /*----------- TELA DE TABELA PRODUTO ADM ------------*/
-.pesquisa
-{
-    margin-top: 150px;
-    margin-left: 400px;
-    border-radius: 5px;
-    background-color: #1ABC9C;
-    width: 500px;
-    height: 35px;
-    
-}
-
-.pesquisa2
-{
-    padding:4 10px;
-    background-color: transparent;
-    border:none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    color: white;
-    margin-top: -25px;
-}
-
-.icon_pesquisa
-{
-    margin-left: 450px
+.content-tabela-produto-adm{
+    margin-top: -100px;
+    margin-left: 350px;
 }
 
 .table 
 {
-    margin-top: 30px;
-    margin-left: 25%;
-    width: 700px;
+    width: 900px;
     display:grid;
     margin-bottom: 5%;
 }
@@ -1109,19 +1117,15 @@ a.email:link
 
 .celulaacoes
 {
-    width:105px;
+    width:120px;
 }
 
-.erro
-{
-    margin-left: 565px;
-}
 /*----------- TABELA DE USUARIO ADM ------------*/
 
 .table_usuario
 {
-    margin-top: 150px;
-    margin-left: 100PX;
+    margin-top: 110px;
+    margin-left: 150px;
     width: 1300px;
     display:grid;
     margin-bottom: 5%;
@@ -1137,7 +1141,7 @@ a.email:link
     display:inline-block;
     padding: 5px 5px;
     margin-bottom: .5%;
-    background-color: #1ABC9C;
+    background-color: #B3F1E5;
     font-size: 12pt;
 }
 .cellHeader_usuario
@@ -1176,192 +1180,9 @@ a.email:link
     width:150px;
 }
 
-.content-tabela-usuario-adm{
-    margin-top: ;
+.header-adm{
+    margin-left: 450px;
 }
 
-/*----------- TELA DE TABELA PRODUTO ADM ------------*/
-
-.table 
-{
-    width: 600px;
-    display:grid;
-    margin-bottom: 5%;
-}
-
-.row 
-{
-    display:block;
-}
-
-.celula
-{
-    display:inline-block;
-    padding: 5px 5px;
-    margin-bottom: .5%;
-    background-color: #1ABC9C;
-    font-size: 12pt;
-}
-.cellHeader 
-{
-    text-align: center !important;
-}
-
-.celulacod 
-{
-    width:100px;
-}
-
-.celulanome
-{
-    width:300px;
-}
-
-
-.celulapreco
-{
-    width:60px; 
-    text-align:right;
-}
-
-.celulaacoes
-{
-    width:150px;
-}
-
-.content-tabela-produto-adm
-{
-    margin-top: 500px;
-}
-
-/*----------- TELA DE LOCAL ------------*/
-.tpfix2_local
-{
-    position: fixed;
-    height: 5%;
-    width: 100%;
-    top: 14%;
-    left: 0;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    color: #1ABC9C;
-    text-align: center;
-}
-
-.frase_local
-{
-    margin-left: 580px;
-    font-size: 18px;
-}
-
-.mapa
-{
-    margin-top: 30px;
-    width: 30%;
-    box-shadow:
-        15px 15px #B3F1E5,
-        16px 16px #B3F1E5,
-        17px 17px #B3F1E5;
-    border-radius: 20px;
-}
-
-/*----------- TELA DE ALTERA PRODUTO ------------*/
-
-.altprod{
-    margin-top: 9%;
-    background-color: #046789;
-    padding: 40px;
-    height: 450px;
-    width: 700px;
-    border-radius: 20px;
-    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
-}
-
-.card-header_altprod
-{
-    padding-bottom: 30px;
-    opacity: 0.8;
-    color: #fff;
-    margin-top: -25px;
-    margin-left: -5%;
-}
-
-.card-header_altprod:after 
-{
-    content: "";
-    width: 106px; /*linha embaixo*/
-    height: 1px;
-    background-color: #fff;
-    display: block;
-    margin-top: -4px;
-    margin-left: 315px;
-}
-
-.altprod label 
-{
-    color: #fff;
-    font-size: 17px;
-    opacity: 0.8;
-}
-
-.altprod input 
-{
-    margin-top: 10px;
-    padding:0 5px;
-    background-color: transparent;
-    border:none;
-    border-bottom: 1px solid #e1e1e1;
-    outline: none;
-    color: #fff;
-}
-
-/*----------- TELA DE ALTERA USUÁRIO ------------*/
-
-.altus{
-    margin-top: 9%;
-    background-color: #046789;
-    padding: 40px;
-    height: 450px;
-    width: 700px;
-    border-radius: 20px;
-    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
-}
-
-.card-header_altus
-{
-    padding-bottom: 30px;
-    opacity: 0.8;
-    color: #fff;
-    margin-top: -25px;
-    margin-left: -5%;
-}
-
-.card-header_altus:after 
-{
-    content: "";
-    width: 106px; /*linha embaixo*/
-    height: 1px;
-    background-color: #fff;
-    display: block;
-    margin-top: -4px;
-    margin-left: 315px;
-}
-
-.altus label 
-{
-    color: #fff;
-    font-size: 17px;
-    opacity: 0.8;
-}
-
-.altus input 
-{
-    margin-top: 10px;
-    padding:0 5px;
-    background-color: transparent;
-    border:none;
-    border-bottom: 1px solid #e1e1e1;
-    outline: none;
-    color: #fff;
+.header-admteste{
 }
