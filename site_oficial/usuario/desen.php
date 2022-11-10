@@ -42,7 +42,7 @@
             <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
             
             <div class="header-btn">
-                <abbr title="Home"><a href="../index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <abbr title="Home"><a href="../usuario/index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <abbr title="Local"><a href="../usuario/local.php"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
                 <?php
                     if($_SESSION['usuariologado']){
