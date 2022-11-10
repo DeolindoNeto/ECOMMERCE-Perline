@@ -149,7 +149,7 @@
                         if ($linha['quantidade']<=0)
                         {
                             echo "
-                            <div><span style='color:red'>Produto esgotado</span></div>";
+                            <div><span style='color:aqua'>Produto esgotado</span></div>";
                         }
                         
                         echo "<br><a class=botaocomprar href='carrinho_back.php?acao=add&id_produto=".$linha['id_produto']."'>Comprar</a>";
