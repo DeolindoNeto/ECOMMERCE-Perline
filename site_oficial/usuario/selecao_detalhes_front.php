@@ -9,7 +9,9 @@
 </head>
 
     <?php
+
         session_start();
+
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
         $id_user = $_SESSION['usuariologado']['id_user'];
@@ -112,7 +114,7 @@
             
                 <input type="submit" id="btn-atualizar" value="Atualizar"/>
                 <br><br>
-                <a class="btn-finalizar" href="./confirma_compra_front.php" target="_blank">Finalizar</a>
+                <a class="btn-finalizar" href="./confirma_compra_front.php" target="_self">Finalizar</a>
             </form>
         </div> 
 
