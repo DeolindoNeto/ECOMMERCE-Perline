@@ -166,27 +166,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <footer>
-            <div class="navegacao"> 
-                Navegação<br><br>
-                <a class="btnnav1" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                <br>
-                <a class="btnnav2" title="Quem Somos" href="quemsomos.html">Quem Somos</a>
-                <br>
-                <a class="btnnav3" title="Local" href="../usuario/local.html">Loja física</a><br><br><br><br>
-            </div>
-            
-            <div class="desenvolvedores"> 
-                <br>Desenvolvedores<br><br>
-                Camila Eduarda Favaro<br>
-                Deolindo Scandolera Neto<br>
-                Evelyn Mayra Pinheiro Lopes<br>
-                Mariana Caroline Silva<br>
-                Matheus Gimenes Soares<br><br><br>
-            </div>
-
-            <div class="voltartopo"> 
-                <a href="../usuario/quemsomos.html"><img src="../imagens/voltar.png" width="60%"></a>
-            </div>
+        
         </footer>
     </div>
 </body>

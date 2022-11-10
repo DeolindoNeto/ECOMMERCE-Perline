@@ -661,6 +661,7 @@ input[class="reset"]:hover {
 
 .cada_prod
 {
+    margin-left: 10%;
     text-align:center;  
     align-items: center;
     width: 300px;
