@@ -1365,4 +1365,1191 @@ a.email:link
     border-bottom: 1px solid #e1e1e1;
     outline: none;
     color: #fff;
+/*------------------ GERAL --------------------*/
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.frase_local
+{
+    margin-left: 36.5%;
+}
+
+body{
+    transition: 0.2s;
+    background: #fff;
+    overflow-x: hidden;
+} 
+
+header {
+    transition: 0.2s;
+    position: fixed;
+    height: 9%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1ABC9C;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 999999;
+}
+
+.header-btn
+{
+    margin-top: 1.5%;
+    margin-left: 25%;
+}
+
+.logo_perline{
+    z-index: 1;
+}
+  
+.header-btn-login{
+    margin-left: 10%;
+}
+
+.tpfix2
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 9%;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    z-index: 999999;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.05);
+}
+
+.logo_perline{
+    margin-left: -25%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 14%;
+    width: 300px; /*largura*/
+    height: 100%; /*altura*/
+    margin-top: 0px;
+    padding-top: 30px;
+    left: 0;
+    color: #fff;
+    background: #168F77;
+    transition: 0.3s;
+    z-index: 999999;
+}
+
+label #btnSidebar{
+    position: fixed;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.2s;
+    transition-property: color;
+    left: 1%;
+    top: 2%;
+}
+
+label #btnSidebar:hover{
+    color: black;
+}
+
+.sidebar h5{
+    margin-top: 5%;
+}
+
+.carrinhohome
+{
+    width: 60%;
+}
+
+.logo
+{
+    width: 20%;
+}
+
+.tpfix2-btn
+{
+    width: 80%;
+    margin-left: 9%;
+    font-family: 'papernotes';
+}
+
+#home-btn{
+    margin-right: 50px;
+}
+
+.prod
+{
+    margin: 0 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'papernotes';
+}
+
+a.prod:active,
+a.prod:visited,
+a.prod:link
+{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ------ obj sumir checked ------- */
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+
+#check:checked ~ .sidebar .title-carrinho{
+    display: none;
+}
+
+#check:checked ~ .sidebar .cellNome{
+    display: none;
+}
+
+#check:checked ~ .sidebar h5{
+    display: none;
+}
+
+#check:checked ~ .sidebar #btn-atualizar{
+    display: none;
+}
+
+#check:checked ~ .sidebar .btn-finalizar{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+#admsumir{
+    display: none;
+}
+/* ------ obj sumir checked fim ------- */
+
+
+/*----------- TELA HOME FINAL------------*/
+.content-home{
+    margin-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.foto-principal-home{
+    width: 450px;
+    height: 350px;
+    margin-left: 15%;
+    box-shadow:
+        -15px 15px #B3F1E5,
+        -16px 16px #B3F1E5,
+        -17px 17px #B3F1E5;
+        border-radius: 20px;
+}
+
+.content-texto-home{
+    font-family: 'Poppins', sans-serif;
+    float: right;
+    margin-top: 50px;
+    margin-right: 10%;
+    width: 450px;
+    height: 250px;
+    background-color: #B3F1E5;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+}
+
+.content-3-prod{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 100px;
+    grid-row-gap: 10px;
+    margin-top: 10%;
+    margin-left: 12%;
+}
+
+.img1, .img2, .img3{
+    width: 200px;
+    height: 240px;
+    margin-top: 20px;
+}
+.imgdetalhes{
+    border-radius: 7px;
+    margin-left: 9px;
+    margin-top: 10px;
+}
+
+.prod-home-1, .prod-home-2, .prod-home-3{
+    text-align:center;  
+    width: 330px;
+    height: 330px;
+    font-family: Georgia;
+    font-size: 15px;    
+}
+
+.prod-home-1{
+    background-color: #D42F68;
+    box-shadow:
+    -15px 15px #792340,
+    -16px 16px #792340,
+    -17px 17px #792340;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
+}
+
+.prod-home-2{
+    background-color: #02779E;
+    box-shadow:
+    -15px 15px #203F49,
+    -16px 16px #203F49,
+    -17px 17px #203F49;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
+}
+
+.prod-home-3{
+    background-color: #9061C2;
+    box-shadow:
+    -15px 15px #4B2C6D,
+    -16px 16px #4B2C6D,
+    -17px 17px #4B2C6D;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
+}
+
+.content-texto2-home{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 200px;
+    margin-left: 12%;
+    width: 450px;
+    height: 250px;
+    background-color: #B3F1E5;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    font-size: 10px;    
+}
+
+.video-principal-home{
+    margin-top: -300px;
+    width: 450px;
+    float: right;
+    height: 350px;
+    margin-right: 10%;
+    box-shadow:
+        15px 15px #B3F1E5,
+        16px 16px #B3F1E5,
+        17px 17px #B3F1E5;
+        border-radius: 20px;
+}
+
+footer{
+    margin-top: 15%;
+    width: 100%;
+    height: 100px;
+    background-color: #22947d;f
+}
+
+
+/*----------- TELA DE LOGIN ------------*/
+
+#titulo_login
+{
+    margin-left: 550px;
+    font-family: Georgia;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.card 
+{
+    margin-top: 10%;
+    background-color: #046789;
+    padding: 40px;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+}
+
+.card-header_login 
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.card-header_login:after 
+{
+    content: "";
+    width: 70px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 305px;
+}
+
+.card-content_login label 
+{
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.card-content-area_login
+{
+    display: flex;
+    flex-direction: column;
+    padding:10px 0;
+}
+
+.card-content-area_login input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.card-footer 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.esquesenha
+{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s; 
+    margin-left: 300px;
+    font-size: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquesenha:hover {
+    color: #fff;
+}
+
+.criarconta {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.criarconta:hover {
+    color: black;
+}
+
+input[type="submit"]{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover{
+    background: #046789;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+/*----------- TELA DESENVOLVEDORES ------------*/
+
+.content_desen{
+    margin-top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.divdesencamila{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesendeola{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenevelyn{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenmariana{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.divdesenmatheus{
+    margin-top: 3%;
+    margin-left: 15%;
+    background-color: #1ABC9C;
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    border: solid 2px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.fotodesen{
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+
+.nome{
+    float: right;
+    margin-top: 7%;
+    margin-right: 31%;
+}
+
+.nomedeola{
+    float: right;
+    margin-top: 7%;
+    margin-right: 30%;
+}
+
+.nomeevelyn{
+    float: right;
+    margin-top: 7%;
+    margin-right: 25%;
+}
+
+.email{
+    float: right;
+    margin-top: -15%;
+    margin-right: 25%;
+}
+
+.emaildeola{
+    float: right;
+    margin-top: -15%;
+    margin-right: 20%;
+}
+
+.emailmariana{
+    float: right;
+    margin-top: -15%;
+    margin-right: 21%;
+}
+
+.emailmatheus{
+    float: right;
+    margin-top: -15%;
+    margin-right: 15%;
+}
+
+.nome:hover {
+    color: #fff;
+}
+
+/*QUEM SOMOS*/
+
+/*----------- TELA DE CADASTRO ------------*/
+
+.cadastro{
+    margin-top: 9%;
+    background-color: #046789;
+    padding: 40px;
+    height: 450px;
+    width: 700px;
+    border-radius: 20px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+}
+
+.card-header_cadastro
+{
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: #fff;
+    margin-top: -25px;
+    margin-left: -5%;
+}
+
+.card-header_cadastro:after 
+{
+    content: "";
+    width: 106px; /*linha embaixo*/
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-top: -4px;
+    margin-left: 315px;
+}
+
+.cadastro label 
+{
+    color: #fff;
+    font-size: 17px;
+    opacity: 0.8;
+}
+
+.cadastro input 
+{
+    margin-top: 10px;
+    padding:0 5px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: #fff;
+}
+
+.form1{
+    margin-left: 6%;
+    margin-top: 50px;
+}
+.form2 {
+    margin-left: 63%;
+    margin-top: -260px;
+}
+
+input[class="submit"],
+input[class="reset"] {
+    width: 25%;
+    margin-top: 7%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+input[class="submit"]:hover,
+input[class="reset"]:hover {
+    background: #046789;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+
+/*----------- TELA DE SELEÇAO PRODUTOS ------------*/
+
+#prod-sublinhado{
+    text-decoration:underline;
+}
+
+.content-selecao-produto{
+    margin-top: 10-0px;
+    margin-left: 200px;
+}
+
+.divproduto
+{
+    display:grid; 
+    grid-template-columns: repeat(3,300px); 
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.cada_prod
+{
+    text-align:center;  
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: #D42F68;
+    font-family: Georgia;
+    font-size: 11px;
+    box-shadow:
+        3px 3px #e7729b,
+        4px 4px #e7729b,
+        5px 5px #e7729b;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    border-radius: 20px;
+}
+
+.cada_prod p 
+{
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.cada_prodindex
+{
+    text-align:center;  
+    background-color: #1ABC9C;
+    font-family: Georgia;
+    font-size: 15px;
+    border-radius: 20px;
+    border: solid 3px black;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+    margin-left: 2.5%;
+    margin-top: 3%;
+    width: 27.5%;
+    background-color: #5bc498;
+  
+}
+
+.cada_prod:hover
+{
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,0.58);
+}
+
+.imgproduto{
+    margin-top: 5%;
+    width: 150px;
+    height: 150px;
+    margin-left: 70px;
+}
+
+.textocomprar{
+    margin-top: 8%;
+}
+
+.botaocomprar {
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocomprar:hover {
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+
+
+.botaocon {
+    margin-left: 10px;
+    width: 90px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocon:hover {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+.botaocon2 {
+    margin-left: 50px;
+    width: 90px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.botaocon2:hover {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.botoesconfirma{
+    margin-top: 20px;
+}
+/*----------- TELA DE DETALHES PRODUTOS ------------*/
+
+.detalhe_produto_foto{
+    width: 20%;
+    height: 450px;
+    background-color: #168F77;
+    border-radius: 30px 30px 0px 30px;}
+
+.detalhes_produtos{
+    float: right;
+    width: 50%;
+    height: 400px;
+    margin-top: -400px;
+    margin-right: 30%;
+    background-color: #D42F68;
+    border-radius: 0px 30px 30px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-detalhes{
+    margin-top: 13%;
+    margin-left: 23%;
+}
+
+
+h1{
+    color:#fff;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+p{
+    margin-left: 5%;
+    font-size: 20px;
+    width: 400px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+h6{
+    font-size: 12px;
+    width: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.preco-detalhes{
+    margin-left: 5%;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.detalhes-btn-comprar{
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background-color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.detalhes-btn-comprar:hover {
+    background: #FF2F77;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/*----------- CARRINHO ------------*/
+
+.btn-atualizar {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.btn-atualizar:hover {
+    color: black;
+}
+
+.btn-finalizar {
+    width: 25%;
+    margin-left: 31%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 3px;
+    transition: 0.2s;
+}
+
+.btn-finalizar:hover {
+    background: #47d8b7;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.title-carrinho {
+    color:black;
+    margin-bottom: 10%;
+    margin-left: 31%;
+}
+.table {
+    padding-top: 200px;
+    width:800px; 
+    display:grid;
+}
+.row { 
+    display:block;
+    margin-left: 20px;
+}
+.cell {
+    display:inline-block;
+    padding: 5px 5px;
+    margin-bottom: .5%;
+    background-color: #168F77; 
+    font-size: 10pt;
+}
+.cellHeader {text-align: center !important;}
+.cellCodigo {width:100px; }
+.cellNome{
+    width: 200px;
+}
+.cellPrecoHeader {width:100px;}
+.cellPreco {width:60px; text-align:right;}
+.cellAcoes {width:100px;}
+
+
+/*----------- FINALIZACAO ------------*/
+.cada_prodindexfinal
+{
+    padding-left: 45px;
+    padding-right: 30px;
+    text-align:center;  
+    background-color: #046789;
+    font-family:sans-serif;
+    border-radius: 15px;
+    margin-left: 300px;
+    margin-top: 150px;
+    min-width: 100px;
+    max-width: 1000px;    
+    align-items: center;
+    height: 500px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.cada_prodindexfinal2
+{
+    margin-top: 200px;
+    margin-left: 400px;
+    background-color: #046789;
+    font-family:sans-serif;
+    border-radius: 15px;
+    width: 800px;   
+    align-items: center;
+    height: 400px;
+    box-shadow: 10px 13px 18px -1px rgba(0,0,0,05);
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.pedidofinalizacao{
+    margin-top: 50px;
+}
+
+.pp{
+    text-align: center;
+    font-size: 50px;
+    margin-left: 210.5px;
+    font-weight: bold;
+    color: white;
+}
+.pf{
+    text-align: center;
+    font-size: 30px;
+    margin-left: 210px;
+    color: white;
+}
+
+.pfinobg{
+    text-align:center;
+    font-size: 24px;
+    margin-left: 230px;
+    color: white;
+}
+
+.pfin{
+    text-align:center;
+    font-size: 13px;
+    margin-left: 205px;
+    color: white;
+}
+
+.afinal{
+    margin-left: 50px;
+    width: 25%;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color:black;
+    font-size: 10px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+a.email:visited{
+    color: red;
+    text-decoration: none;
+    text-decoration:underline;
+}
+a.email:link
+{
+    color: black;
+    text-decoration:underline;
+}
+
+/*----------- TELA DE LOCAL ------------*/
+.tpfix2_local
+{
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    top: 14%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: #1ABC9C;
+    text-align: center;
+}
+
+.frase_local
+{
+    margin-left: 580px;
+    font-size: 18px;
+}
+
+.mapa
+{
+    margin-top: 30px;
+    width: 30%;
+    box-shadow:
+        15px 15px #B3F1E5,
+        16px 16px #B3F1E5,
+        17px 17px #B3F1E5;
+    border-radius: 20px;
+}
+
+/*----------- TELA DE TABELA PRODUTO ADM ------------*/
+.content-tabela-produto-adm{
+    margin-top: -100px;
+    margin-left: 350px;
+}
+
+.table 
+{
+    width: 900px;
+    display:grid;
+    margin-bottom: 5%;
+}
+
+.row 
+{
+    display:block;
+}
+
+.celula
+{
+    display:inline-block;
+    padding: 5px 5px;
+    margin-bottom: .5%;
+    background-color: #B3F1E5;
+    font-size: 12pt;
+}
+.cellHeader 
+{
+    text-align: center !important;
+}
+
+.celulacod 
+{
+    width:100px;
+}
+
+.celulanome
+{
+    width:300px;
+}
+
+
+.celulapreco
+{
+    width:60px; 
+    text-align:right;
+}
+
+.celulaacoes
+{
+    width:120px;
+}
+
+/*----------- TABELA DE USUARIO ADM ------------*/
+
+.table_usuario
+{
+    margin-top: 110px;
+    margin-left: 150px;
+    width: 1300px;
+    display:grid;
+    margin-bottom: 5%;
+}
+
+.row_usuario
+{
+    display:block;
+}
+
+.celula_usuario
+{
+    display:inline-block;
+    padding: 5px 5px;
+    margin-bottom: .5%;
+    background-color: #B3F1E5;
+    font-size: 12pt;
+}
+.cellHeader_usuario
+{
+    text-align: center !important;
+}
+
+.celulaid_usuario 
+{
+    width:80px;
+}
+
+.celulanome_usuario
+{
+    width:200px;
+}
+
+
+.celulaemail
+{
+    width:300px; 
+}
+
+.celulatelefone
+{
+    width:150px; 
+}
+
+.celulacpf
+{
+    width:150px; 
+}
+
+.celulaacoes_usuario
+{
+    width:150px;
+}
+
+.header-adm{
+    margin-left: 450px;
+}
+
+.header-admteste{
 }

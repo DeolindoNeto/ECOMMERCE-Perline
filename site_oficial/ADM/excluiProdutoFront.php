@@ -3,123 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <title>Perline</title>
-        <link rel="stylesheet" type="text/css" href="../css/menuLateral.css">
+        <link rel="stylesheet" type="text/css" href="../estilo.css">
     </head>
     <body>
-    <input type="checkbox" id="check" checked>
-        <header>
-
-            <div class="carrinhohome">
-                <label for="check">
-                    <abbr title="Carrinho"><img  id="btnSidebar" src="../img/icon_menu_sacola.png"></abbr>
-                </label>
-            </div>
-            
-            <abbr class="logo_perline" title="Perline"><img src="../img/PERLINE.png" width="70%"></abbr>
-            
-            <div class="header-btn">
-                <abbr title="Home"><a href="./index.php"><img class="header-btn-home" src="../img/icon_menu_home.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <abbr title="Local"><a href="../usuario/local.php"><img class="header-btn-local" src="../img/icon_menu_mapa.png"></a></abbr>
-                <abbr title="Login"><a href="../usuario/login.html"><img class="header-btn-login" src="../img/icon_menu_login.png"></a></abbr>&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="divfixa">
+            <div class="divimg"><img src="../imagens/logo.png" height="90px"></div>
+                <br><br>
+                <table width="85%">
+                    <tr>
+                        <th align="left">
+                        <a class="botao" href="../index.html">Home</a>&nbsp;
+                        <a class="botao" href="#Produtos" target="_blank">Produtos</a>&nbsp;
+                        <a class="botao" href="../local.html" target="_blank">Conheça Nossa Loja Física</a>&nbsp;
+                        <a class="botao" href="../sobre.html" target="_blank">Sobre</a>&nbsp;
+                        <a class="botao" href="../patrocinadores.html" target="_blank">Patrocinadores</a>&nbsp;
+                        </th>
+                        <th align="right">
+                        <a class="botao" href="#Carrinho" target="_blank">Carrinho</a>&nbsp;
+                        <a class="botao" href="../login.html" target="_blank">Login</a>&nbsp;
+                        </th>
+                    </tr>
+                </table>       
             </div>  
-        </header>
-
-        <div class="tpfix2">
-                
-            <div class="tpfix2-btn">
-                <center>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Produtos" href="../usuario/selecao_produto_front.php">Produtos</a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" title="Quem Somos" href="desen.html">Quem Somos</a>
-                </center>
-            </div>
-        </div>
-        
         <a name="topo"></a>
         <br><br><br><br><br>
         
         <!-- Início da página -->
+    <center>
+        <div class="menu"><br><br><br>
             <?php
             $id_produto = $_GET["id_produto"];
             include "./get_InfoProduto.php";
             ?>
 
             <!-- Formulário (após as informações serem carregadas) -->
-            <div class="content">
-                <form class="altprod" action="./excluiProdutoBack.php" method="post">
-                    
-                    <div class="card-header_alteraprod">
-                        <center>
-                            <h2>Exclusão de Produto</h2>
-                        </center>
-                    </div>
+            <form action="./excluiProdutoBack.php" method="post">
 
-                    <div class="form1">
+                <label>ID do produto: </label><input type="number" name="id_produto" value="<?php echo $linha['id_produto']; ?>">
+                <tr align="left">
+                    <th width="300px">
+                        <p>Nome do produto:</p>
+                    </th>
+                    <th width="300px"><input type="text" name="PRODUCTNAME" maxlength="70" size="26" value="<?php echo $linha['nome']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Preço:</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTPRICE" placeholder="Ex. 9.99" value="<?php echo $linha['preco']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Código visual:</p>
+                    </th>
+                    <th><input type="text" name="PRODUCTCODE" maxlength="50" size="26" value="<?php echo $linha['codigo_visual']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Custo:</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTCOST" placeholder="Ex. 9.99" value="<?php echo $linha['custo']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Preço de Venda:</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTSELLPRICE" placeholder="Ex. 9.99" value="<?php echo $linha['preco_venda']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Margem de lucro (%):</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTMARGIN" placeholder="Ex. 33.33" value="<?php echo $linha['margem_lucro']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>ICMS (%):</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTICMS" placeholder="Ex. 33.33" value="<?php echo $linha['icms']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Imagem:</p>
+                    </th>
+                    <th><input type="text" name="PRODUCTIMAGE" maxlength="200" size="26" value="<?php echo $linha['campo_imagem']; ?>" readonly></th>
+                </tr>
+                <tr align="left">
+                    <th>
+                        <p>Quantidade:</p>
+                    </th>
+                    <th><input type="number" name="PRODUCTQTDE" maxlength="200" size="26" value="<?php echo $linha['quantidade']; ?>" readonly></th>
+                </tr>
 
-                        <label class="labels">ID do produto:</label><br>
-                        <input type='number' size='26' value="<?php echo "".$linha['id_produto'].""; ?>" readonly>
-
-                        <br><br>
-
-                        <label class="labels">Nome do produto:</label><br>
-                        <input type='text' name='PRODUCTNAME' maxlength='70' size='26' value="<?php echo "".$linha['nome'].""; ?>" readonly>
-
-                        <br><br>
-
-                        <label class="labels">Preço:</label><br>
-                        <input type='number' name='PRODUCTPRICE' placeholder='Ex. 9.99' value="<?php echo "".$linha['preco'].""; ?>" readonly>
-
-                        <br><br>
-
-                        <label class="labels">Código visual:</label><br>
-                        <input type='text' name='PRODUCTCODE' maxlength='50' size='26' value="<?php echo "".$linha['codigo_visual'].""; ?>" readonly>
-                        <br><br>
-
-                        <label class="labels">Custo:</label><br>
-                        <input type='number' name='PRODUCTCOST' placeholder='Ex. 9.99' value="<?php echo "".$linha['custo'].""; ?>" readonly>
-                            
-                        <br><br>
-
-                    </div>
-                
-                    <div class="form2">
-                    
-                        <label class="labels">Preço de Venda:</label><br>
-                        <input type='number' name='PRODUCTSELLPRICE' placeholder='Ex. 9.99' value="<?php echo "".$linha['preco_venda'].""; ?>" readonly>
-                        
-                        <br><br>
-
-                        <label class="labels">Margem de lucro (%):</label><br>
-                        <input type='number' name='PRODUCTMARGIN' placeholder='Ex. 33.33' value="<?php echo "".$linha['margem_lucro'].""; ?>" readonly>
-
-                        <br><br>
-
-                        <label class="labels">ICMS (%):</label><br>
-                        <input type='number' name='PRODUCTICMS' placeholder='Ex. 33.33' value="<?php echo "".$linha['icms'].""; ?>" readonly>
-                        <br><br>
-                            
-                        <label class="labels">Imagem:</label><br>
-                        <input type='text' name='PRODUCTIMAG' maxlength='200' size='26' value="<?php echo "".$linha['campo_imagem'].""; ?>" readonly>
-
-                        <br><br>
-
-                        <label class="labels">Manufaturado?</label><br>
-                        <input type="radio" name="PRODUCTMANFACTURED" value="Sim" checked required> <label>SIM</label>
-                        <input type="radio" name="PRODUCTMANFACTURED" value="Não" required> <label>NÃO</label>
-
-                        <br><br>
-                    </div>  
-
-                        <input type="submit" value="Confirma exclusão">
-                        <input type="button" value="Editar" onclick="location.href='alteraProdutosFront.php?id_produto=<?php echo $id_produto ?>';">
-                        <input type="button" value="Voltar" onclick="location.href='tabelaprodutos.php';">
+                <br><br>
+                <input type="submit" value="Confirma exclusão">
+                <input type="button" value="Editar" onclick="location.href='alteraProdutosFront.php?id_produto=<?php echo $id_produto ?>';">
+                <input type="button" value="Voltar" onclick="location.href='tabelaprodutos.php';">
                 </form>
-            </div> 
-        <footer>
-            <a> </a>
-        </footer>
+                </div></center>
+<!-- Fim da página -->
+        
+        <div id="divrodape">
+            <center>
+                <br>
+                <a class="voltar" href="#topo">Clique aqui para voltar ao topo</a>
+                <br><hr><br>
+                <a class="botao" href="./admhome.php">Menu de Desenvolvimento</a>&nbsp;
+                <br><br><hr>
+                <table>
+                    <tr>
+                        <td><white>Camila Eduarda - n°8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
+                        <td><white>Deolindo Neto - n°12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
+                        <td><white>Evelyn Mayra - n°15 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
+                        <td><white>Mariana Caroline - n°28 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </white></td>
+                        <td><white>Matheus Soares - n°30</white></td>
+                    </tr>
+                </table>
+
+            </center>
+        </div>
     </body>
 </html>
