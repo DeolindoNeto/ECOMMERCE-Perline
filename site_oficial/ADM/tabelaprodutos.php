@@ -57,6 +57,7 @@
                     <a class="prod" id="prod-sublinhado" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
+                    <a class="prod" title="Relatórios" href="relatorio_grafico.php">Relatórios</a>
                 </center>
             </div>
 

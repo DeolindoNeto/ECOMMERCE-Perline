@@ -52,7 +52,7 @@ header {
     margin-left: 10%;
 }
 
-.tpfix2
+.tpfix2-adm
 {
     position: fixed;
     height: 5%;
@@ -116,7 +116,7 @@ label #btnSidebar:hover{
     width: 20%;
 }
 
-.tpfix2-btn
+.tpfix2-btn-adm
 {
     width: 80%;
     margin-left: 9%;

@@ -53,11 +53,12 @@
             <div class="tpfix2-btn">
                 <center>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a class="prod" id="prod-sublinhado" id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
+                    <a class="prod" id="prod-sublinhado"id="home-btn" title="Home" href="../usuario/index.php">Home</a> 
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Produtos" href="../ADM/tabelaprodutos.php">Produtos</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a class="prod" title="Usuários" href="../ADM/tabelausuarios.php">Usuários</a>
+                    <a class="prod"  title="Relatórios" href="relatorio_grafico.php">Relatórios</a>
                 </center>
             </div>
             </div>
