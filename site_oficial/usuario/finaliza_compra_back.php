@@ -84,8 +84,7 @@
     }
     else
     {
-        $_SESSION['erro_finalizacao'] = 1;
-
+            $_SESSION['erro_finalizacao'] = 1;
             header ('Location: selecao_produto_front.php');
             return;
     }
