@@ -91,7 +91,7 @@
         <hr>
         <h3>Deseja confirmar?</h3>
         <div class="botoesconfirma">
-            <a class="botaocon" href="finaliza_compra_front.php">Finalizar</a>
+            <a class="botaocon" href="finaliza_front.php">Finalizar</a>
             <a class="botaocon2" href="./selecao_produto_front.php">Cancelar</a>&nbsp;&nbsp;
         </div>
     </div>

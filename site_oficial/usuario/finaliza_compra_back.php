@@ -1,17 +1,23 @@
 <?php
     include "../utils/conection.php";
+
     session_start();
     $id_user = $_SESSION['usuariologado']['id_user'];
     $compraFinalizada = FALSE;
     $cont = 0;
     $total = 0;
+    $qtdeVendida = 0;
 
-   function validarProdutos($resultado_lista)
+   function validarProdutos($conecta, $resultado_lista)
     {
          foreach($resultado_lista as $linha)
          {
              $id_produto=$linha["id_produto"];
              $sqlPegaProd="SELECT * FROM produto WHERE id_produto = $id_produto;";
+             $res=pg_query($conecta, $sqlPegaProd);
+
+             if($res==0)
+             return false;
          }   
 
         return true;
@@ -36,7 +42,7 @@
     
     $id_produto = $_SESSION['carrinho'];
         
-    validarProdutos($resultado_lista); 
+    validarProdutos($conecta, $resultado_lista); 
 
     foreach($resultado_lista as $linha)
     { 
@@ -67,7 +73,8 @@
         }
         else
         {
-            header ('Location: selecao_produto_front.php');
+             header ('Location: finaliza_front.php');
+             include "../ADM/Email/enviaking.php";
         }
         foreach($resultado_lista as $linha)
         { 
@@ -80,7 +87,7 @@
             $res = pg_query($conecta, $sql);
             atualizarEstoque($conecta, $id_produto, $qtdVendida);
         }  
-        header ('Location: finaliza_compra_front.php');
+        header ('Location: finaliza_front.php');
     }
     else
     {
@@ -97,4 +104,3 @@
 
     // Fecha a conexão com o PostgreSQL
     pg_close($conecta);
-?>
