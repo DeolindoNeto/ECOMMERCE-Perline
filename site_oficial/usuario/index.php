@@ -11,6 +11,7 @@
 
     <?php
         session_start();
+
         $acao = $_GET['acao'] ?? '';
         $id_produto = $_GET['id_produto'] ?? 0;
         $id_user = $_SESSION['usuariologado']['id_user'];
