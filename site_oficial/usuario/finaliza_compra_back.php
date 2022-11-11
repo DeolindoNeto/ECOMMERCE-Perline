@@ -73,7 +73,7 @@
         }
         else
         {
-             header ('Location: finaliza_front.php');
+             header ('Location: index.php');
              include "../ADM/Email/enviaking.php";
         }
         foreach($resultado_lista as $linha)

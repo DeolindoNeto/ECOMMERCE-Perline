@@ -2,11 +2,14 @@
 /*
  * This example shows settings to use when sending via Google's Gmail servers.
  */
+session_start();
+$userEmail = $_SESSION['usuariologado']['email'];
+
 //SMTP needs accurate times, and the PHP time zone MUST be set
 date_default_timezone_set('Etc/UTC');
 
 //Carrega as bibliotecas de classes
-require './PHPMailer/PHPMailerAutoload.php';
+require 'PHPMailer/PHPMailerAutoload.php';
 
 //Cria uma nova instância da classe PHPMailer
 $mail = new PHPMailer;
@@ -36,20 +39,19 @@ $mail->SMTPSecure = '';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = 'projetoscti09@projetoscti.com.br'; //Preencher com o usuário da sua conta Gmail
+$mail->Username = 'marke@projetoscti.com.br'; //Preencher com o usuário da sua conta Gmail
 
 //Password to use for SMTP authentication
 //$mail->Password = 'YfTvkhprsLC0OJn5'; //Preencher com a senha do usuário da sua conta Gmail
-$mail->Password = 'E!maildoprof';
+$mail->Password = 'M4rk3#2022';
 
 //Set who the message is to be sent from
-$mail->From='projetoscti09@projetoscti.com.br'; //Preencher com a sua conta Gmail
+$mail->From='marke@projetoscti.com.br'; //Preencher com a sua conta Gmail
 
 $mail->FromName='Equipe Perline Art'; //Preencher com o nome do remetente
 
 //Set who the message is to be sent to
-$userEmail = $_SESSION['usuariologado']['email'];
-$mail->addAddress('deolindonetos@gmail.com'); //Preencher com o email e nome de quem receberá a mensagem
+$mail->addAddress("$userEmail"); //Preencher com o email e nome de quem receberá a mensagem
 
 //Set the subject line
 $mail->Subject = 'Compra confirmada com sucesso'; //Preencher com o assunto do email
@@ -64,6 +66,4 @@ $mail->Body = '<html><head><meta charset="utf-8"></head><body> Obrigado por comp
 //send the message, check for errors
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
-} else {
-    echo "Message sent!";
 }
