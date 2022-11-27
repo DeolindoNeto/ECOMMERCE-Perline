@@ -3,7 +3,7 @@
 <div class="mae">
 <input type="checkbox" id="check">
 <?php
-    include "./finaliza_compra_back.php";
+    include "finaliza_compra_back.php";
 ?> 
     <header>
 

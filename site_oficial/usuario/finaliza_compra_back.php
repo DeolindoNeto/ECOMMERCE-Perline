@@ -37,7 +37,6 @@
                 </div>";
         }
     } 
-    session_start();
     $resultado_lista = $_SESSION['produtos'];
     
     $id_produto = $_SESSION['carrinho'];
@@ -58,6 +57,11 @@
            $cont++;
           break;
         }
+        else if ($qtde < 1)
+        {
+            $cont++;
+            break;
+        }
     }
 
     if ($cont == 0)
@@ -73,7 +77,7 @@
         }
         else
         {
-             header ('Location: index.php');
+             header ('Location: .php');
              include "../ADM/Email/enviaking.php";
         }
         foreach($resultado_lista as $linha)
@@ -87,7 +91,6 @@
             $res = pg_query($conecta, $sql);
             atualizarEstoque($conecta, $id_produto, $qtdVendida);
         }  
-        header ('Location: finaliza_front.php');
     }
     else
     {

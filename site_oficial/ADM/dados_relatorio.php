@@ -11,7 +11,7 @@
                on p.id_produto = iv.id_produto 
             group by p.id_produto,
                   p.descricao
-            order by qtdevendida desc ";
+            order by qtdevendida desc";
 
 	$res = pg_query($conecta, $sql);
 	$qtde=pg_num_rows($res);	 
